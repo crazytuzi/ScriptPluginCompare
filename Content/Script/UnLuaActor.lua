@@ -862,7 +862,10 @@ function M:EndTest()
         Value = Value .. self.Data[i]["Name"] .. ", " .. tostring(self.Data[i]["Time"]) .. "\n"
     end
 
-    local File = string.format("UnLua-%d-%d-%d-%d-%d-%d-%d.csv", Year, Month, Day, Hour, Minute, Second, Millisecond)
+    local File = string.format("UnLua-%s-%s-%d-%d-%d-%d-%d-%d-%d-%d.csv",
+        UE.UTestCaseBlueprintFunctionLibrary.GetPlatform(),
+        UE.UTestCaseBlueprintFunctionLibrary.GetBuildConfiguration(), self.Loop, Year, Month, Day, Hour, Minute, Second,
+        Millisecond)
 
     UE.UTestCaseBlueprintFunctionLibrary.SaveStringToFile(File, Value)
 end

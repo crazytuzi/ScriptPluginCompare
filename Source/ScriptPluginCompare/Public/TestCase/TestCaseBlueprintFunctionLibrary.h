@@ -19,5 +19,11 @@ public:
 	static double GetTotalSeconds(const FDateTime& A, const FDateTime& B);
 
 	UFUNCTION()
+	static FString GetPlatform();
+
+	UFUNCTION()
+	static FString GetBuildConfiguration();
+
+	UFUNCTION()
 	static void SaveStringToFile(FString FileName, const FString& String);
 };

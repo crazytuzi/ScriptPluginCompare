@@ -8,6 +8,34 @@ double UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(const FDateTime& A, co
 	return (A - B).GetTotalSeconds();
 }
 
+FString UTestCaseBlueprintFunctionLibrary::GetPlatform()
+{
+#if PLATFORM_WINDOWS
+	return TEXT("Windows");
+#elif PLATFORM_LINUX
+	return TEXT("Linux");
+#elif PLATFORM_MAC
+	return TEXT("Mac");
+#elif PLATFORM_ANDROID
+	return TEXT("Android");
+#elif PLATFORM_IOS
+	return TEXT("IOS");
+#endif
+}
+
+FString UTestCaseBlueprintFunctionLibrary::GetBuildConfiguration()
+{
+#if UE_BUILD_DEBUG
+	return TEXT("Debug");
+#elif UE_BUILD_DEVELOPMENT
+	return TEXT("Development");
+#elif UE_BUILD_TEST
+	return TEXT("Test");
+#elif UE_BUILD_SHIPPING
+	return TEXT("Shipping");
+#endif
+}
+
 void UTestCaseBlueprintFunctionLibrary::SaveStringToFile(FString FileName, const FString& String)
 {
 	const auto FileManager = &IFileManager::Get();
