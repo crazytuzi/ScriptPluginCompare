@@ -690,9 +690,9 @@ function M:ProcessTest()
     self:Exec("GeTextValue", GetNameValue, Loop, TestActor)
 
     -- FString
-    self:Exec("SetTextValue", SetStringValue, Loop, TestActor, "String")
+    self:Exec("SetStringValue", SetStringValue, Loop, TestActor, "String")
 
-    self:Exec("GeTextValue", GetStringValue, Loop, TestActor)
+    self:Exec("GetStringValue", GetStringValue, Loop, TestActor)
 
     -- UEnum
     self:Exec("SetEnumValue", SetEnumValue, Loop, TestActor, TestEnum)
