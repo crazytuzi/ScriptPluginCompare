@@ -31,7 +31,7 @@ enum class ETestEnumClass
 };
 
 UCLASS()
-class SCRIPTPLUGINCOMPARE_API ATestActor : public AActor
+class SCRIPTPLUGINCOMPARE_API ATestActor : public AActor, public ITestInterface
 {
 	GENERATED_BODY()
 
@@ -48,6 +48,12 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
+	UFUNCTION()
+	static void StaticFunction();
+
+	UFUNCTION()
+	void MemberFunction();
+
 	UFUNCTION()
 	void SetBoolValueFunction(bool InBoolValue);
 

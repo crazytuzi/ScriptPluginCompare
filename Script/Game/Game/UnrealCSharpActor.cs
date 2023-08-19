@@ -37,6 +37,8 @@ namespace Script.ScriptPluginCompare
 
             var TestClass = TestActor.GetClass();
 
+            var TestInterface = TestActor.InterfaceValue;
+
             var TestStruct = new FTestStruct
             {
                 Value = 1
@@ -50,7 +52,7 @@ namespace Script.ScriptPluginCompare
 
             var TestSet = new TSet<Int32> { 1 };
 
-            var TestMap = new TMap<Int32, Int32> { { 1, 1 } };
+            var TestMap = new TMap<Int32, Int32> { { 0, 1 } };
 
             // Bool
             SetBoolValue(Loop, TestActor, true);
@@ -148,12 +150,19 @@ namespace Script.ScriptPluginCompare
             GetClassValue(Loop, TestActor);
 
             // UInterface
-            // @TODO
+            SetInterfaceValue(Loop, TestActor, TestInterface);
+
+            GetInterfaceValue(Loop, TestActor);
 
             // TArray
             SetArrayValue(Loop, TestActor, TestArray);
 
             GetArrayValue(Loop, TestActor);
+
+            // TArray Element
+            SetArrayElement(Loop, TestActor, 0, 1);
+
+            GetArrayElement(Loop, TestActor, 0);
 
             // TSet
             SetSetValue(Loop, TestActor, TestSet);
@@ -164,6 +173,32 @@ namespace Script.ScriptPluginCompare
             SetMapValue(Loop, TestActor, TestMap);
 
             GetMapValue(Loop, TestActor);
+
+            // TMap Element
+            SetMapElement(Loop, TestActor, 0, 1);
+
+            GetMapElement(Loop, TestActor, 0);
+
+            // Empty
+            EmptyFunction(Loop);
+
+            // Add
+            AddFunction(Loop);
+
+            // Subtract
+            SubtractFunction(Loop);
+
+            // Multiply
+            MultiplyFunction(Loop);
+
+            // Divide
+            DivideFunction(Loop);
+
+            // Static
+            StaticFunction(Loop);
+
+            // Member
+            MemberFunction(Loop, TestActor);
 
             // Bool
             SetBoolValueFunction(Loop, TestActor, true);
@@ -261,7 +296,9 @@ namespace Script.ScriptPluginCompare
             GetClassValueFunction(Loop, TestActor);
 
             // UInterface
-            // @TODO
+            SetInterfaceValueFunction(Loop, TestActor, TestInterface);
+
+            GetInterfaceValueFunction(Loop, TestActor);
 
             // TArray
             SetArrayValueFunction(Loop, TestActor, TestArray);
@@ -945,7 +982,37 @@ namespace Script.ScriptPluginCompare
         }
 
         // UInterface 
-        // @TODO
+        private void SetInterfaceValue(Int32 InLoop, ATestActor InTestActor, TScriptInterface<ITestInterface> InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InTestActor.InterfaceValue = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetInterfaceValue", TotalSeconds));
+        }
+
+        private void GetInterfaceValue(Int32 InLoop, ATestActor InTestActor)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InTestActor.InterfaceValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetInterfaceValue", TotalSeconds));
+        }
 
         // TArray
         private void SetArrayValue(Int32 InLoop, ATestActor InTestActor, TArray<Int32> InValue)
@@ -978,6 +1045,39 @@ namespace Script.ScriptPluginCompare
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
             Data.Add(new KeyValuePair<string, double>("GetArrayValue", TotalSeconds));
+        }
+
+        // TArray Element
+        private void SetArrayElement(Int32 InLoop, ATestActor InTestActor, Int32 InIndex, Int32 InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InTestActor.ArrayValue[InIndex] = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetArrayElement", TotalSeconds));
+        }
+
+        private void GetArrayElement(Int32 InLoop, ATestActor InTestActor, Int32 InIndex)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InTestActor.ArrayValue[InIndex];
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetArrayElement", TotalSeconds));
         }
 
         // TSet
@@ -1044,6 +1144,182 @@ namespace Script.ScriptPluginCompare
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
             Data.Add(new KeyValuePair<string, double>("GetMapValue", TotalSeconds));
+        }
+
+        // TMap Element
+        private void SetMapElement(Int32 InLoop, ATestActor InTestActor, Int32 InIndex, Int32 InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InTestActor.MapValue[InIndex] = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetMapElement", TotalSeconds));
+        }
+
+        private void GetMapElement(Int32 InLoop, ATestActor InTestActor, Int32 InIndex)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InTestActor.MapValue[InIndex];
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetMapElement", TotalSeconds));
+        }
+
+        private void Empty()
+        {
+        }
+
+        // Empty
+        private void EmptyFunction(Int32 InLoop)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                Empty();
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("EmptyFunction", TotalSeconds));
+        }
+
+        private void Add(Int32 A, Int32 B)
+        {
+            var Value = A + B;
+        }
+
+        // Add
+        private void AddFunction(Int32 InLoop)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                Add(1, 1);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("AddFunction", TotalSeconds));
+        }
+
+        private void Subtract(Int32 A, Int32 B)
+        {
+            var Value = A - B;
+        }
+
+        // Subtract
+        private void SubtractFunction(Int32 InLoop)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                Subtract(1, 1);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SubtractFunction", TotalSeconds));
+        }
+
+        private void Multiply(Int32 A, Int32 B)
+        {
+            var Value = A * B;
+        }
+
+        // Multiply
+        private void MultiplyFunction(Int32 InLoop)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                Multiply(1, 1);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("MultiplyFunction", TotalSeconds));
+        }
+
+        private void Divide(Int32 A, Int32 B)
+        {
+            var Value = A / B;
+        }
+
+        // Divide
+        private void DivideFunction(Int32 InLoop)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                Divide(1, 1);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("DivideFunction", TotalSeconds));
+        }
+
+        // Static
+        private void StaticFunction(Int32 InLoop)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                ATestActor.StaticFunction();
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("StaticFunction", TotalSeconds));
+        }
+
+        // Member
+        private void MemberFunction(Int32 InLoop, ATestActor InTestActor)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InTestActor.MemberFunction();
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("MemberFunction", TotalSeconds));
         }
 
         // Bool
@@ -1674,7 +1950,38 @@ namespace Script.ScriptPluginCompare
         }
 
         // UInterface 
-        // @TODO
+        private void SetInterfaceValueFunction(Int32 InLoop, ATestActor InTestActor,
+            TScriptInterface<ITestInterface> InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InTestActor.SetInterfaceValueFunction(InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetInterfaceValueFunction", TotalSeconds));
+        }
+
+        private void GetInterfaceValueFunction(Int32 InLoop, ATestActor InTestActor)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InTestActor.GetInterfaceValueFunction();
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetInterfaceValueFunction", TotalSeconds));
+        }
 
         // TArray
         private void SetArrayValueFunction(Int32 InLoop, ATestActor InTestActor, TArray<Int32> InValue)

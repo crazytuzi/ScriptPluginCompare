@@ -22,6 +22,14 @@ void ATestActor::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 }
 
+void ATestActor::StaticFunction()
+{
+}
+
+void ATestActor::MemberFunction()
+{
+}
+
 void ATestActor::SetBoolValueFunction(const bool InBoolValue)
 {
 	BoolValue = InBoolValue;
