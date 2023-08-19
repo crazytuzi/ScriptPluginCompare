@@ -263,6 +263,19 @@ local function GetArrayValue(InLoop, InTestActor)
     end
 end
 
+-- TArray Element
+local function SetArrayElement(InLoop, InTestActor, InIndex, InValue)
+    for i = 0, InLoop do
+        InTestActor.ArrayValue[InIndex] = InValue
+    end
+end
+
+local function GetArrayElement(InLoop, InTestActor, InIndex)
+    for i = 0, InLoop do
+        local Value = InTestActor.ArrayValue[InIndex]
+    end
+end
+
 -- TSet
 local function SetSetValue(InLoop, InTestActor, InValue)
     for i = 0, InLoop do
@@ -286,6 +299,87 @@ end
 local function GetMapValue(InLoop, InTestActor)
     for i = 0, InLoop do
         local Value = InTestActor.MapValue
+    end
+end
+
+-- TMap Element
+local function SetMapElement(InLoop, InTestActor, InIndex, InValue)
+    for i = 0, InLoop do
+        InTestActor.MapValue:Add(InIndex, InValue)
+    end
+end
+
+local function GetMapElement(InLoop, InTestActor, InIndex)
+    for i = 0, InLoop do
+        local Value = InTestActor.MapValue:Find(InIndex)
+    end
+end
+
+local function Empty()
+end
+
+-- Empty
+local function EmptyFunction(InLoop)
+    for i = 0, InLoop do
+        Empty()
+    end
+end
+
+local function Add(A, B)
+    local Value = A + B;
+end
+
+-- Add
+local function AddFunction(InLoop)
+    for i = 0, InLoop do
+        Add(1, 1)
+    end
+end
+
+local function Subtract(A, B)
+    local Value = A - B;
+end
+
+-- Subtract
+local function SubtractFunction(InLoop)
+    for i = 0, InLoop do
+        Subtract(1, 1)
+    end
+end
+
+local function Multiply(A, B)
+    local Value = A * B;
+end
+
+-- Multiply
+local function MultiplyFunction(InLoop)
+    for i = 0, InLoop do
+        Multiply(1, 1)
+    end
+end
+
+local function Divide(A, B)
+    local Value = A / B;
+end
+
+-- Divide
+local function DivideFunction(InLoop)
+    for i = 0, InLoop do
+        Divide(1, 1)
+    end
+end
+
+-- Static
+local function StaticFunction(InLoop, InTestActor)
+    for i = 0, InLoop do
+        InTestActor.StaticFunction()
+    end
+end
+
+-- Member
+local function MemberFunction(InLoop, InTestActor)
+    for i = 0, InLoop do
+        InTestActor:MemberFunction()
     end
 end
 
@@ -622,7 +716,7 @@ function M:ProcessTest()
 
     local TestMap = UE.TMap(0, 0)
 
-    TestMap:Add(1, 1)
+    TestMap:Add(0, 1)
 
     -- Bool
     self:Exec("SetBoolValue", SetBoolValue, Loop, TestActor, true)
@@ -727,6 +821,11 @@ function M:ProcessTest()
 
     self:Exec("GeArrayValue", GetArrayValue, Loop, TestActor)
 
+    -- TArray Element
+    self:Exec("SetArrayElement", SetArrayElement, Loop, TestActor, 1, 1)
+
+    self:Exec("GetArrayElement", GetArrayValue, Loop, TestActor, 1)
+
     -- TSet
     self:Exec("SeSetValue", SetSetValue, Loop, TestActor, TestSet)
 
@@ -736,6 +835,32 @@ function M:ProcessTest()
     self:Exec("SeMapValue", SetMapValue, Loop, TestActor, TestMap)
 
     self:Exec("GeMapValue", GetMapValue, Loop, TestActor)
+
+    -- TMap Element
+    self:Exec("SetMapElement", SetMapElement, Loop, TestActor, 0, 1)
+
+    self:Exec("GetMapElement", GetMapValue, Loop, TestActor, 0)
+
+    -- Empty
+    self:Exec("EmptyFunction", EmptyFunction, Loop)
+
+    -- Add
+    self:Exec("AddFunction", AddFunction, Loop)
+
+    -- Subtract
+    self:Exec("SubtractFunction", SubtractFunction, Loop)
+
+    -- Multiply
+    self:Exec("MultiplyFunction", MultiplyFunction, Loop)
+
+    -- Divide
+    self:Exec("DivideFunction", DivideFunction, Loop)
+
+    -- Static
+    self:Exec("StaticFunction", StaticFunction, Loop, TestActor)
+
+    -- Member
+    self:Exec("MemberFunction", MemberFunction, Loop, TestActor)
 
     -- Bool
     self:Exec("SetBoolValueFunction", SetBoolValueFunction, Loop, TestActor, true)

@@ -150,9 +150,9 @@ namespace Script.ScriptPluginCompare
             GetClassValue(Loop, TestActor);
 
             // UInterface
-            SetInterfaceValue(Loop, TestActor, TestInterface);
+            // SetInterfaceValue(Loop, TestActor, TestInterface);
 
-            GetInterfaceValue(Loop, TestActor);
+            // GetInterfaceValue(Loop, TestActor);
 
             // TArray
             SetArrayValue(Loop, TestActor, TestArray);
@@ -296,9 +296,9 @@ namespace Script.ScriptPluginCompare
             GetClassValueFunction(Loop, TestActor);
 
             // UInterface
-            SetInterfaceValueFunction(Loop, TestActor, TestInterface);
+            // SetInterfaceValueFunction(Loop, TestActor, TestInterface);
 
-            GetInterfaceValueFunction(Loop, TestActor);
+            // GetInterfaceValueFunction(Loop, TestActor);
 
             // TArray
             SetArrayValueFunction(Loop, TestActor, TestArray);
