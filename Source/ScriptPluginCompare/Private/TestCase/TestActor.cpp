@@ -155,7 +155,7 @@ void ATestActor::SetTextValueFunction(const FText& InTextValue)
 	TextValue = InTextValue;
 }
 
-FText ATestActor::GetTextValueFunction()
+FText ATestActor::GetTextValueFunction() const
 {
 	return TextValue;
 }
@@ -255,7 +255,7 @@ void ATestActor::SetMapValueFunction(const TMap<int32, int32>& InMapValue)
 	MapValue = InMapValue;
 }
 
-TMap<int32, int32> ATestActor::GetMapValueFunction()
+TMap<int32, int32> ATestActor::GetMapValueFunction() const
 {
 	return MapValue;
 }

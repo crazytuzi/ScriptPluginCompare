@@ -7,24 +7,24 @@
 #include "GameFramework/Actor.h"
 #include "TestActor.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTestStruct
 {
 	GENERATED_BODY()
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	int32 Value;
 };
 
-UENUM()
+UENUM(BlueprintType)
 enum ETestEnum
 {
 	TestEnumZero,
 	TestEnumOne
 };
 
-UENUM()
-enum class ETestEnumClass
+UENUM(BlueprintType)
+enum class ETestEnumClass : uint8
 {
 	TestEnumClassZero,
 	TestEnumClassOne
@@ -48,16 +48,16 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	static void StaticFunction();
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void MemberFunction();
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetBoolValueFunction(bool InBoolValue);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	bool GetBoolValueFunction() const;
 
 	UFUNCTION()
@@ -72,22 +72,22 @@ public:
 	UFUNCTION()
 	int16 GetInt16ValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetInt32ValueFunction(int32 InInt32Value);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	int32 GetInt32ValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetInt64ValueFunction(int64 InInt64Value);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	int64 GetInt64ValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetUInt8ValueFunction(uint8 InUInt8Value);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	uint8 GetUInt8ValueFunction() const;
 
 	UFUNCTION()
@@ -108,92 +108,92 @@ public:
 	UFUNCTION()
 	uint64 GetUInt64ValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetFloatValueFunction(float InFloatValue);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	float GetFloatValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetDoubleValueFunction(double InDoubleValue);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	double GetDoubleValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetNameValueFunction(const FName& InNameValue);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	FName GetNameValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetTextValueFunction(const FText& InTextValue);
 
-	UFUNCTION()
-	FText GetTextValueFunction();
+	UFUNCTION(BlueprintCallable)
+	FText GetTextValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetStringValueFunction(const FString& InStringValue);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	FString GetStringValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetEnumValueFunction(ETestEnum InEnumValue);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	ETestEnum GetEnumValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetEnumClassValueFunction(ETestEnumClass InEnumClassValue);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	ETestEnumClass GetEnumClassValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetStructValueFunction(const FTestStruct& InStructValue);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	FTestStruct GetStructValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetObjectValueFunction(ATestActor* InObjectValue);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	ATestActor* GetObjectValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetClassValueFunction(UClass* InClassValue);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	UClass* GetClassValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetInterfaceValueFunction(TScriptInterface<ITestInterface> InInterfaceValue);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	TScriptInterface<ITestInterface> GetInterfaceValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetArrayValueFunction(const TArray<int32>& InArrayValue);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	TArray<int32> GetArrayValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetSetValueFunction(const TSet<int32>& InSetValue);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	TSet<int32> GetSetValueFunction() const;
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetMapValueFunction(const TMap<int32, int32>& InMapValue);
 
-	UFUNCTION()
-	TMap<int32, int32> GetMapValueFunction();
+	UFUNCTION(BlueprintCallable)
+	TMap<int32, int32> GetMapValueFunction() const;
 
 public:
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	bool BoolValue;
 
 	UPROPERTY()
@@ -202,13 +202,13 @@ public:
 	UPROPERTY()
 	int16 Int16Value;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	int32 Int32Value;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	int64 Int64Value;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	uint8 UInt8Value;
 
 	UPROPERTY()
@@ -220,45 +220,45 @@ public:
 	UPROPERTY()
 	uint64 UInt64Value;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	float FloatValue;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	double DoubleValue;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	FName NameValue;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	FText TextValue;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	FString StringValue;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	TEnumAsByte<ETestEnum> EnumValue;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	ETestEnumClass EnumClassValue;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	FTestStruct StructValue;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	ATestActor* ObjectValue;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	UClass* ClassValue;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	TScriptInterface<ITestInterface> InterfaceValue;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	TArray<int32> ArrayValue;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	TSet<int32> SetValue;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	TMap<int32, int32> MapValue;
 };

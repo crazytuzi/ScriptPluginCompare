@@ -15,15 +15,15 @@ class SCRIPTPLUGINCOMPARE_API UTestCaseBlueprintFunctionLibrary : public UBluepr
 	GENERATED_BODY()
 
 public:
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	static double GetTotalSeconds(const FDateTime& A, const FDateTime& B);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	static FString GetPlatform();
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	static FString GetBuildConfiguration();
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	static void SaveStringToFile(FString FileName, const FString& String);
 };
