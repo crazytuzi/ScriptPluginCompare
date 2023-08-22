@@ -14,6 +14,8 @@ ATestActor::ATestActor()
 void ATestActor::BeginPlay()
 {
 	Super::BeginPlay();
+
+	InterfaceValue = this;
 }
 
 // Called every frame

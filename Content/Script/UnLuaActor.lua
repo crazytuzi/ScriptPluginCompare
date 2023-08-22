@@ -248,7 +248,17 @@ local function GetClassValue(InLoop, InTestActor)
 end
 
 -- UInterface 
--- @TODO
+local function SetInterfaceValue(InLoop, InTestActor, InValue)
+    for i = 0, InLoop do
+        InTestActor.InterfaceValue = InValue
+    end
+end
+
+local function GetInterfaceValue(InLoop, InTestActor)
+    for i = 0, InLoop do
+        local Value = InTestActor.InterfaceValue
+    end
+end
 
 -- TArray
 local function SetArrayValue(InLoop, InTestActor, InValue)
@@ -631,7 +641,17 @@ local function GetClassValueFunction(InLoop, InTestActor)
 end
 
 -- UInterface 
--- @TODO
+local function SetInterfaceValueFunction(InLoop, InTestActor, InValue)
+    for i = 0, InLoop do
+        InTestActor:SetInterfaceValueFunction(InValue)
+    end
+end
+
+local function GetInterfaceValueFunction(InLoop, InTestActor)
+    for i = 0, InLoop do
+        local Value = InTestActor:GetInterfaceValueFunction()
+    end
+end
 
 -- TArray
 local function SetArrayValueFunction(InLoop, InTestActor, InValue)
@@ -697,6 +717,8 @@ function M:ProcessTest()
     local TestActor = self:GetWorld():SpawnActor(UE.ATestActor)
 
     local TestClass = TestActor:GetClass()
+
+    local TestInterface = TestActor.InterfaceValue
 
     local TestStruct = UE.FTestStruct()
 
@@ -766,22 +788,22 @@ function M:ProcessTest()
     -- Float
     self:Exec("SetFloatValue", SetFloatValue, Loop, TestActor, 1.0)
 
-    self:Exec("GeFloatValue", GetFloatValue, Loop, TestActor)
+    self:Exec("GetFloatValue", GetFloatValue, Loop, TestActor)
 
     -- Double
     self:Exec("SetDoubleValue", SetDoubleValue, Loop, TestActor, 1.0)
 
-    self:Exec("GeDoubleValue", GetDoubleValue, Loop, TestActor)
+    self:Exec("GetDoubleValue", GetDoubleValue, Loop, TestActor)
 
     -- FName
     self:Exec("SetNameValue", SetNameValue, Loop, TestActor, "Name")
 
-    self:Exec("GeNameValue", GetNameValue, Loop, TestActor)
+    self:Exec("GetNameValue", GetNameValue, Loop, TestActor)
 
     -- FText
     self:Exec("SetTextValue", SetNameValue, Loop, TestActor, "Text")
 
-    self:Exec("GeTextValue", GetNameValue, Loop, TestActor)
+    self:Exec("GetTextValue", GetNameValue, Loop, TestActor)
 
     -- FString
     self:Exec("SetStringValue", SetStringValue, Loop, TestActor, "String")
@@ -791,35 +813,37 @@ function M:ProcessTest()
     -- UEnum
     self:Exec("SetEnumValue", SetEnumValue, Loop, TestActor, TestEnum)
 
-    self:Exec("GeEnumValue", GetEnumValue, Loop, TestActor)
+    self:Exec("GetEnumValue", GetEnumValue, Loop, TestActor)
 
     -- UEnum Class
     self:Exec("SetEnumClassValue", SetEnumClassValue, Loop, TestActor, TestEnumClass)
 
-    self:Exec("GeEnumClassValue", GetEnumClassValue, Loop, TestActor)
+    self:Exec("GetEnumClassValue", GetEnumClassValue, Loop, TestActor)
 
     -- UStruct
     self:Exec("SetStructValue", SetStructValue, Loop, TestActor, TestStruct)
 
-    self:Exec("GeStructValue", GetStructValue, Loop, TestActor)
+    self:Exec("GetStructValue", GetStructValue, Loop, TestActor)
 
     -- UObject
     self:Exec("SetObjectValue", SetObjectValue, Loop, TestActor, TestActor)
 
-    self:Exec("GeObjectValue", GetObjectValue, Loop, TestActor)
+    self:Exec("GetObjectValue", GetObjectValue, Loop, TestActor)
 
     -- UClass
     self:Exec("SetClassValue", SetClassValue, Loop, TestActor, TestClass)
 
-    self:Exec("GeClassValue", GetClassValue, Loop, TestActor)
+    self:Exec("GetClassValue", GetClassValue, Loop, TestActor)
 
     -- UInterface 
-    -- @TODO
+    self:Exec("SetInterfaceValue", SetInterfaceValue, Loop, TestActor, TestInterface)
+
+    self:Exec("GetInterfaceValue", GetInterfaceValue, Loop, TestActor)
 
     -- TArray
     self:Exec("SeArrayValue", SetArrayValue, Loop, TestActor, TestArray)
 
-    self:Exec("GeArrayValue", GetArrayValue, Loop, TestActor)
+    self:Exec("GetArrayValue", GetArrayValue, Loop, TestActor)
 
     -- TArray Element
     self:Exec("SetArrayElement", SetArrayElement, Loop, TestActor, 1, 1)
@@ -829,12 +853,12 @@ function M:ProcessTest()
     -- TSet
     self:Exec("SeSetValue", SetSetValue, Loop, TestActor, TestSet)
 
-    self:Exec("GeSetValue", GetSetValue, Loop, TestActor)
+    self:Exec("GetSetValue", GetSetValue, Loop, TestActor)
 
     -- TMap
     self:Exec("SeMapValue", SetMapValue, Loop, TestActor, TestMap)
 
-    self:Exec("GeMapValue", GetMapValue, Loop, TestActor)
+    self:Exec("GetMapValue", GetMapValue, Loop, TestActor)
 
     -- TMap Element
     self:Exec("SetMapElement", SetMapElement, Loop, TestActor, 0, 1)
@@ -920,32 +944,32 @@ function M:ProcessTest()
     -- FName
     self:Exec("SetNameValueFunction", SetNameValueFunction, Loop, TestActor, "Name")
 
-    self:Exec("GeNameValueFunction", GetNameValueFunction, Loop, TestActor)
+    self:Exec("GetNameValueFunction", GetNameValueFunction, Loop, TestActor)
 
     -- FText
     self:Exec("SetTextValueFunction", SetTextValueFunction, Loop, TestActor, "Text")
 
-    self:Exec("GeTextValueFunction", GetTextValueFunction, Loop, TestActor)
+    self:Exec("GetTextValueFunction", GetTextValueFunction, Loop, TestActor)
 
     -- FString
     self:Exec("SetStringValueFunction", SetStringValueFunction, Loop, TestActor, "String")
 
-    self:Exec("GeStringValueFunction", GetStringValueFunction, Loop, TestActor)
+    self:Exec("GetStringValueFunction", GetStringValueFunction, Loop, TestActor)
 
     -- UEnum
     self:Exec("SetEnumValueFunction", SetEnumValueFunction, Loop, TestActor, TestEnum)
 
-    self:Exec("GeEnumValueFunction", GetEnumValueFunction, Loop, TestActor)
+    self:Exec("GetEnumValueFunction", GetEnumValueFunction, Loop, TestActor)
 
     -- UEnum Class
     self:Exec("SetEnumClassValueFunction", SetEnumClassValueFunction, Loop, TestActor, TestEnumClass)
 
-    self:Exec("GeEnumClassValueFunction", GetEnumClassValueFunction, Loop, TestActor)
+    self:Exec("GetEnumClassValueFunction", GetEnumClassValueFunction, Loop, TestActor)
 
     -- UStruct
     self:Exec("SetStructValueFunction", SetStructValueFunction, Loop, TestActor, TestStruct)
 
-    self:Exec("GeStructValueFunction", GetStructValueFunction, Loop, TestActor)
+    self:Exec("GetStructValueFunction", GetStructValueFunction, Loop, TestActor)
 
     -- UObject
     self:Exec("SetObjectValueFunction", SetObjectValueFunction, Loop, TestActor, TestActor)
@@ -958,7 +982,9 @@ function M:ProcessTest()
     self:Exec("GetClassValueFunction", GetClassValueFunction, Loop, TestActor)
 
     -- UInterface 
-    -- @TODO
+    self:Exec("SetInterfaceValueFunction", SetInterfaceValueFunction, Loop, TestActor, TestInterface)
+
+    self:Exec("GetInterfaceValueFunction", GetInterfaceValueFunction, Loop, TestActor)
 
     -- TArray
     self:Exec("SetArrayValueFunction", SetArrayValueFunction, Loop, TestActor, TestArray)
