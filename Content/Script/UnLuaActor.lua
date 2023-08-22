@@ -1,5 +1,59 @@
 local M = UnLua.Class()
 
+local function Empty()
+end
+
+-- Empty
+local function EmptyFunction(InLoop)
+    for i = 0, InLoop do
+        Empty()
+    end
+end
+
+local function Add(A, B)
+    local Value = A + B;
+end
+
+-- Add
+local function AddFunction(InLoop)
+    for i = 0, InLoop do
+        Add(1, 1)
+    end
+end
+
+local function Subtract(A, B)
+    local Value = A - B;
+end
+
+-- Subtract
+local function SubtractFunction(InLoop)
+    for i = 0, InLoop do
+        Subtract(1, 1)
+    end
+end
+
+local function Multiply(A, B)
+    local Value = A * B;
+end
+
+-- Multiply
+local function MultiplyFunction(InLoop)
+    for i = 0, InLoop do
+        Multiply(1, 1)
+    end
+end
+
+local function Divide(A, B)
+    local Value = A / B;
+end
+
+-- Divide
+local function DivideFunction(InLoop)
+    for i = 0, InLoop do
+        Divide(1, 1)
+    end
+end
+
 -- Bool
 local function SetCppBoolValue(InLoop, InObject, InValue)
     for i = 0, InLoop do
@@ -325,60 +379,6 @@ local function GetCppMapElement(InLoop, InObject, InIndex)
     end
 end
 
-local function Empty()
-end
-
--- Empty
-local function EmptyFunction(InLoop)
-    for i = 0, InLoop do
-        Empty()
-    end
-end
-
-local function Add(A, B)
-    local Value = A + B;
-end
-
--- Add
-local function AddFunction(InLoop)
-    for i = 0, InLoop do
-        Add(1, 1)
-    end
-end
-
-local function Subtract(A, B)
-    local Value = A - B;
-end
-
--- Subtract
-local function SubtractFunction(InLoop)
-    for i = 0, InLoop do
-        Subtract(1, 1)
-    end
-end
-
-local function Multiply(A, B)
-    local Value = A * B;
-end
-
--- Multiply
-local function MultiplyFunction(InLoop)
-    for i = 0, InLoop do
-        Multiply(1, 1)
-    end
-end
-
-local function Divide(A, B)
-    local Value = A / B;
-end
-
--- Divide
-local function DivideFunction(InLoop)
-    for i = 0, InLoop do
-        Divide(1, 1)
-    end
-end
-
 -- Static
 local function StaticCppFunction(InLoop, InObject)
     for i = 0, InLoop do
@@ -692,6 +692,488 @@ local function GetCppMapValueFunction(InLoop, InObject)
     end
 end
 
+-- Bool
+local function SetBPBoolValue(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.BoolValue = InValue
+    end
+end
+
+local function GetBPBoolValue(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.BoolValue
+    end
+end
+
+-- Int32
+local function SetBPInt32Value(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.Int32Value = InValue
+    end
+end
+
+local function GetBPInt32Value(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.Int32Value
+    end
+end
+
+-- Int64
+local function SetBPInt64Value(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.Int64Value = InValue
+    end
+end
+
+local function GetBPInt64Value(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.Int64Value
+    end
+end
+
+-- UInt8
+local function SetBPUInt8Value(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.UInt8Value = InValue
+    end
+end
+
+local function GetBPUInt8Value(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.UInt8Value
+    end
+end
+
+-- Double
+local function SetBPDoubleValue(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.DoubleValue = InValue
+    end
+end
+
+local function GetBPDoubleValue(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.DoubleValue
+    end
+end
+
+-- FName
+local function SetBPNameValue(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.NameValue = InValue
+    end
+end
+
+local function GetBPNameValue(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.NameValue
+    end
+end
+
+-- FText
+local function SetBPTextValue(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.TextValue = InValue
+    end
+end
+
+local function GetBPTextValue(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.TextValue
+    end
+end
+
+-- FString
+local function SetBPStringValue(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.StringValue = InValue
+    end
+end
+
+local function GetBPStringValue(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.StringValue
+    end
+end
+
+-- UEnum
+local function SetBPEnumValue(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.EnumValue = InValue
+    end
+end
+
+local function GetBPEnumValue(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.EnumValue
+    end
+end
+
+-- UEnum Class
+local function SetBPEnumClassValue(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.EnumClassValue = InValue
+    end
+end
+
+local function GetBPEnumClassValue(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.EnumClassValue
+    end
+end
+
+-- UStruct
+local function SetBPStructValue(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.StructValue = InValue
+    end
+end
+
+local function GetBPStructValue(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.StructValue
+    end
+end
+
+-- UObject
+local function SetBPObjectValue(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.ObjectValue = InValue
+    end
+end
+
+local function GetBPObjectValue(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.ObjectValue
+    end
+end
+
+-- UClass
+local function SetBPClassValue(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.ClassValue = InValue
+    end
+end
+
+local function GetBPClassValue(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.ClassValue
+    end
+end
+
+-- UInterface 
+local function SetBPInterfaceValue(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.InterfaceValue = InValue
+    end
+end
+
+local function GetBPInterfaceValue(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.InterfaceValue
+    end
+end
+
+-- TArray
+local function SetBPArrayValue(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.ArrayValue = InValue
+    end
+end
+
+local function GetBPArrayValue(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.ArrayValue
+    end
+end
+
+-- TArray Element
+local function SetBPArrayElement(InLoop, InObject, InIndex, InValue)
+    for i = 0, InLoop do
+        InObject.ArrayValue[InIndex] = InValue
+    end
+end
+
+local function GetBPArrayElement(InLoop, InObject, InIndex)
+    for i = 0, InLoop do
+        local Value = InObject.ArrayValue[InIndex]
+    end
+end
+
+-- TSet
+local function SetBPSetValue(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.SetValue = InValue
+    end
+end
+
+local function GetBPSetValue(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.SetValue
+    end
+end
+
+-- TMap
+local function SetBPMapValue(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject.MapValue = InValue
+    end
+end
+
+local function GetBPMapValue(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject.MapValue
+    end
+end
+
+-- TMap Element
+local function SetBPMapElement(InLoop, InObject, InIndex, InValue)
+    for i = 0, InLoop do
+        InObject.MapValue:Add(InIndex, InValue)
+    end
+end
+
+local function GetBPMapElement(InLoop, InObject, InIndex)
+    for i = 0, InLoop do
+        local Value = InObject.MapValue:Find(InIndex)
+    end
+end
+
+-- Static
+local function StaticBPFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        InObject:StaticFunction()
+    end
+end
+
+-- Member
+local function MemberBPFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        InObject:MemberFunction()
+    end
+end
+
+-- Bool
+local function SetBPBoolValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetBoolValueFunction(InValue)
+    end
+end
+
+local function GetBPBoolValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetBoolValueFunction()
+    end
+end
+
+-- Int32
+local function SetBPInt32ValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetInt32ValueFunction(InValue)
+    end
+end
+
+local function GetBPInt32ValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetInt32ValueFunction()
+    end
+end
+
+-- Int64
+local function SetBPInt64ValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetInt64ValueFunction(InValue)
+    end
+end
+
+local function GetBPInt64ValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetInt64ValueFunction()
+    end
+end
+
+-- UInt8
+local function SetBPUInt8ValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetUInt8ValueFunction(InValue)
+    end
+end
+
+local function GetBPUInt8ValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetUInt8ValueFunction()
+    end
+end
+
+-- Double
+local function SetBPDoubleValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetDoubleValueFunction(InValue)
+    end
+end
+
+local function GetBPDoubleValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetDoubleValueFunction()
+    end
+end
+
+-- FName
+local function SetBPNameValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetNameValueFunction(InValue)
+    end
+end
+
+local function GetBPNameValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetNameValueFunction()
+    end
+end
+
+-- FText
+local function SetBPTextValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetTextValueFunction(InValue)
+    end
+end
+
+local function GetBPTextValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetTextValueFunction()
+    end
+end
+
+-- FString
+local function SetBPStringValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetStringValueFunction(InValue)
+    end
+end
+
+local function GetBPStringValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetStringValueFunction()
+    end
+end
+
+-- UEnum
+local function SetBPEnumValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetEnumValueFunction(InValue)
+    end
+end
+
+local function GetBPEnumValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetEnumValueFunction()
+    end
+end
+
+-- UEnum Class
+local function SetBPEnumClassValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetEnumClassValueFunction(InValue)
+    end
+end
+
+local function GetBPEnumClassValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetEnumClassValueFunction()
+    end
+end
+
+-- UStruct
+local function SetBPStructValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetStructValueFunction(InValue)
+    end
+end
+
+local function GetBPStructValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetStructValueFunction()
+    end
+end
+
+-- UObject
+local function SetBPObjectValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetObjectValueFunction(InValue)
+    end
+end
+
+local function GetBPObjectValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetObjectValueFunction()
+    end
+end
+
+-- UClass
+local function SetBPClassValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetClassValueFunction(InValue)
+    end
+end
+
+local function GetBPClassValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetClassValueFunction()
+    end
+end
+
+-- UInterface 
+local function SetBPInterfaceValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetInterfaceValueFunction(InValue)
+    end
+end
+
+local function GetBPInterfaceValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetInterfaceValueFunction()
+    end
+end
+
+-- TArray
+local function SetBPArrayValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetArrayValueFunction(InValue)
+    end
+end
+
+local function GetBPArrayValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetArrayValueFunction()
+    end
+end
+
+-- TSet
+local function SetBPSetValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetSetValueFunction(InValue)
+    end
+end
+
+local function GetBPSetValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetSetValueFunction()
+    end
+end
+
+-- TMap
+local function SetBPMapValueFunction(InLoop, InObject, InValue)
+    for i = 0, InLoop do
+        InObject:SetMapValueFunction(InValue)
+    end
+end
+
+local function GetBPMapValueFunction(InLoop, InObject)
+    for i = 0, InLoop do
+        local Value = InObject:GetMapValueFunction()
+    end
+end
+
 function M:Exec(InName, InFunction, ...)
     local Start = UE.UKismetMathLibrary.Now()
 
@@ -707,11 +1189,26 @@ function M:Exec(InName, InFunction, ...)
     })
 end
 
-function M:StartTest()
-    self.Data = {}
+function M:TestSelf()
+    local Loop = self.Loop
+
+    -- Empty
+    self:Exec("EmptyFunction", EmptyFunction, Loop)
+
+    -- Add
+    self:Exec("AddFunction", AddFunction, Loop)
+
+    -- Subtract
+    self:Exec("SubtractFunction", SubtractFunction, Loop)
+
+    -- Multiply
+    self:Exec("MultiplyFunction", MultiplyFunction, Loop)
+
+    -- Divide
+    self:Exec("DivideFunction", DivideFunction, Loop)
 end
 
-function M:ProcessTest()
+function M:TestCpp()
     local Loop = self.Loop
 
     local TestActor = self:GetWorld():SpawnActor(UE.ATestActor)
@@ -843,7 +1340,7 @@ function M:ProcessTest()
     -- TArray
     self:Exec("SeCppArrayValue", SetCppArrayValue, Loop, TestActor, TestArray)
 
-    self:Exec("GeCpptArrayValue", GetCppArrayValue, Loop, TestActor)
+    self:Exec("GeCppArrayValue", GetCppArrayValue, Loop, TestActor)
 
     -- TArray Element
     self:Exec("SetCppArrayElement", SetCppArrayElement, Loop, TestActor, 1, 1)
@@ -864,21 +1361,6 @@ function M:ProcessTest()
     self:Exec("SetCppMapElement", SetCppMapElement, Loop, TestActor, 0, 1)
 
     self:Exec("GetCppMapElement", GetCppMapValue, Loop, TestActor, 0)
-
-    -- Empty
-    self:Exec("EmptyFunction", EmptyFunction, Loop)
-
-    -- Add
-    self:Exec("AddFunction", AddFunction, Loop)
-
-    -- Subtract
-    self:Exec("SubtractFunction", SubtractFunction, Loop)
-
-    -- Multiply
-    self:Exec("MultiplyFunction", MultiplyFunction, Loop)
-
-    -- Divide
-    self:Exec("DivideFunction", DivideFunction, Loop)
 
     -- Static
     self:Exec("StaticCppFunction", StaticCppFunction, Loop, TestActor)
@@ -974,7 +1456,7 @@ function M:ProcessTest()
     -- UObject
     self:Exec("SetCppObjectValueFunction", SetCppObjectValueFunction, Loop, TestActor, TestActor)
 
-    self:Exec("GeCpptObjectValueFunction", GetCppObjectValueFunction, Loop, TestActor)
+    self:Exec("GetCppObjectValueFunction", GetCppObjectValueFunction, Loop, TestActor)
 
     -- UClass
     self:Exec("SetCppClassValueFunction", SetCppClassValueFunction, Loop, TestActor, TestClass)
@@ -1000,6 +1482,235 @@ function M:ProcessTest()
     self:Exec("SetCppMapValueFunction", SetCppMapValueFunction, Loop, TestActor, TestMap)
 
     self:Exec("GetCppMapValueFunction", GetCppMapValueFunction, Loop, TestActor)
+end
+
+function M:TestBP()
+    local Loop = self.Loop
+
+    local TestActor = self:GetWorld():SpawnActor(UE.UClass.Load(
+        "/Game/FirstPerson/Blueprints/BP_TestActor.BP_TestActor_C"))
+
+    local TestClass = TestActor:GetClass()
+
+    local TestInterface = TestActor.InterfaceValue
+
+    local TestStruct = UE.FTestStruct()
+
+    TestStruct.Value = 1
+
+    local TestEnum = UE.ETestEnum.TestEnumOne
+
+    local TestEnumClass = UE.ETestEnumClass.TestEnumClassOne
+
+    local TestArray = UE.TArray(0)
+
+    TestArray:Add(1)
+
+    local TestSet = UE.TSet(0)
+
+    TestSet:Add(1)
+
+    local TestMap = UE.TMap(0, 0)
+
+    TestMap:Add(0, 1)
+
+    -- Bool
+    self:Exec("SetBPBoolValue", SetBPBoolValue, Loop, TestActor, true)
+
+    self:Exec("GetBPBoolValue", GetBPBoolValue, Loop, TestActor)
+
+    -- Int32
+    self:Exec("SetBPInt32Value", SetBPInt32Value, Loop, TestActor, 1)
+
+    self:Exec("GetBPInt32Value", GetBPInt32Value, Loop, TestActor)
+
+    -- Int64
+    self:Exec("SetBPInt64Value", SetBPInt64Value, Loop, TestActor, 1)
+
+    self:Exec("GetBPInt64Value", GetBPInt64Value, Loop, TestActor)
+
+    -- UInt8
+    self:Exec("SetBPUInt8Value", SetBPUInt8Value, Loop, TestActor, 1)
+
+    self:Exec("GetBPUInt8Value", GetBPUInt8Value, Loop, TestActor)
+
+    -- Double
+    self:Exec("SetBPDoubleValue", SetBPDoubleValue, Loop, TestActor, 1.0)
+
+    self:Exec("GetBPDoubleValue", GetBPDoubleValue, Loop, TestActor)
+
+    -- FName
+    self:Exec("SetBPNameValue", SetBPNameValue, Loop, TestActor, "Name")
+
+    self:Exec("GetBPNameValue", GetBPNameValue, Loop, TestActor)
+
+    -- FText
+    self:Exec("SetBPTextValue", SetBPNameValue, Loop, TestActor, "Text")
+
+    self:Exec("GetBPTextValue", GetBPNameValue, Loop, TestActor)
+
+    -- FString
+    self:Exec("SetBPStringValue", SetBPStringValue, Loop, TestActor, "String")
+
+    self:Exec("GetBPStringValue", GetBPStringValue, Loop, TestActor)
+
+    -- UEnum
+    self:Exec("SetBPEnumValue", SetBPEnumValue, Loop, TestActor, TestEnum)
+
+    self:Exec("GetBPEnumValue", GetBPEnumValue, Loop, TestActor)
+
+    -- UEnum Class
+    self:Exec("SetBPEnumClassValue", SetBPEnumClassValue, Loop, TestActor, TestEnumClass)
+
+    self:Exec("GetBPEnumClassValue", GetBPEnumClassValue, Loop, TestActor)
+
+    -- UStruct
+    self:Exec("SetBPStructValue", SetBPStructValue, Loop, TestActor, TestStruct)
+
+    self:Exec("GetBPStructValue", GetBPStructValue, Loop, TestActor)
+
+    -- UObject
+    self:Exec("SetBPObjectValue", SetBPObjectValue, Loop, TestActor, TestActor)
+
+    self:Exec("GetBPObjectValue", GetBPObjectValue, Loop, TestActor)
+
+    -- UClass
+    self:Exec("SetBPClassValue", SetBPClassValue, Loop, TestActor, TestClass)
+
+    self:Exec("GetBPClassValue", GetBPClassValue, Loop, TestActor)
+
+    -- UInterface 
+    self:Exec("SetBPInterfaceValue", SetBPInterfaceValue, Loop, TestActor, TestInterface)
+
+    self:Exec("GetBPInterfaceValue", GetBPInterfaceValue, Loop, TestActor)
+
+    -- TArray
+    self:Exec("SeBPArrayValue", SetBPArrayValue, Loop, TestActor, TestArray)
+
+    self:Exec("GeBPArrayValue", GetBPArrayValue, Loop, TestActor)
+
+    -- TArray Element
+    self:Exec("SetBPArrayElement", SetBPArrayElement, Loop, TestActor, 1, 1)
+
+    self:Exec("GetBPArrayElement", GetBPArrayValue, Loop, TestActor, 1)
+
+    -- TSet
+    self:Exec("SetBPSetValue", SetBPSetValue, Loop, TestActor, TestSet)
+
+    self:Exec("GetBPSetValue", GetBPSetValue, Loop, TestActor)
+
+    -- TMap
+    self:Exec("SeBPMapValue", SetBPMapValue, Loop, TestActor, TestMap)
+
+    self:Exec("GetBPMapValue", GetBPMapValue, Loop, TestActor)
+
+    -- TMap Element
+    self:Exec("SetBPMapElement", SetBPMapElement, Loop, TestActor, 0, 1)
+
+    self:Exec("GetBPMapElement", GetBPMapValue, Loop, TestActor, 0)
+
+    -- Static
+    self:Exec("StaticBPFunction", StaticBPFunction, Loop, TestActor)
+
+    -- Member
+    self:Exec("MemberBPFunction", MemberBPFunction, Loop, TestActor)
+
+    -- Bool
+    self:Exec("SetBPBoolValueFunction", SetBPBoolValueFunction, Loop, TestActor, true)
+
+    self:Exec("GetBPBoolValueFunction", GetBPBoolValueFunction, Loop, TestActor)
+
+    -- Int32
+    self:Exec("SetBPInt32ValueFunction", SetBPInt32ValueFunction, Loop, TestActor, 1)
+
+    self:Exec("GetBPInt32ValueFunction", GetBPInt32ValueFunction, Loop, TestActor)
+
+    -- Int64
+    self:Exec("SetBPInt64ValueFunction", SetBPInt64ValueFunction, Loop, TestActor, 1)
+
+    self:Exec("GetBPInt64ValueFunction", GetBPInt64ValueFunction, Loop, TestActor)
+
+    -- UInt8
+    self:Exec("SetBPUInt8ValueFunction", SetBPUInt8ValueFunction, Loop, TestActor, 1)
+
+    self:Exec("GetBPUInt8ValueFunction", GetBPUInt8ValueFunction, Loop, TestActor)
+
+    -- Double
+    self:Exec("SetBPDoubleValueFunction", SetBPDoubleValueFunction, Loop, TestActor, 1.0)
+
+    self:Exec("GetBPDoubleValueFunction", GetBPDoubleValueFunction, Loop, TestActor)
+
+    -- FName
+    self:Exec("SetBPNameValueFunction", SetBPNameValueFunction, Loop, TestActor, "Name")
+
+    self:Exec("GetBPNameValueFunction", GetBPNameValueFunction, Loop, TestActor)
+
+    -- FText
+    self:Exec("SetBPTextValueFunction", SetBPTextValueFunction, Loop, TestActor, "Text")
+
+    self:Exec("GetBPTextValueFunction", GetBPTextValueFunction, Loop, TestActor)
+
+    -- FString
+    self:Exec("SetBPStringValueFunction", SetBPStringValueFunction, Loop, TestActor, "String")
+
+    self:Exec("GetBPStringValueFunction", GetBPStringValueFunction, Loop, TestActor)
+
+    -- UEnum
+    self:Exec("SetBPEnumValueFunction", SetBPEnumValueFunction, Loop, TestActor, TestEnum)
+
+    self:Exec("GetBPEnumValueFunction", GetBPEnumValueFunction, Loop, TestActor)
+
+    -- UEnum Class
+    self:Exec("SetBPEnumClassValueFunction", SetBPEnumClassValueFunction, Loop, TestActor, TestEnumClass)
+
+    self:Exec("GetBPEnumClassValueFunction", GetBPEnumClassValueFunction, Loop, TestActor)
+
+    -- UStruct
+    self:Exec("SetBPStructValueFunction", SetBPStructValueFunction, Loop, TestActor, TestStruct)
+
+    self:Exec("GetBPStructValueFunction", GetBPStructValueFunction, Loop, TestActor)
+
+    -- UObject
+    self:Exec("SetBPObjectValueFunction", SetBPObjectValueFunction, Loop, TestActor, TestActor)
+
+    self:Exec("GetBPObjectValueFunction", GetBPObjectValueFunction, Loop, TestActor)
+
+    -- UClass
+    self:Exec("SetBPClassValueFunction", SetBPClassValueFunction, Loop, TestActor, TestClass)
+
+    self:Exec("GetBPClassValueFunction", GetBPClassValueFunction, Loop, TestActor)
+
+    -- UInterface 
+    self:Exec("SetBPInterfaceValueFunction", SetBPInterfaceValueFunction, Loop, TestActor, TestInterface)
+
+    self:Exec("GetBPInterfaceValueFunction", GetBPInterfaceValueFunction, Loop, TestActor)
+
+    -- TArray
+    self:Exec("SetBPArrayValueFunction", SetBPArrayValueFunction, Loop, TestActor, TestArray)
+
+    self:Exec("GetBPArrayValueFunction", GetBPArrayValueFunction, Loop, TestActor)
+
+    -- TSet
+    self:Exec("SetBPSetValueFunction", SetBPSetValueFunction, Loop, TestActor, TestSet)
+
+    self:Exec("GetBPSetValueFunction", GetBPSetValueFunction, Loop, TestActor)
+
+    -- TMap
+    self:Exec("SetBPMapValueFunction", SetBPMapValueFunction, Loop, TestActor, TestMap)
+
+    self:Exec("GetBPMapValueFunction", GetBPMapValueFunction, Loop, TestActor)
+end
+
+function M:StartTest()
+    self.Data = {}
+end
+
+function M:ProcessTest()
+    self:TestSelf()
+
+    self:TestCpp()
+
+    self:TestBP()
 end
 
 function M:EndTest()
