@@ -55,129 +55,129 @@ namespace Script.ScriptPluginCompare
             var TestMap = new TMap<Int32, Int32> { { 0, 1 } };
 
             // Bool
-            SetBoolValue(Loop, TestActor, true);
+            SetCppBoolValue(Loop, TestActor, true);
 
-            GetBoolValue(Loop, TestActor);
+            GetCppBoolValue(Loop, TestActor);
 
             // Int8
-            SetInt8Value(Loop, TestActor, 1);
+            SetCppInt8Value(Loop, TestActor, 1);
 
-            GetInt8Value(Loop, TestActor);
+            GetCppInt8Value(Loop, TestActor);
 
             // Int16
-            SetInt16Value(Loop, TestActor, 1);
+            SetCppInt16Value(Loop, TestActor, 1);
 
-            GetInt16Value(Loop, TestActor);
+            GetCppInt16Value(Loop, TestActor);
 
             // Int32
-            SetInt32Value(Loop, TestActor, 1);
+            SetCppInt32Value(Loop, TestActor, 1);
 
-            GetInt32Value(Loop, TestActor);
+            GetCppInt32Value(Loop, TestActor);
 
             // Int64
-            SetInt64Value(Loop, TestActor, 1);
+            SetCppInt64Value(Loop, TestActor, 1);
 
-            GetInt64Value(Loop, TestActor);
+            GetCppInt64Value(Loop, TestActor);
 
             // UInt8
-            SetUInt8Value(Loop, TestActor, 1);
+            SetCppUInt8Value(Loop, TestActor, 1);
 
-            GetUInt8Value(Loop, TestActor);
+            GetCppUInt8Value(Loop, TestActor);
 
             // UInt16
-            SetUInt16Value(Loop, TestActor, 1);
+            SetCppUInt16Value(Loop, TestActor, 1);
 
-            GetUInt16Value(Loop, TestActor);
+            GetCppUInt16Value(Loop, TestActor);
 
             // UInt32
-            SetUInt32Value(Loop, TestActor, 1);
+            SetCppUInt32Value(Loop, TestActor, 1);
 
-            GetUInt32Value(Loop, TestActor);
+            GetCppUInt32Value(Loop, TestActor);
 
             // UInt64
-            SetUInt64Value(Loop, TestActor, 1);
+            SetCppUInt64Value(Loop, TestActor, 1);
 
-            GetUInt64Value(Loop, TestActor);
+            GetCppUInt64Value(Loop, TestActor);
 
             // Float
-            SetFloatValue(Loop, TestActor, 1.0f);
+            SetCppFloatValue(Loop, TestActor, 1.0f);
 
-            GetFloatValue(Loop, TestActor);
+            GetCppFloatValue(Loop, TestActor);
 
             // Double
-            SetDoubleValue(Loop, TestActor, 1.0);
+            SetCppDoubleValue(Loop, TestActor, 1.0);
 
-            GetDoubleValue(Loop, TestActor);
+            GetCppDoubleValue(Loop, TestActor);
 
             // FName
-            SetNameValue(Loop, TestActor, "Name");
+            SetCppNameValue(Loop, TestActor, "Name");
 
-            GetNameValue(Loop, TestActor);
+            GetCppNameValue(Loop, TestActor);
 
             // FText
-            SetTextValue(Loop, TestActor, "Text");
+            SetCppTextValue(Loop, TestActor, "Text");
 
-            GetTextValue(Loop, TestActor);
+            GetCppTextValue(Loop, TestActor);
 
             // FString
-            SetStringValue(Loop, TestActor, "String");
+            SetCppStringValue(Loop, TestActor, "String");
 
-            GetStringValue(Loop, TestActor);
+            GetCppStringValue(Loop, TestActor);
 
             // UEnum
-            SetEnumValue(Loop, TestActor, TestEnum);
+            SetCppEnumValue(Loop, TestActor, TestEnum);
 
-            GetEnumValue(Loop, TestActor);
+            GetCppEnumValue(Loop, TestActor);
 
             // UEnum Class
-            SetEnumClassValue(Loop, TestActor, TestEnumClass);
+            SetCppEnumClassValue(Loop, TestActor, TestEnumClass);
 
-            GetEnumClassValue(Loop, TestActor);
+            GetCppEnumClassValue(Loop, TestActor);
 
             // UStruct
-            SetStructValue(Loop, TestActor, TestStruct);
+            SetCppStructValue(Loop, TestActor, TestStruct);
 
-            GetStructValue(Loop, TestActor);
+            GetCppStructValue(Loop, TestActor);
 
             // UObject
-            SetObjectValue(Loop, TestActor, TestActor);
+            SetCppObjectValue(Loop, TestActor, TestActor);
 
-            GetObjectValue(Loop, TestActor);
+            GetCppObjectValue(Loop, TestActor);
 
             // UClass
-            SetClassValue(Loop, TestActor, TestClass);
+            SetCppClassValue(Loop, TestActor, TestClass);
 
-            GetClassValue(Loop, TestActor);
+            GetCppClassValue(Loop, TestActor);
 
             // UInterface
-            SetInterfaceValue(Loop, TestActor, TestInterface);
+            SetCppInterfaceValue(Loop, TestActor, TestInterface);
 
-            GetInterfaceValue(Loop, TestActor);
+            GetCppInterfaceValue(Loop, TestActor);
 
             // TArray
-            SetArrayValue(Loop, TestActor, TestArray);
+            SetCppArrayValue(Loop, TestActor, TestArray);
 
-            GetArrayValue(Loop, TestActor);
+            GetCppArrayValue(Loop, TestActor);
 
             // TArray Element
-            SetArrayElement(Loop, TestActor, 0, 1);
+            SetCppArrayElement(Loop, TestActor, 0, 1);
 
-            GetArrayElement(Loop, TestActor, 0);
+            GetCppArrayElement(Loop, TestActor, 0);
 
             // TSet
-            SetSetValue(Loop, TestActor, TestSet);
+            SetCppSetValue(Loop, TestActor, TestSet);
 
-            GetSetValue(Loop, TestActor);
+            GetCppSetValue(Loop, TestActor);
 
             // TMap
-            SetMapValue(Loop, TestActor, TestMap);
+            SetCppMapValue(Loop, TestActor, TestMap);
 
-            GetMapValue(Loop, TestActor);
+            GetCppMapValue(Loop, TestActor);
 
             // TMap Element
-            SetMapElement(Loop, TestActor, 0, 1);
+            SetCppMapElement(Loop, TestActor, 0, 1);
 
-            GetMapElement(Loop, TestActor, 0);
+            GetCppMapElement(Loop, TestActor, 0);
 
             // Empty
             EmptyFunction(Loop);
@@ -195,125 +195,125 @@ namespace Script.ScriptPluginCompare
             DivideFunction(Loop);
 
             // Static
-            StaticFunction(Loop);
+            StaticCppFunction(Loop);
 
             // Member
-            MemberFunction(Loop, TestActor);
+            MemberCppFunction(Loop, TestActor);
 
             // Bool
-            SetBoolValueFunction(Loop, TestActor, true);
+            SetCppBoolValueFunction(Loop, TestActor, true);
 
-            GetBoolValueFunction(Loop, TestActor);
+            GetCppBoolValueFunction(Loop, TestActor);
 
             // Int8
-            SetInt8ValueFunction(Loop, TestActor, 1);
+            SetCppInt8ValueFunction(Loop, TestActor, 1);
 
-            GetInt8ValueFunction(Loop, TestActor);
+            GetCppInt8ValueFunction(Loop, TestActor);
 
             // Int16
-            SetInt16ValueFunction(Loop, TestActor, 1);
+            SetCppInt16ValueFunction(Loop, TestActor, 1);
 
-            GetInt16ValueFunction(Loop, TestActor);
+            GetCppInt16ValueFunction(Loop, TestActor);
 
             // Int32
-            SetInt32ValueFunction(Loop, TestActor, 1);
+            SetCppInt32ValueFunction(Loop, TestActor, 1);
 
-            GetInt32ValueFunction(Loop, TestActor);
+            GetCppInt32ValueFunction(Loop, TestActor);
 
             // Int64
-            SetInt64ValueFunction(Loop, TestActor, 1);
+            SetCppInt64ValueFunction(Loop, TestActor, 1);
 
-            GetInt64ValueFunction(Loop, TestActor);
+            GetCppInt64ValueFunction(Loop, TestActor);
 
             // UInt8
-            SetUInt8ValueFunction(Loop, TestActor, 1);
+            SetCppUInt8ValueFunction(Loop, TestActor, 1);
 
-            GetUInt8ValueFunction(Loop, TestActor);
+            GetCppUInt8ValueFunction(Loop, TestActor);
 
             // UInt16
-            SetUInt16ValueFunction(Loop, TestActor, 1);
+            SetCppUInt16ValueFunction(Loop, TestActor, 1);
 
-            GetUInt16ValueFunction(Loop, TestActor);
+            GetCppUInt16ValueFunction(Loop, TestActor);
 
             // UInt32
-            SetUInt32ValueFunction(Loop, TestActor, 1);
+            SetCppUInt32ValueFunction(Loop, TestActor, 1);
 
-            GetUInt32ValueFunction(Loop, TestActor);
+            GetCppUInt32ValueFunction(Loop, TestActor);
 
             // UInt64
-            SetUInt64ValueFunction(Loop, TestActor, 1);
+            SetCppUInt64ValueFunction(Loop, TestActor, 1);
 
-            GetUInt64ValueFunction(Loop, TestActor);
+            GetCppUInt64ValueFunction(Loop, TestActor);
 
             // Float
-            SetFloatValueFunction(Loop, TestActor, 1.0f);
+            SetCppFloatValueFunction(Loop, TestActor, 1.0f);
 
-            GetFloatValueFunction(Loop, TestActor);
+            GetCppFloatValueFunction(Loop, TestActor);
 
             // Double
-            SetDoubleValueFunction(Loop, TestActor, 1.0);
+            SetCppDoubleValueFunction(Loop, TestActor, 1.0);
 
-            GetDoubleValueFunction(Loop, TestActor);
+            GetCppDoubleValueFunction(Loop, TestActor);
 
             // FName
-            SetNameValueFunction(Loop, TestActor, "Name");
+            SetCppNameValueFunction(Loop, TestActor, "Name");
 
-            GetNameValueFunction(Loop, TestActor);
+            GetCppNameValueFunction(Loop, TestActor);
 
             // FText
-            SetTextValueFunction(Loop, TestActor, "Text");
+            SetCppTextValueFunction(Loop, TestActor, "Text");
 
-            GetTextValueFunction(Loop, TestActor);
+            GetCppTextValueFunction(Loop, TestActor);
 
             // FString
-            SetStringValueFunction(Loop, TestActor, "String");
+            SetCppStringValueFunction(Loop, TestActor, "String");
 
-            GetStringValueFunction(Loop, TestActor);
+            GetCppStringValueFunction(Loop, TestActor);
 
             // UEnum
-            SetEnumValueFunction(Loop, TestActor, TestEnum);
+            SetCppEnumValueFunction(Loop, TestActor, TestEnum);
 
-            GetEnumValueFunction(Loop, TestActor);
+            GetCppEnumValueFunction(Loop, TestActor);
 
             // UEnum Class
-            SetEnumClassValueFunction(Loop, TestActor, TestEnumClass);
+            SetCppEnumClassValueFunction(Loop, TestActor, TestEnumClass);
 
-            GetEnumClassValueFunction(Loop, TestActor);
+            GetCppEnumClassValueFunction(Loop, TestActor);
 
             // UStruct
-            SetStructValueFunction(Loop, TestActor, TestStruct);
+            SetCppStructValueFunction(Loop, TestActor, TestStruct);
 
-            GetStructValueFunction(Loop, TestActor);
+            GetCppStructValueFunction(Loop, TestActor);
 
             // UObject
-            SetObjectValueFunction(Loop, TestActor, TestActor);
+            SetCppObjectValueFunction(Loop, TestActor, TestActor);
 
-            GetObjectValueFunction(Loop, TestActor);
+            GetCppObjectValueFunction(Loop, TestActor);
 
             // UClass
-            SetClassValueFunction(Loop, TestActor, TestClass);
+            SetCppClassValueFunction(Loop, TestActor, TestClass);
 
-            GetClassValueFunction(Loop, TestActor);
+            GetCppClassValueFunction(Loop, TestActor);
 
             // UInterface
-            SetInterfaceValueFunction(Loop, TestActor, TestInterface);
+            SetCppInterfaceValueFunction(Loop, TestActor, TestInterface);
 
-            GetInterfaceValueFunction(Loop, TestActor);
+            GetCppInterfaceValueFunction(Loop, TestActor);
 
             // TArray
-            SetArrayValueFunction(Loop, TestActor, TestArray);
+            SetCppArrayValueFunction(Loop, TestActor, TestArray);
 
-            GetArrayValueFunction(Loop, TestActor);
+            GetCppArrayValueFunction(Loop, TestActor);
 
             // TSet
-            SetSetValueFunction(Loop, TestActor, TestSet);
+            SetCppSetValueFunction(Loop, TestActor, TestSet);
 
-            GetSetValueFunction(Loop, TestActor);
+            GetCppSetValueFunction(Loop, TestActor);
 
             // TMap
-            SetMapValueFunction(Loop, TestActor, TestMap);
+            SetCppMapValueFunction(Loop, TestActor, TestMap);
 
-            GetMapValueFunction(Loop, TestActor);
+            GetCppMapValueFunction(Loop, TestActor);
         }
 
         private void EndTest()
@@ -355,828 +355,828 @@ namespace Script.ScriptPluginCompare
         }
 
         // Bool
-        private void SetBoolValue(Int32 InLoop, ATestActor InTestActor, Boolean InValue)
+        private void SetCppBoolValue(Int32 InLoop, ATestActor InObject, Boolean InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.BoolValue = InValue;
+                InObject.BoolValue = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetBoolValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppBoolValue", TotalSeconds));
         }
 
-        private void GetBoolValue(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppBoolValue(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.BoolValue;
+                var Value = InObject.BoolValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetBoolValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppBoolValue", TotalSeconds));
         }
 
         // Int8
-        private void SetInt8Value(Int32 InLoop, ATestActor InTestActor, SByte InValue)
+        private void SetCppInt8Value(Int32 InLoop, ATestActor InObject, SByte InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.Int8Value = InValue;
+                InObject.Int8Value = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetInt8Value", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppInt8Value", TotalSeconds));
         }
 
-        private void GetInt8Value(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppInt8Value(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.Int8Value;
+                var Value = InObject.Int8Value;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetInt8Value", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppInt8Value", TotalSeconds));
         }
 
         // Int16
-        private void SetInt16Value(Int32 InLoop, ATestActor InTestActor, Int16 InValue)
+        private void SetCppInt16Value(Int32 InLoop, ATestActor InObject, Int16 InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.Int16Value = InValue;
+                InObject.Int16Value = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetInt16Value", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppInt16Value", TotalSeconds));
         }
 
-        private void GetInt16Value(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppInt16Value(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.Int16Value;
+                var Value = InObject.Int16Value;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetInt16Value", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppInt16Value", TotalSeconds));
         }
 
         // Int32
-        private void SetInt32Value(Int32 InLoop, ATestActor InTestActor, Int32 InValue)
+        private void SetCppInt32Value(Int32 InLoop, ATestActor InObject, Int32 InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.Int32Value = InValue;
+                InObject.Int32Value = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetInt32Value", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppInt32Value", TotalSeconds));
         }
 
-        private void GetInt32Value(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppInt32Value(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.Int32Value;
+                var Value = InObject.Int32Value;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetInt32Value", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppInt32Value", TotalSeconds));
         }
 
         // Int64
-        private void SetInt64Value(Int32 InLoop, ATestActor InTestActor, Int64 InValue)
+        private void SetCppInt64Value(Int32 InLoop, ATestActor InObject, Int64 InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.Int64Value = InValue;
+                InObject.Int64Value = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetInt64Value", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppInt64Value", TotalSeconds));
         }
 
-        private void GetInt64Value(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppInt64Value(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.Int64Value;
+                var Value = InObject.Int64Value;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetInt64Value", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppInt64Value", TotalSeconds));
         }
 
         // UInt8
-        private void SetUInt8Value(Int32 InLoop, ATestActor InTestActor, Byte InValue)
+        private void SetCppUInt8Value(Int32 InLoop, ATestActor InObject, Byte InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.UInt8Value = InValue;
+                InObject.UInt8Value = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetUInt8Value", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppUInt8Value", TotalSeconds));
         }
 
-        private void GetUInt8Value(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppUInt8Value(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.UInt8Value;
+                var Value = InObject.UInt8Value;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetUInt8Value", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppUInt8Value", TotalSeconds));
         }
 
         // UInt16
-        private void SetUInt16Value(Int32 InLoop, ATestActor InTestActor, UInt16 InValue)
+        private void SetCppUInt16Value(Int32 InLoop, ATestActor InObject, UInt16 InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.UInt16Value = InValue;
+                InObject.UInt16Value = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetUInt16Value", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppUInt16Value", TotalSeconds));
         }
 
-        private void GetUInt16Value(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppUInt16Value(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.UInt16Value;
+                var Value = InObject.UInt16Value;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetUInt16Value", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppUInt16Value", TotalSeconds));
         }
 
         // UInt32
-        private void SetUInt32Value(Int32 InLoop, ATestActor InTestActor, UInt32 InValue)
+        private void SetCppUInt32Value(Int32 InLoop, ATestActor InObject, UInt32 InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.UInt32Value = InValue;
+                InObject.UInt32Value = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetUInt32Value", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppUInt32Value", TotalSeconds));
         }
 
-        private void GetUInt32Value(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppUInt32Value(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.UInt32Value;
+                var Value = InObject.UInt32Value;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetUInt32Value", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppUInt32Value", TotalSeconds));
         }
 
         // UInt64
-        private void SetUInt64Value(Int32 InLoop, ATestActor InTestActor, UInt64 InValue)
+        private void SetCppUInt64Value(Int32 InLoop, ATestActor InObject, UInt64 InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.UInt64Value = InValue;
+                InObject.UInt64Value = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetUInt64Value", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppUInt64Value", TotalSeconds));
         }
 
-        private void GetUInt64Value(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppUInt64Value(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.UInt64Value;
+                var Value = InObject.UInt64Value;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetUInt64Value", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppUInt64Value", TotalSeconds));
         }
 
         // Float
-        private void SetFloatValue(Int32 InLoop, ATestActor InTestActor, Single InValue)
+        private void SetCppFloatValue(Int32 InLoop, ATestActor InObject, Single InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.FloatValue = InValue;
+                InObject.FloatValue = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetFloatValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppFloatValue", TotalSeconds));
         }
 
-        private void GetFloatValue(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppFloatValue(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.FloatValue;
+                var Value = InObject.FloatValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetFloatValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppFloatValue", TotalSeconds));
         }
 
         // Double
-        private void SetDoubleValue(Int32 InLoop, ATestActor InTestActor, Double InValue)
+        private void SetCppDoubleValue(Int32 InLoop, ATestActor InObject, Double InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.DoubleValue = InValue;
+                InObject.DoubleValue = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetDoubleValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppDoubleValue", TotalSeconds));
         }
 
-        private void GetDoubleValue(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppDoubleValue(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.DoubleValue;
+                var Value = InObject.DoubleValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetDoubleValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppDoubleValue", TotalSeconds));
         }
 
         // FName
-        private void SetNameValue(Int32 InLoop, ATestActor InTestActor, FName InValue)
+        private void SetCppNameValue(Int32 InLoop, ATestActor InObject, FName InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.NameValue = InValue;
+                InObject.NameValue = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetNameValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppNameValue", TotalSeconds));
         }
 
-        private void GetNameValue(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppNameValue(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.NameValue;
+                var Value = InObject.NameValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetNameValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppNameValue", TotalSeconds));
         }
 
         // FText
-        private void SetTextValue(Int32 InLoop, ATestActor InTestActor, FText InValue)
+        private void SetCppTextValue(Int32 InLoop, ATestActor InObject, FText InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.TextValue = InValue;
+                InObject.TextValue = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetTextValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppTextValue", TotalSeconds));
         }
 
-        private void GetTextValue(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppTextValue(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.TextValue;
+                var Value = InObject.TextValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetTextValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppTextValue", TotalSeconds));
         }
 
         // FString
-        private void SetStringValue(Int32 InLoop, ATestActor InTestActor, FString InValue)
+        private void SetCppStringValue(Int32 InLoop, ATestActor InObject, FString InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.StringValue = InValue;
+                InObject.StringValue = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetStringValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppStringValue", TotalSeconds));
         }
 
-        private void GetStringValue(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppStringValue(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.StringValue;
+                var Value = InObject.StringValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetStringValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppStringValue", TotalSeconds));
         }
 
         // UEnum
-        private void SetEnumValue(Int32 InLoop, ATestActor InTestActor, ETestEnum InValue)
+        private void SetCppEnumValue(Int32 InLoop, ATestActor InObject, ETestEnum InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.EnumValue = InValue;
+                InObject.EnumValue = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetEnumValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppEnumValue", TotalSeconds));
         }
 
-        private void GetEnumValue(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppEnumValue(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.EnumValue;
+                var Value = InObject.EnumValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetEnumValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppEnumValue", TotalSeconds));
         }
 
         // UEnum Class
-        private void SetEnumClassValue(Int32 InLoop, ATestActor InTestActor, ETestEnumClass InValue)
+        private void SetCppEnumClassValue(Int32 InLoop, ATestActor InObject, ETestEnumClass InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.EnumClassValue = InValue;
+                InObject.EnumClassValue = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetEnumClassValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppEnumClassValue", TotalSeconds));
         }
 
-        private void GetEnumClassValue(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppEnumClassValue(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.EnumClassValue;
+                var Value = InObject.EnumClassValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetEnumClassValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppEnumClassValue", TotalSeconds));
         }
 
         // UStruct
-        private void SetStructValue(Int32 InLoop, ATestActor InTestActor, FTestStruct InValue)
+        private void SetCppStructValue(Int32 InLoop, ATestActor InObject, FTestStruct InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.StructValue = InValue;
+                InObject.StructValue = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetStructValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppStructValue", TotalSeconds));
         }
 
-        private void GetStructValue(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppStructValue(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.StructValue;
+                var Value = InObject.StructValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetStructValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppStructValue", TotalSeconds));
         }
 
         // UObject
-        private void SetObjectValue(Int32 InLoop, ATestActor InTestActor, ATestActor InValue)
+        private void SetCppObjectValue(Int32 InLoop, ATestActor InObject, ATestActor InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.ObjectValue = InValue;
+                InObject.ObjectValue = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetObjectValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppObjectValue", TotalSeconds));
         }
 
-        private void GetObjectValue(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppObjectValue(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.ObjectValue;
+                var Value = InObject.ObjectValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetObjectValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppObjectValue", TotalSeconds));
         }
 
         // UClass
-        private void SetClassValue(Int32 InLoop, ATestActor InTestActor, TSubclassOf<UObject> InValue)
+        private void SetCppClassValue(Int32 InLoop, ATestActor InObject, TSubclassOf<UObject> InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.ClassValue = InValue;
+                InObject.ClassValue = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetClassValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppClassValue", TotalSeconds));
         }
 
-        private void GetClassValue(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppClassValue(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.ClassValue;
+                var Value = InObject.ClassValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetClassValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppClassValue", TotalSeconds));
         }
 
         // UInterface 
-        private void SetInterfaceValue(Int32 InLoop, ATestActor InTestActor, TScriptInterface<ITestInterface> InValue)
+        private void SetCppInterfaceValue(Int32 InLoop, ATestActor InObject, TScriptInterface<ITestInterface> InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.InterfaceValue = InValue;
+                InObject.InterfaceValue = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetInterfaceValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppInterfaceValue", TotalSeconds));
         }
 
-        private void GetInterfaceValue(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppInterfaceValue(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.InterfaceValue;
+                var Value = InObject.InterfaceValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetInterfaceValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppInterfaceValue", TotalSeconds));
         }
 
         // TArray
-        private void SetArrayValue(Int32 InLoop, ATestActor InTestActor, TArray<Int32> InValue)
+        private void SetCppArrayValue(Int32 InLoop, ATestActor InObject, TArray<Int32> InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.ArrayValue = InValue;
+                InObject.ArrayValue = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetArrayValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppArrayValue", TotalSeconds));
         }
 
-        private void GetArrayValue(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppArrayValue(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.ArrayValue;
+                var Value = InObject.ArrayValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetArrayValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppArrayValue", TotalSeconds));
         }
 
         // TArray Element
-        private void SetArrayElement(Int32 InLoop, ATestActor InTestActor, Int32 InIndex, Int32 InValue)
+        private void SetCppArrayElement(Int32 InLoop, ATestActor InObject, Int32 InIndex, Int32 InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.ArrayValue[InIndex] = InValue;
+                InObject.ArrayValue[InIndex] = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetArrayElement", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppArrayElement", TotalSeconds));
         }
 
-        private void GetArrayElement(Int32 InLoop, ATestActor InTestActor, Int32 InIndex)
+        private void GetCppArrayElement(Int32 InLoop, ATestActor InObject, Int32 InIndex)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.ArrayValue[InIndex];
+                var Value = InObject.ArrayValue[InIndex];
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetArrayElement", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppArrayElement", TotalSeconds));
         }
 
         // TSet
-        private void SetSetValue(Int32 InLoop, ATestActor InTestActor, TSet<Int32> InValue)
+        private void SetCppSetValue(Int32 InLoop, ATestActor InObject, TSet<Int32> InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetValue = InValue;
+                InObject.SetValue = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetSetValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppSetValue", TotalSeconds));
         }
 
-        private void GetSetValue(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppSetValue(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.SetValue;
+                var Value = InObject.SetValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetSetValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppSetValue", TotalSeconds));
         }
 
         // TMap
-        private void SetMapValue(Int32 InLoop, ATestActor InTestActor, TMap<Int32, Int32> InValue)
+        private void SetCppMapValue(Int32 InLoop, ATestActor InObject, TMap<Int32, Int32> InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.MapValue = InValue;
+                InObject.MapValue = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetMapValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppMapValue", TotalSeconds));
         }
 
-        private void GetMapValue(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppMapValue(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.MapValue;
+                var Value = InObject.MapValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetMapValue", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppMapValue", TotalSeconds));
         }
 
         // TMap Element
-        private void SetMapElement(Int32 InLoop, ATestActor InTestActor, Int32 InIndex, Int32 InValue)
+        private void SetCppMapElement(Int32 InLoop, ATestActor InObject, Int32 InIndex, Int32 InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.MapValue[InIndex] = InValue;
+                InObject.MapValue[InIndex] = InValue;
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetMapElement", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppMapElement", TotalSeconds));
         }
 
-        private void GetMapElement(Int32 InLoop, ATestActor InTestActor, Int32 InIndex)
+        private void GetCppMapElement(Int32 InLoop, ATestActor InObject, Int32 InIndex)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.MapValue[InIndex];
+                var Value = InObject.MapValue[InIndex];
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetMapElement", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppMapElement", TotalSeconds));
         }
 
         private void Empty()
@@ -1289,7 +1289,7 @@ namespace Script.ScriptPluginCompare
         }
 
         // Static
-        private void StaticFunction(Int32 InLoop)
+        private void StaticCppFunction(Int32 InLoop)
         {
             var Start = UKismetMathLibrary.Now();
 
@@ -1302,784 +1302,784 @@ namespace Script.ScriptPluginCompare
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("StaticFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("StaticCppFunction", TotalSeconds));
         }
 
         // Member
-        private void MemberFunction(Int32 InLoop, ATestActor InTestActor)
+        private void MemberCppFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.MemberFunction();
+                InObject.MemberFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("MemberFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("MemberCppFunction", TotalSeconds));
         }
 
         // Bool
-        private void SetBoolValueFunction(Int32 InLoop, ATestActor InTestActor, Boolean InValue)
+        private void SetCppBoolValueFunction(Int32 InLoop, ATestActor InObject, Boolean InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetBoolValueFunction(InValue);
+                InObject.SetBoolValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetBoolValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppBoolValueFunction", TotalSeconds));
         }
 
-        private void GetBoolValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppBoolValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetBoolValueFunction();
+                var Value = InObject.GetBoolValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetBoolValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppBoolValueFunction", TotalSeconds));
         }
 
         // Int8
-        private void SetInt8ValueFunction(Int32 InLoop, ATestActor InTestActor, SByte InValue)
+        private void SetCppInt8ValueFunction(Int32 InLoop, ATestActor InObject, SByte InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetInt8ValueFunction(InValue);
+                InObject.SetInt8ValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetInt8ValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppInt8ValueFunction", TotalSeconds));
         }
 
-        private void GetInt8ValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppInt8ValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetInt8ValueFunction();
+                var Value = InObject.GetInt8ValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetInt8ValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppInt8ValueFunction", TotalSeconds));
         }
 
         // Int16
-        private void SetInt16ValueFunction(Int32 InLoop, ATestActor InTestActor, Int16 InValue)
+        private void SetCppInt16ValueFunction(Int32 InLoop, ATestActor InObject, Int16 InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetInt16ValueFunction(InValue);
+                InObject.SetInt16ValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetInt16ValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppInt16ValueFunction", TotalSeconds));
         }
 
-        private void GetInt16ValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppInt16ValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetUInt16ValueFunction();
+                var Value = InObject.GetUInt16ValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetInt16ValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppInt16ValueFunction", TotalSeconds));
         }
 
         // Int32
-        private void SetInt32ValueFunction(Int32 InLoop, ATestActor InTestActor, Int32 InValue)
+        private void SetCppInt32ValueFunction(Int32 InLoop, ATestActor InObject, Int32 InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetInt32ValueFunction(InValue);
+                InObject.SetInt32ValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetInt32ValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppInt32ValueFunction", TotalSeconds));
         }
 
-        private void GetInt32ValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppInt32ValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetInt32ValueFunction();
+                var Value = InObject.GetInt32ValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetInt32ValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppInt32ValueFunction", TotalSeconds));
         }
 
         // Int64
-        private void SetInt64ValueFunction(Int32 InLoop, ATestActor InTestActor, Int64 InValue)
+        private void SetCppInt64ValueFunction(Int32 InLoop, ATestActor InObject, Int64 InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetInt64ValueFunction(InValue);
+                InObject.SetInt64ValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetInt64ValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppInt64ValueFunction", TotalSeconds));
         }
 
-        private void GetInt64ValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppInt64ValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetInt64ValueFunction();
+                var Value = InObject.GetInt64ValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetInt64ValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppInt64ValueFunction", TotalSeconds));
         }
 
         // UInt8
-        private void SetUInt8ValueFunction(Int32 InLoop, ATestActor InTestActor, Byte InValue)
+        private void SetCppUInt8ValueFunction(Int32 InLoop, ATestActor InObject, Byte InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetUInt8ValueFunction(InValue);
+                InObject.SetUInt8ValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetUInt8ValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppUInt8ValueFunction", TotalSeconds));
         }
 
-        private void GetUInt8ValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppUInt8ValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetUInt8ValueFunction();
+                var Value = InObject.GetUInt8ValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetUInt8ValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppUInt8ValueFunction", TotalSeconds));
         }
 
         // UInt16
-        private void SetUInt16ValueFunction(Int32 InLoop, ATestActor InTestActor, UInt16 InValue)
+        private void SetCppUInt16ValueFunction(Int32 InLoop, ATestActor InObject, UInt16 InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetUInt16ValueFunction(InValue);
+                InObject.SetUInt16ValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetUInt16ValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppUInt16ValueFunction", TotalSeconds));
         }
 
-        private void GetUInt16ValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppUInt16ValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetUInt16ValueFunction();
+                var Value = InObject.GetUInt16ValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetUInt16ValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppUInt16ValueFunction", TotalSeconds));
         }
 
         // UInt32
-        private void SetUInt32ValueFunction(Int32 InLoop, ATestActor InTestActor, UInt32 InValue)
+        private void SetCppUInt32ValueFunction(Int32 InLoop, ATestActor InObject, UInt32 InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetUInt32ValueFunction(InValue);
+                InObject.SetUInt32ValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetUInt32ValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppUInt32ValueFunction", TotalSeconds));
         }
 
-        private void GetUInt32ValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppUInt32ValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetUInt32ValueFunction();
+                var Value = InObject.GetUInt32ValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetUInt32ValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppUInt32ValueFunction", TotalSeconds));
         }
 
         // UInt64
-        private void SetUInt64ValueFunction(Int32 InLoop, ATestActor InTestActor, UInt64 InValue)
+        private void SetCppUInt64ValueFunction(Int32 InLoop, ATestActor InObject, UInt64 InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetUInt64ValueFunction(InValue);
+                InObject.SetUInt64ValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetUInt64ValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppUInt64ValueFunction", TotalSeconds));
         }
 
-        private void GetUInt64ValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppUInt64ValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetUInt64ValueFunction();
+                var Value = InObject.GetUInt64ValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetUInt64ValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppUInt64ValueFunction", TotalSeconds));
         }
 
         // Float
-        private void SetFloatValueFunction(Int32 InLoop, ATestActor InTestActor, Single InValue)
+        private void SetCppFloatValueFunction(Int32 InLoop, ATestActor InObject, Single InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetFloatValueFunction(InValue);
+                InObject.SetFloatValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetFloatValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppFloatValueFunction", TotalSeconds));
         }
 
-        private void GetFloatValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppFloatValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetFloatValueFunction();
+                var Value = InObject.GetFloatValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetFloatValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppFloatValueFunction", TotalSeconds));
         }
 
         // Double
-        private void SetDoubleValueFunction(Int32 InLoop, ATestActor InTestActor, Double InValue)
+        private void SetCppDoubleValueFunction(Int32 InLoop, ATestActor InObject, Double InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetDoubleValueFunction(InValue);
+                InObject.SetDoubleValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetDoubleValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppDoubleValueFunction", TotalSeconds));
         }
 
-        private void GetDoubleValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppDoubleValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetDoubleValueFunction();
+                var Value = InObject.GetDoubleValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetDoubleValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppDoubleValueFunction", TotalSeconds));
         }
 
         // FName
-        private void SetNameValueFunction(Int32 InLoop, ATestActor InTestActor, FName InValue)
+        private void SetCppNameValueFunction(Int32 InLoop, ATestActor InObject, FName InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetNameValueFunction(InValue);
+                InObject.SetNameValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetNameValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppNameValueFunction", TotalSeconds));
         }
 
-        private void GetNameValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppNameValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetNameValueFunction();
+                var Value = InObject.GetNameValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetNameValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppNameValueFunction", TotalSeconds));
         }
 
         // FText
-        private void SetTextValueFunction(Int32 InLoop, ATestActor InTestActor, FText InValue)
+        private void SetCppTextValueFunction(Int32 InLoop, ATestActor InObject, FText InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetTextValueFunction(InValue);
+                InObject.SetTextValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetTextValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppTextValueFunction", TotalSeconds));
         }
 
-        private void GetTextValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppTextValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetTextValueFunction();
+                var Value = InObject.GetTextValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetTextValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppTextValueFunction", TotalSeconds));
         }
 
         // FString
-        private void SetStringValueFunction(Int32 InLoop, ATestActor InTestActor, FString InValue)
+        private void SetCppStringValueFunction(Int32 InLoop, ATestActor InObject, FString InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetStringValueFunction(InValue);
+                InObject.SetStringValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetStringValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppStringValueFunction", TotalSeconds));
         }
 
-        private void GetStringValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppStringValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetStringValueFunction();
+                var Value = InObject.GetStringValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetStringValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppStringValueFunction", TotalSeconds));
         }
 
         // UEnum
-        private void SetEnumValueFunction(Int32 InLoop, ATestActor InTestActor, ETestEnum InValue)
+        private void SetCppEnumValueFunction(Int32 InLoop, ATestActor InObject, ETestEnum InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetEnumValueFunction(InValue);
+                InObject.SetEnumValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetEnumValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppEnumValueFunction", TotalSeconds));
         }
 
-        private void GetEnumValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppEnumValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetEnumValueFunction();
+                var Value = InObject.GetEnumValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetEnumValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppEnumValueFunction", TotalSeconds));
         }
 
         // UEnum Class
-        private void SetEnumClassValueFunction(Int32 InLoop, ATestActor InTestActor, ETestEnumClass InValue)
+        private void SetCppEnumClassValueFunction(Int32 InLoop, ATestActor InObject, ETestEnumClass InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetEnumClassValueFunction(InValue);
+                InObject.SetEnumClassValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetEnumClassValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppEnumClassValueFunction", TotalSeconds));
         }
 
-        private void GetEnumClassValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppEnumClassValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetEnumClassValueFunction();
+                var Value = InObject.GetEnumClassValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetEnumClassValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppEnumClassValueFunction", TotalSeconds));
         }
 
         // UStruct
-        private void SetStructValueFunction(Int32 InLoop, ATestActor InTestActor, FTestStruct InValue)
+        private void SetCppStructValueFunction(Int32 InLoop, ATestActor InObject, FTestStruct InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetStructValueFunction(InValue);
+                InObject.SetStructValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetStructValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppStructValueFunction", TotalSeconds));
         }
 
-        private void GetStructValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppStructValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetStructValueFunction();
+                var Value = InObject.GetStructValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetStructValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppStructValueFunction", TotalSeconds));
         }
 
         // UObject
-        private void SetObjectValueFunction(Int32 InLoop, ATestActor InTestActor, ATestActor InValue)
+        private void SetCppObjectValueFunction(Int32 InLoop, ATestActor InObject, ATestActor InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetObjectValueFunction(InValue);
+                InObject.SetObjectValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetObjectValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppObjectValueFunction", TotalSeconds));
         }
 
-        private void GetObjectValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppObjectValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetObjectValueFunction();
+                var Value = InObject.GetObjectValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetObjectValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppObjectValueFunction", TotalSeconds));
         }
 
         // UClass
-        private void SetClassValueFunction(Int32 InLoop, ATestActor InTestActor, TSubclassOf<UObject> InValue)
+        private void SetCppClassValueFunction(Int32 InLoop, ATestActor InObject, TSubclassOf<UObject> InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetClassValueFunction(InValue);
+                InObject.SetClassValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetClassValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppClassValueFunction", TotalSeconds));
         }
 
-        private void GetClassValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppClassValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetClassValueFunction();
+                var Value = InObject.GetClassValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetClassValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppClassValueFunction", TotalSeconds));
         }
 
         // UInterface 
-        private void SetInterfaceValueFunction(Int32 InLoop, ATestActor InTestActor,
+        private void SetCppInterfaceValueFunction(Int32 InLoop, ATestActor InObject,
             TScriptInterface<ITestInterface> InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetInterfaceValueFunction(InValue);
+                InObject.SetInterfaceValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetInterfaceValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppInterfaceValueFunction", TotalSeconds));
         }
 
-        private void GetInterfaceValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppInterfaceValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetInterfaceValueFunction();
+                var Value = InObject.GetInterfaceValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetInterfaceValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppInterfaceValueFunction", TotalSeconds));
         }
 
         // TArray
-        private void SetArrayValueFunction(Int32 InLoop, ATestActor InTestActor, TArray<Int32> InValue)
+        private void SetCppArrayValueFunction(Int32 InLoop, ATestActor InObject, TArray<Int32> InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetArrayValueFunction(InValue);
+                InObject.SetArrayValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetArrayValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppArrayValueFunction", TotalSeconds));
         }
 
-        private void GetArrayValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppArrayValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetArrayValueFunction();
+                var Value = InObject.GetArrayValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetArrayValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppArrayValueFunction", TotalSeconds));
         }
 
         // TSet
-        private void SetSetValueFunction(Int32 InLoop, ATestActor InTestActor, TSet<Int32> InValue)
+        private void SetCppSetValueFunction(Int32 InLoop, ATestActor InObject, TSet<Int32> InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetSetValueFunction(InValue);
+                InObject.SetSetValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetSetValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppSetValueFunction", TotalSeconds));
         }
 
-        private void GetSetValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppSetValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetSetValueFunction();
+                var Value = InObject.GetSetValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetSetValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppSetValueFunction", TotalSeconds));
         }
 
         // TMap
-        private void SetMapValueFunction(Int32 InLoop, ATestActor InTestActor, TMap<Int32, Int32> InValue)
+        private void SetCppMapValueFunction(Int32 InLoop, ATestActor InObject, TMap<Int32, Int32> InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                InTestActor.SetMapValueFunction(InValue);
+                InObject.SetMapValueFunction(InValue);
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("SetMapValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("SetCppMapValueFunction", TotalSeconds));
         }
 
-        private void GetMapValueFunction(Int32 InLoop, ATestActor InTestActor)
+        private void GetCppMapValueFunction(Int32 InLoop, ATestActor InObject)
         {
             var Start = UKismetMathLibrary.Now();
 
             for (var i = 0; i < InLoop; i++)
             {
-                var Value = InTestActor.GetMapValueFunction();
+                var Value = InObject.GetMapValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
-            Data.Add(new KeyValuePair<string, double>("GetMapValueFunction", TotalSeconds));
+            Data.Add(new KeyValuePair<string, double>("GetCppMapValueFunction", TotalSeconds));
         }
 
         private List<KeyValuePair<string, double>> Data;
