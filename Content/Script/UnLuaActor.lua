@@ -1,327 +1,327 @@
 local M = UnLua.Class()
 
 -- Bool
-local function SetBoolValue(InLoop, InTestActor, InValue)
+local function SetCppBoolValue(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.BoolValue = InValue
+        InObject.BoolValue = InValue
     end
 end
 
-local function GetBoolValue(InLoop, InTestActor)
+local function GetCppBoolValue(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.BoolValue
+        local Value = InObject.BoolValue
     end
 end
 
 -- Int8
-local function SetInt8Value(InLoop, InTestActor, InValue)
+local function SetCppInt8Value(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.Int8Value = InValue
+        InObject.Int8Value = InValue
     end
 end
 
-local function GetInt8Value(InLoop, InTestActor)
+local function GetCppInt8Value(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.Int8Value
+        local Value = InObject.Int8Value
     end
 end
 
 -- Int16
-local function SetInt16Value(InLoop, InTestActor, InValue)
+local function SetCppInt16Value(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.Int16Value = InValue
+        InObject.Int16Value = InValue
     end
 end
 
-local function GetInt16Value(InLoop, InTestActor)
+local function GetCppInt16Value(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.Int16Value
+        local Value = InObject.Int16Value
     end
 end
 
 -- Int32
-local function SetInt32Value(InLoop, InTestActor, InValue)
+local function SetCppInt32Value(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.Int32Value = InValue
+        InObject.Int32Value = InValue
     end
 end
 
-local function GetInt32Value(InLoop, InTestActor)
+local function GetCppInt32Value(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.Int32Value
+        local Value = InObject.Int32Value
     end
 end
 
 -- Int64
-local function SetInt64Value(InLoop, InTestActor, InValue)
+local function SetCppInt64Value(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.Int64Value = InValue
+        InObject.Int64Value = InValue
     end
 end
 
-local function GetInt64Value(InLoop, InTestActor)
+local function GetCppInt64Value(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.Int64Value
+        local Value = InObject.Int64Value
     end
 end
 
 -- UInt8
-local function SetUInt8Value(InLoop, InTestActor, InValue)
+local function SetCppUInt8Value(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.UInt8Value = InValue
+        InObject.UInt8Value = InValue
     end
 end
 
-local function GetUInt8Value(InLoop, InTestActor)
+local function GetCppUInt8Value(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.UInt8Value
+        local Value = InObject.UInt8Value
     end
 end
 
 -- UInt16
-local function SetUInt16Value(InLoop, InTestActor, InValue)
+local function SetCppUInt16Value(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.UInt16Value = InValue
+        InObject.UInt16Value = InValue
     end
 end
 
-local function GetUInt16Value(InLoop, InTestActor)
+local function GetCppUInt16Value(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.UInt16Value
+        local Value = InObject.UInt16Value
     end
 end
 
 -- UInt32
-local function SetUInt32Value(InLoop, InTestActor, InValue)
+local function SetCppUInt32Value(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.UInt32Value = InValue
+        InObject.UInt32Value = InValue
     end
 end
 
-local function GetUInt32Value(InLoop, InTestActor)
+local function GetCppUInt32Value(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.UInt32Value
+        local Value = InObject.UInt32Value
     end
 end
 
 -- UInt64
-local function SetUInt64Value(InLoop, InTestActor, InValue)
+local function SetCppUInt64Value(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.UInt64Value = InValue
+        InObject.UInt64Value = InValue
     end
 end
 
-local function GetUInt64Value(InLoop, InTestActor)
+local function GetCppUInt64Value(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.UInt64Value
+        local Value = InObject.UInt64Value
     end
 end
 
 -- Float
-local function SetFloatValue(InLoop, InTestActor, InValue)
+local function SetCppFloatValue(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.FloatValue = InValue
+        InObject.FloatValue = InValue
     end
 end
 
-local function GetFloatValue(InLoop, InTestActor)
+local function GetCppFloatValue(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.FloatValue
+        local Value = InObject.FloatValue
     end
 end
 
 -- Double
-local function SetDoubleValue(InLoop, InTestActor, InValue)
+local function SetCppDoubleValue(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.DoubleValue = InValue
+        InObject.DoubleValue = InValue
     end
 end
 
-local function GetDoubleValue(InLoop, InTestActor)
+local function GetCppDoubleValue(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.DoubleValue
+        local Value = InObject.DoubleValue
     end
 end
 
 -- FName
-local function SetNameValue(InLoop, InTestActor, InValue)
+local function SetCppNameValue(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.NameValue = InValue
+        InObject.NameValue = InValue
     end
 end
 
-local function GetNameValue(InLoop, InTestActor)
+local function GetCppNameValue(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.NameValue
+        local Value = InObject.NameValue
     end
 end
 
 -- FText
-local function SetTextValue(InLoop, InTestActor, InValue)
+local function SetCppTextValue(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.TextValue = InValue
+        InObject.TextValue = InValue
     end
 end
 
-local function GetTextValue(InLoop, InTestActor)
+local function GetCppTextValue(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.TextValue
+        local Value = InObject.TextValue
     end
 end
 
 -- FString
-local function SetStringValue(InLoop, InTestActor, InValue)
+local function SetCppStringValue(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.StringValue = InValue
+        InObject.StringValue = InValue
     end
 end
 
-local function GetStringValue(InLoop, InTestActor)
+local function GetCppStringValue(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.StringValue
+        local Value = InObject.StringValue
     end
 end
 
 -- UEnum
-local function SetEnumValue(InLoop, InTestActor, InValue)
+local function SetCppEnumValue(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.EnumValue = InValue
+        InObject.EnumValue = InValue
     end
 end
 
-local function GetEnumValue(InLoop, InTestActor)
+local function GetCppEnumValue(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.EnumValue
+        local Value = InObject.EnumValue
     end
 end
 
 -- UEnum Class
-local function SetEnumClassValue(InLoop, InTestActor, InValue)
+local function SetCppEnumClassValue(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.EnumClassValue = InValue
+        InObject.EnumClassValue = InValue
     end
 end
 
-local function GetEnumClassValue(InLoop, InTestActor)
+local function GetCppEnumClassValue(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.EnumClassValue
+        local Value = InObject.EnumClassValue
     end
 end
 
 -- UStruct
-local function SetStructValue(InLoop, InTestActor, InValue)
+local function SetCppStructValue(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.StructValue = InValue
+        InObject.StructValue = InValue
     end
 end
 
-local function GetStructValue(InLoop, InTestActor)
+local function GetCppStructValue(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.StructValue
+        local Value = InObject.StructValue
     end
 end
 
 -- UObject
-local function SetObjectValue(InLoop, InTestActor, InValue)
+local function SetCppObjectValue(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.ObjectValue = InValue
+        InObject.ObjectValue = InValue
     end
 end
 
-local function GetObjectValue(InLoop, InTestActor)
+local function GetCppObjectValue(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.ObjectValue
+        local Value = InObject.ObjectValue
     end
 end
 
 -- UClass
-local function SetClassValue(InLoop, InTestActor, InValue)
+local function SetCppClassValue(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.ClassValue = InValue
+        InObject.ClassValue = InValue
     end
 end
 
-local function GetClassValue(InLoop, InTestActor)
+local function GetCppClassValue(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.ClassValue
+        local Value = InObject.ClassValue
     end
 end
 
 -- UInterface 
-local function SetInterfaceValue(InLoop, InTestActor, InValue)
+local function SetCppInterfaceValue(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.InterfaceValue = InValue
+        InObject.InterfaceValue = InValue
     end
 end
 
-local function GetInterfaceValue(InLoop, InTestActor)
+local function GetCppInterfaceValue(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.InterfaceValue
+        local Value = InObject.InterfaceValue
     end
 end
 
 -- TArray
-local function SetArrayValue(InLoop, InTestActor, InValue)
+local function SetCppArrayValue(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.ArrayValue = InValue
+        InObject.ArrayValue = InValue
     end
 end
 
-local function GetArrayValue(InLoop, InTestActor)
+local function GetCppArrayValue(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.ArrayValue
+        local Value = InObject.ArrayValue
     end
 end
 
 -- TArray Element
-local function SetArrayElement(InLoop, InTestActor, InIndex, InValue)
+local function SetCppArrayElement(InLoop, InObject, InIndex, InValue)
     for i = 0, InLoop do
-        InTestActor.ArrayValue[InIndex] = InValue
+        InObject.ArrayValue[InIndex] = InValue
     end
 end
 
-local function GetArrayElement(InLoop, InTestActor, InIndex)
+local function GetCppArrayElement(InLoop, InObject, InIndex)
     for i = 0, InLoop do
-        local Value = InTestActor.ArrayValue[InIndex]
+        local Value = InObject.ArrayValue[InIndex]
     end
 end
 
 -- TSet
-local function SetSetValue(InLoop, InTestActor, InValue)
+local function SetCppSetValue(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.SetValue = InValue
+        InObject.SetValue = InValue
     end
 end
 
-local function GetSetValue(InLoop, InTestActor)
+local function GetCppSetValue(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.SetValue
+        local Value = InObject.SetValue
     end
 end
 
 -- TMap
-local function SetMapValue(InLoop, InTestActor, InValue)
+local function SetCppMapValue(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor.MapValue = InValue
+        InObject.MapValue = InValue
     end
 end
 
-local function GetMapValue(InLoop, InTestActor)
+local function GetCppMapValue(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor.MapValue
+        local Value = InObject.MapValue
     end
 end
 
 -- TMap Element
-local function SetMapElement(InLoop, InTestActor, InIndex, InValue)
+local function SetCppMapElement(InLoop, InObject, InIndex, InValue)
     for i = 0, InLoop do
-        InTestActor.MapValue:Add(InIndex, InValue)
+        InObject.MapValue:Add(InIndex, InValue)
     end
 end
 
-local function GetMapElement(InLoop, InTestActor, InIndex)
+local function GetCppMapElement(InLoop, InObject, InIndex)
     for i = 0, InLoop do
-        local Value = InTestActor.MapValue:Find(InIndex)
+        local Value = InObject.MapValue:Find(InIndex)
     end
 end
 
@@ -380,315 +380,315 @@ local function DivideFunction(InLoop)
 end
 
 -- Static
-local function StaticFunction(InLoop, InTestActor)
+local function StaticCppFunction(InLoop, InObject)
     for i = 0, InLoop do
-        InTestActor.StaticFunction()
+        InObject.StaticFunction()
     end
 end
 
 -- Member
-local function MemberFunction(InLoop, InTestActor)
+local function MemberCppFunction(InLoop, InObject)
     for i = 0, InLoop do
-        InTestActor:MemberFunction()
+        InObject:MemberFunction()
     end
 end
 
 -- Bool
-local function SetBoolValueFunction(InLoop, InTestActor, InValue)
+local function SetCppBoolValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetBoolValueFunction(InValue)
+        InObject:SetBoolValueFunction(InValue)
     end
 end
 
-local function GetBoolValueFunction(InLoop, InTestActor)
+local function GetCppBoolValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetBoolValueFunction()
+        local Value = InObject:GetBoolValueFunction()
     end
 end
 
 -- Int8
-local function SetInt8ValueFunction(InLoop, InTestActor, InValue)
+local function SetCppInt8ValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetInt8ValueFunction(InValue)
+        InObject:SetInt8ValueFunction(InValue)
     end
 end
 
-local function GetInt8ValueFunction(InLoop, InTestActor)
+local function GetCppInt8ValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetInt8ValueFunction()
+        local Value = InObject:GetInt8ValueFunction()
     end
 end
 
 -- Int16
-local function SetInt16ValueFunction(InLoop, InTestActor, InValue)
+local function SetCppInt16ValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetInt16ValueFunction(InValue)
+        InObject:SetInt16ValueFunction(InValue)
     end
 end
 
-local function GetInt16ValueFunction(InLoop, InTestActor)
+local function GetCppInt16ValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetInt16ValueFunction()
+        local Value = InObject:GetInt16ValueFunction()
     end
 end
 
 -- Int32
-local function SetInt32ValueFunction(InLoop, InTestActor, InValue)
+local function SetCppInt32ValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetInt32ValueFunction(InValue)
+        InObject:SetInt32ValueFunction(InValue)
     end
 end
 
-local function GetInt32ValueFunction(InLoop, InTestActor)
+local function GetCppInt32ValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetInt32ValueFunction()
+        local Value = InObject:GetInt32ValueFunction()
     end
 end
 
 -- Int64
-local function SetInt64ValueFunction(InLoop, InTestActor, InValue)
+local function SetCppInt64ValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetInt64ValueFunction(InValue)
+        InObject:SetInt64ValueFunction(InValue)
     end
 end
 
-local function GetInt64ValueFunction(InLoop, InTestActor)
+local function GetCppInt64ValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetInt64ValueFunction()
+        local Value = InObject:GetInt64ValueFunction()
     end
 end
 
 -- UInt8
-local function SetUInt8ValueFunction(InLoop, InTestActor, InValue)
+local function SetCppUInt8ValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetUInt8ValueFunction(InValue)
+        InObject:SetUInt8ValueFunction(InValue)
     end
 end
 
-local function GetUInt8ValueFunction(InLoop, InTestActor)
+local function GetCppUInt8ValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetUInt8ValueFunction()
+        local Value = InObject:GetUInt8ValueFunction()
     end
 end
 
 -- UInt16
-local function SetUInt16ValueFunction(InLoop, InTestActor, InValue)
+local function SetCppUInt16ValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetUInt16ValueFunction(InValue)
+        InObject:SetUInt16ValueFunction(InValue)
     end
 end
 
-local function GetUInt16ValueFunction(InLoop, InTestActor)
+local function GetCppUInt16ValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetUInt16ValueFunction()
+        local Value = InObject:GetUInt16ValueFunction()
     end
 end
 
 -- UInt32
-local function SetUInt32ValueFunction(InLoop, InTestActor, InValue)
+local function SetCppUInt32ValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetUInt32ValueFunction(InValue)
+        InObject:SetUInt32ValueFunction(InValue)
     end
 end
 
-local function GetUInt32ValueFunction(InLoop, InTestActor)
+local function GetCppUInt32ValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetUInt32ValueFunction()
+        local Value = InObject:GetUInt32ValueFunction()
     end
 end
 
 -- UInt64
-local function SetUInt64ValueFunction(InLoop, InTestActor, InValue)
+local function SetCppUInt64ValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetUInt64ValueFunction(InValue)
+        InObject:SetUInt64ValueFunction(InValue)
     end
 end
 
-local function GetUInt64ValueFunction(InLoop, InTestActor)
+local function GetCppUInt64ValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetUInt64ValueFunction()
+        local Value = InObject:GetUInt64ValueFunction()
     end
 end
 
 -- Float
-local function SetFloatValueFunction(InLoop, InTestActor, InValue)
+local function SetCppFloatValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetFloatValueFunction(InValue)
+        InObject:SetFloatValueFunction(InValue)
     end
 end
 
-local function GetFloatValueFunction(InLoop, InTestActor)
+local function GetCppFloatValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetFloatValueFunction()
+        local Value = InObject:GetFloatValueFunction()
     end
 end
 
 -- Double
-local function SetDoubleValueFunction(InLoop, InTestActor, InValue)
+local function SetCppDoubleValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetDoubleValueFunction(InValue)
+        InObject:SetDoubleValueFunction(InValue)
     end
 end
 
-local function GetDoubleValueFunction(InLoop, InTestActor)
+local function GetCppDoubleValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetDoubleValueFunction()
+        local Value = InObject:GetDoubleValueFunction()
     end
 end
 
 -- FName
-local function SetNameValueFunction(InLoop, InTestActor, InValue)
+local function SetCppNameValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetNameValueFunction(InValue)
+        InObject:SetNameValueFunction(InValue)
     end
 end
 
-local function GetNameValueFunction(InLoop, InTestActor)
+local function GetCppNameValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetNameValueFunction()
+        local Value = InObject:GetNameValueFunction()
     end
 end
 
 -- FText
-local function SetTextValueFunction(InLoop, InTestActor, InValue)
+local function SetCppTextValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetTextValueFunction(InValue)
+        InObject:SetTextValueFunction(InValue)
     end
 end
 
-local function GetTextValueFunction(InLoop, InTestActor)
+local function GetCppTextValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetTextValueFunction()
+        local Value = InObject:GetTextValueFunction()
     end
 end
 
 -- FString
-local function SetStringValueFunction(InLoop, InTestActor, InValue)
+local function SetCppStringValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetStringValueFunction(InValue)
+        InObject:SetStringValueFunction(InValue)
     end
 end
 
-local function GetStringValueFunction(InLoop, InTestActor)
+local function GetCppStringValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetStringValueFunction()
+        local Value = InObject:GetStringValueFunction()
     end
 end
 
 -- UEnum
-local function SetEnumValueFunction(InLoop, InTestActor, InValue)
+local function SetCppEnumValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetEnumValueFunction(InValue)
+        InObject:SetEnumValueFunction(InValue)
     end
 end
 
-local function GetEnumValueFunction(InLoop, InTestActor)
+local function GetCppEnumValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetEnumValueFunction()
+        local Value = InObject:GetEnumValueFunction()
     end
 end
 
 -- UEnum Class
-local function SetEnumClassValueFunction(InLoop, InTestActor, InValue)
+local function SetCppEnumClassValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetEnumClassValueFunction(InValue)
+        InObject:SetEnumClassValueFunction(InValue)
     end
 end
 
-local function GetEnumClassValueFunction(InLoop, InTestActor)
+local function GetCppEnumClassValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetEnumClassValueFunction()
+        local Value = InObject:GetEnumClassValueFunction()
     end
 end
 
 -- UStruct
-local function SetStructValueFunction(InLoop, InTestActor, InValue)
+local function SetCppStructValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetStructValueFunction(InValue)
+        InObject:SetStructValueFunction(InValue)
     end
 end
 
-local function GetStructValueFunction(InLoop, InTestActor)
+local function GetCppStructValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetStructValueFunction()
+        local Value = InObject:GetStructValueFunction()
     end
 end
 
 -- UObject
-local function SetObjectValueFunction(InLoop, InTestActor, InValue)
+local function SetCppObjectValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetObjectValueFunction(InValue)
+        InObject:SetObjectValueFunction(InValue)
     end
 end
 
-local function GetObjectValueFunction(InLoop, InTestActor)
+local function GetCppObjectValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetObjectValueFunction()
+        local Value = InObject:GetObjectValueFunction()
     end
 end
 
 -- UClass
-local function SetClassValueFunction(InLoop, InTestActor, InValue)
+local function SetCppClassValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetClassValueFunction(InValue)
+        InObject:SetClassValueFunction(InValue)
     end
 end
 
-local function GetClassValueFunction(InLoop, InTestActor)
+local function GetCppClassValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetClassValueFunction()
+        local Value = InObject:GetClassValueFunction()
     end
 end
 
 -- UInterface 
-local function SetInterfaceValueFunction(InLoop, InTestActor, InValue)
+local function SetCppInterfaceValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetInterfaceValueFunction(InValue)
+        InObject:SetInterfaceValueFunction(InValue)
     end
 end
 
-local function GetInterfaceValueFunction(InLoop, InTestActor)
+local function GetCppInterfaceValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetInterfaceValueFunction()
+        local Value = InObject:GetInterfaceValueFunction()
     end
 end
 
 -- TArray
-local function SetArrayValueFunction(InLoop, InTestActor, InValue)
+local function SetCppArrayValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetArrayValueFunction(InValue)
+        InObject:SetArrayValueFunction(InValue)
     end
 end
 
-local function GetArrayValueFunction(InLoop, InTestActor)
+local function GetCppArrayValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetArrayValueFunction()
+        local Value = InObject:GetArrayValueFunction()
     end
 end
 
 -- TSet
-local function SetSetValueFunction(InLoop, InTestActor, InValue)
+local function SetCppSetValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetSetValueFunction(InValue)
+        InObject:SetSetValueFunction(InValue)
     end
 end
 
-local function GetSetValueFunction(InLoop, InTestActor)
+local function GetCppSetValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetSetValueFunction()
+        local Value = InObject:GetSetValueFunction()
     end
 end
 
 -- TMap
-local function SetMapValueFunction(InLoop, InTestActor, InValue)
+local function SetCppMapValueFunction(InLoop, InObject, InValue)
     for i = 0, InLoop do
-        InTestActor:SetMapValueFunction(InValue)
+        InObject:SetMapValueFunction(InValue)
     end
 end
 
-local function GetMapValueFunction(InLoop, InTestActor)
+local function GetCppMapValueFunction(InLoop, InObject)
     for i = 0, InLoop do
-        local Value = InTestActor:GetMapValueFunction()
+        local Value = InObject:GetMapValueFunction()
     end
 end
 
@@ -741,129 +741,129 @@ function M:ProcessTest()
     TestMap:Add(0, 1)
 
     -- Bool
-    self:Exec("SetBoolValue", SetBoolValue, Loop, TestActor, true)
+    self:Exec("SetCppBoolValue", SetCppBoolValue, Loop, TestActor, true)
 
-    self:Exec("GetBoolValue", GetBoolValue, Loop, TestActor)
+    self:Exec("GetCppBoolValue", GetCppBoolValue, Loop, TestActor)
 
     -- Int8
-    self:Exec("SetInt8Value", SetInt8Value, Loop, TestActor, 1)
+    self:Exec("SetCppInt8Value", SetCppInt8Value, Loop, TestActor, 1)
 
-    self:Exec("GetInt8Value", GetInt8Value, Loop, TestActor)
+    self:Exec("GetCppInt8Value", GetCppInt8Value, Loop, TestActor)
 
     -- Int16
-    self:Exec("SetInt16Value", SetInt16Value, Loop, TestActor, 1)
+    self:Exec("SetCppInt16Value", SetCppInt16Value, Loop, TestActor, 1)
 
-    self:Exec("GetInt16Value", GetInt16Value, Loop, TestActor)
+    self:Exec("GetCppInt16Value", GetCppInt16Value, Loop, TestActor)
 
     -- Int32
-    self:Exec("SetInt32Value", SetInt32Value, Loop, TestActor, 1)
+    self:Exec("SetCppInt32Value", SetCppInt32Value, Loop, TestActor, 1)
 
-    self:Exec("GetInt32Value", GetInt32Value, Loop, TestActor)
+    self:Exec("GetCppInt32Value", GetCppInt32Value, Loop, TestActor)
 
     -- Int64
-    self:Exec("SetInt64Value", SetInt64Value, Loop, TestActor, 1)
+    self:Exec("SetCppInt64Value", SetCppInt64Value, Loop, TestActor, 1)
 
-    self:Exec("GetInt64Value", GetInt64Value, Loop, TestActor)
+    self:Exec("GetCppInt64Value", GetCppInt64Value, Loop, TestActor)
 
     -- UInt8
-    self:Exec("SetUInt8Value", SetUInt8Value, Loop, TestActor, 1)
+    self:Exec("SetCppUInt8Value", SetCppUInt8Value, Loop, TestActor, 1)
 
-    self:Exec("GetUInt8Value", GetUInt8Value, Loop, TestActor)
+    self:Exec("GetCppUInt8Value", GetCppUInt8Value, Loop, TestActor)
 
     -- UInt16
-    self:Exec("SetUInt16Value", SetUInt16Value, Loop, TestActor, 1)
+    self:Exec("SetCppUInt16Value", SetCppUInt16Value, Loop, TestActor, 1)
 
-    self:Exec("GetUInt16Value", GetUInt16Value, Loop, TestActor)
+    self:Exec("GetCppUInt16Value", GetCppUInt16Value, Loop, TestActor)
 
     -- UInt32
-    self:Exec("SetUInt32Value", SetUInt32Value, Loop, TestActor, 1)
+    self:Exec("SetCppUInt32Value", SetCppUInt32Value, Loop, TestActor, 1)
 
-    self:Exec("GetUInt32Value", GetUInt32Value, Loop, TestActor)
+    self:Exec("GetCppUInt32Value", GetCppUInt32Value, Loop, TestActor)
 
     -- UInt64
-    self:Exec("SetUInt64Value", SetUInt64Value, Loop, TestActor, 1)
+    self:Exec("SetCppUInt64Value", SetCppUInt64Value, Loop, TestActor, 1)
 
-    self:Exec("GetUInt64Value", GetUInt64Value, Loop, TestActor)
+    self:Exec("GetCppUInt64Value", GetCppUInt64Value, Loop, TestActor)
 
     -- Float
-    self:Exec("SetFloatValue", SetFloatValue, Loop, TestActor, 1.0)
+    self:Exec("SetCppFloatValue", SetCppFloatValue, Loop, TestActor, 1.0)
 
-    self:Exec("GetFloatValue", GetFloatValue, Loop, TestActor)
+    self:Exec("GetCppFloatValue", GetCppFloatValue, Loop, TestActor)
 
     -- Double
-    self:Exec("SetDoubleValue", SetDoubleValue, Loop, TestActor, 1.0)
+    self:Exec("SetCppDoubleValue", SetCppDoubleValue, Loop, TestActor, 1.0)
 
-    self:Exec("GetDoubleValue", GetDoubleValue, Loop, TestActor)
+    self:Exec("GetCppDoubleValue", GetCppDoubleValue, Loop, TestActor)
 
     -- FName
-    self:Exec("SetNameValue", SetNameValue, Loop, TestActor, "Name")
+    self:Exec("SetCppNameValue", SetCppNameValue, Loop, TestActor, "Name")
 
-    self:Exec("GetNameValue", GetNameValue, Loop, TestActor)
+    self:Exec("GetCppNameValue", GetCppNameValue, Loop, TestActor)
 
     -- FText
-    self:Exec("SetTextValue", SetNameValue, Loop, TestActor, "Text")
+    self:Exec("SetCppTextValue", SetCppNameValue, Loop, TestActor, "Text")
 
-    self:Exec("GetTextValue", GetNameValue, Loop, TestActor)
+    self:Exec("GetCppTextValue", GetCppNameValue, Loop, TestActor)
 
     -- FString
-    self:Exec("SetStringValue", SetStringValue, Loop, TestActor, "String")
+    self:Exec("SetCppStringValue", SetCppStringValue, Loop, TestActor, "String")
 
-    self:Exec("GetStringValue", GetStringValue, Loop, TestActor)
+    self:Exec("GetCppStringValue", GetCppStringValue, Loop, TestActor)
 
     -- UEnum
-    self:Exec("SetEnumValue", SetEnumValue, Loop, TestActor, TestEnum)
+    self:Exec("SetCppEnumValue", SetCppEnumValue, Loop, TestActor, TestEnum)
 
-    self:Exec("GetEnumValue", GetEnumValue, Loop, TestActor)
+    self:Exec("GetCppEnumValue", GetCppEnumValue, Loop, TestActor)
 
     -- UEnum Class
-    self:Exec("SetEnumClassValue", SetEnumClassValue, Loop, TestActor, TestEnumClass)
+    self:Exec("SetCppEnumClassValue", SetCppEnumClassValue, Loop, TestActor, TestEnumClass)
 
-    self:Exec("GetEnumClassValue", GetEnumClassValue, Loop, TestActor)
+    self:Exec("GetCppEnumClassValue", GetCppEnumClassValue, Loop, TestActor)
 
     -- UStruct
-    self:Exec("SetStructValue", SetStructValue, Loop, TestActor, TestStruct)
+    self:Exec("SetCppStructValue", SetCppStructValue, Loop, TestActor, TestStruct)
 
-    self:Exec("GetStructValue", GetStructValue, Loop, TestActor)
+    self:Exec("GetCppStructValue", GetCppStructValue, Loop, TestActor)
 
     -- UObject
-    self:Exec("SetObjectValue", SetObjectValue, Loop, TestActor, TestActor)
+    self:Exec("SetCppObjectValue", SetCppObjectValue, Loop, TestActor, TestActor)
 
-    self:Exec("GetObjectValue", GetObjectValue, Loop, TestActor)
+    self:Exec("GetCppObjectValue", GetCppObjectValue, Loop, TestActor)
 
     -- UClass
-    self:Exec("SetClassValue", SetClassValue, Loop, TestActor, TestClass)
+    self:Exec("SetCppClassValue", SetCppClassValue, Loop, TestActor, TestClass)
 
-    self:Exec("GetClassValue", GetClassValue, Loop, TestActor)
+    self:Exec("GetCppClassValue", GetCppClassValue, Loop, TestActor)
 
     -- UInterface 
-    self:Exec("SetInterfaceValue", SetInterfaceValue, Loop, TestActor, TestInterface)
+    self:Exec("SetCppInterfaceValue", SetCppInterfaceValue, Loop, TestActor, TestInterface)
 
-    self:Exec("GetInterfaceValue", GetInterfaceValue, Loop, TestActor)
+    self:Exec("GetCppInterfaceValue", GetCppInterfaceValue, Loop, TestActor)
 
     -- TArray
-    self:Exec("SeArrayValue", SetArrayValue, Loop, TestActor, TestArray)
+    self:Exec("SeCppArrayValue", SetCppArrayValue, Loop, TestActor, TestArray)
 
-    self:Exec("GetArrayValue", GetArrayValue, Loop, TestActor)
+    self:Exec("GeCpptArrayValue", GetCppArrayValue, Loop, TestActor)
 
     -- TArray Element
-    self:Exec("SetArrayElement", SetArrayElement, Loop, TestActor, 1, 1)
+    self:Exec("SetCppArrayElement", SetCppArrayElement, Loop, TestActor, 1, 1)
 
-    self:Exec("GetArrayElement", GetArrayValue, Loop, TestActor, 1)
+    self:Exec("GetCppArrayElement", GetCppArrayValue, Loop, TestActor, 1)
 
     -- TSet
-    self:Exec("SeSetValue", SetSetValue, Loop, TestActor, TestSet)
+    self:Exec("SetCppSetValue", SetCppSetValue, Loop, TestActor, TestSet)
 
-    self:Exec("GetSetValue", GetSetValue, Loop, TestActor)
+    self:Exec("GetCppSetValue", GetCppSetValue, Loop, TestActor)
 
     -- TMap
-    self:Exec("SeMapValue", SetMapValue, Loop, TestActor, TestMap)
+    self:Exec("SeCppMapValue", SetCppMapValue, Loop, TestActor, TestMap)
 
-    self:Exec("GetMapValue", GetMapValue, Loop, TestActor)
+    self:Exec("GetCppMapValue", GetCppMapValue, Loop, TestActor)
 
     -- TMap Element
-    self:Exec("SetMapElement", SetMapElement, Loop, TestActor, 0, 1)
+    self:Exec("SetCppMapElement", SetCppMapElement, Loop, TestActor, 0, 1)
 
-    self:Exec("GetMapElement", GetMapValue, Loop, TestActor, 0)
+    self:Exec("GetCppMapElement", GetCppMapValue, Loop, TestActor, 0)
 
     -- Empty
     self:Exec("EmptyFunction", EmptyFunction, Loop)
@@ -881,125 +881,125 @@ function M:ProcessTest()
     self:Exec("DivideFunction", DivideFunction, Loop)
 
     -- Static
-    self:Exec("StaticFunction", StaticFunction, Loop, TestActor)
+    self:Exec("StaticCppFunction", StaticCppFunction, Loop, TestActor)
 
     -- Member
-    self:Exec("MemberFunction", MemberFunction, Loop, TestActor)
+    self:Exec("MemberCppFunction", MemberCppFunction, Loop, TestActor)
 
     -- Bool
-    self:Exec("SetBoolValueFunction", SetBoolValueFunction, Loop, TestActor, true)
+    self:Exec("SetCppBoolValueFunction", SetCppBoolValueFunction, Loop, TestActor, true)
 
-    self:Exec("GetBoolValueFunction", GetBoolValueFunction, Loop, TestActor)
+    self:Exec("GetCppBoolValueFunction", GetCppBoolValueFunction, Loop, TestActor)
 
     -- Int8
-    self:Exec("SetInt8ValueFunction", SetInt8ValueFunction, Loop, TestActor, 1)
+    self:Exec("SetCppInt8ValueFunction", SetCppInt8ValueFunction, Loop, TestActor, 1)
 
-    self:Exec("GetInt8ValueFunction", GetInt8ValueFunction, Loop, TestActor)
+    self:Exec("GetCppInt8ValueFunction", GetCppInt8ValueFunction, Loop, TestActor)
 
     -- Int16
-    self:Exec("SetInt16ValueFunction", SetInt16ValueFunction, Loop, TestActor, 1)
+    self:Exec("SetCppInt16ValueFunction", SetCppInt16ValueFunction, Loop, TestActor, 1)
 
-    self:Exec("GetInt16ValueFunction", GetInt16ValueFunction, Loop, TestActor)
+    self:Exec("GetCppInt16ValueFunction", GetCppInt16ValueFunction, Loop, TestActor)
 
     -- Int32
-    self:Exec("SetInt32ValueFunction", SetInt32ValueFunction, Loop, TestActor, 1)
+    self:Exec("SetCppInt32ValueFunction", SetCppInt32ValueFunction, Loop, TestActor, 1)
 
-    self:Exec("GetInt32ValueFunction", GetInt32ValueFunction, Loop, TestActor)
+    self:Exec("GetCppInt32ValueFunction", GetCppInt32ValueFunction, Loop, TestActor)
 
     -- Int64
-    self:Exec("SetInt64ValueFunction", SetInt64ValueFunction, Loop, TestActor, 1)
+    self:Exec("SetCppInt64ValueFunction", SetCppInt64ValueFunction, Loop, TestActor, 1)
 
-    self:Exec("GetInt64ValueFunction", GetInt64ValueFunction, Loop, TestActor)
+    self:Exec("GetCppInt64ValueFunction", GetCppInt64ValueFunction, Loop, TestActor)
 
     -- UInt8
-    self:Exec("SetUInt8ValueFunction", SetUInt8ValueFunction, Loop, TestActor, 1)
+    self:Exec("SetCppUInt8ValueFunction", SetCppUInt8ValueFunction, Loop, TestActor, 1)
 
-    self:Exec("GetUInt8ValueFunction", GetUInt8ValueFunction, Loop, TestActor)
+    self:Exec("GetCppUInt8ValueFunction", GetCppUInt8ValueFunction, Loop, TestActor)
 
     -- UInt16
-    self:Exec("SetUInt16ValueFunction", SetUInt16ValueFunction, Loop, TestActor, 1)
+    self:Exec("SetCppUInt16ValueFunction", SetCppUInt16ValueFunction, Loop, TestActor, 1)
 
-    self:Exec("GetUInt16ValueFunction", GetUInt16ValueFunction, Loop, TestActor)
+    self:Exec("GetCppUInt16ValueFunction", GetCppUInt16ValueFunction, Loop, TestActor)
 
     -- UInt32
-    self:Exec("SetUInt32ValueFunction", SetUInt32ValueFunction, Loop, TestActor, 1)
+    self:Exec("SetCppUInt32ValueFunction", SetCppUInt32ValueFunction, Loop, TestActor, 1)
 
-    self:Exec("GetUInt32ValueFunction", GetUInt32ValueFunction, Loop, TestActor)
+    self:Exec("GetCppUInt32ValueFunction", GetCppUInt32ValueFunction, Loop, TestActor)
 
     -- UInt64
-    self:Exec("SetUInt64ValueFunction", SetUInt64ValueFunction, Loop, TestActor, 1)
+    self:Exec("SetCppUInt64ValueFunction", SetCppUInt64ValueFunction, Loop, TestActor, 1)
 
-    self:Exec("GetUInt64ValueFunction", GetUInt64ValueFunction, Loop, TestActor)
+    self:Exec("GetCppUInt64ValueFunction", GetCppUInt64ValueFunction, Loop, TestActor)
 
     -- Float
-    self:Exec("SetFloatValueFunction", SetFloatValueFunction, Loop, TestActor, 1.0)
+    self:Exec("SetCppFloatValueFunction", SetCppFloatValueFunction, Loop, TestActor, 1.0)
 
-    self:Exec("GetFloatValueFunction", GetFloatValueFunction, Loop, TestActor)
+    self:Exec("GetCppFloatValueFunction", GetCppFloatValueFunction, Loop, TestActor)
 
     -- Double
-    self:Exec("SetDoubleValueFunction", SetDoubleValueFunction, Loop, TestActor, 1.0)
+    self:Exec("SetCppDoubleValueFunction", SetCppDoubleValueFunction, Loop, TestActor, 1.0)
 
-    self:Exec("GetDoubleValueFunction", GetDoubleValueFunction, Loop, TestActor)
+    self:Exec("GetCppDoubleValueFunction", GetCppDoubleValueFunction, Loop, TestActor)
 
     -- FName
-    self:Exec("SetNameValueFunction", SetNameValueFunction, Loop, TestActor, "Name")
+    self:Exec("SetCppNameValueFunction", SetCppNameValueFunction, Loop, TestActor, "Name")
 
-    self:Exec("GetNameValueFunction", GetNameValueFunction, Loop, TestActor)
+    self:Exec("GetCppNameValueFunction", GetCppNameValueFunction, Loop, TestActor)
 
     -- FText
-    self:Exec("SetTextValueFunction", SetTextValueFunction, Loop, TestActor, "Text")
+    self:Exec("SetCppTextValueFunction", SetCppTextValueFunction, Loop, TestActor, "Text")
 
-    self:Exec("GetTextValueFunction", GetTextValueFunction, Loop, TestActor)
+    self:Exec("GetCppTextValueFunction", GetCppTextValueFunction, Loop, TestActor)
 
     -- FString
-    self:Exec("SetStringValueFunction", SetStringValueFunction, Loop, TestActor, "String")
+    self:Exec("SetCppStringValueFunction", SetCppStringValueFunction, Loop, TestActor, "String")
 
-    self:Exec("GetStringValueFunction", GetStringValueFunction, Loop, TestActor)
+    self:Exec("GetCppStringValueFunction", GetCppStringValueFunction, Loop, TestActor)
 
     -- UEnum
-    self:Exec("SetEnumValueFunction", SetEnumValueFunction, Loop, TestActor, TestEnum)
+    self:Exec("SetCppEnumValueFunction", SetCppEnumValueFunction, Loop, TestActor, TestEnum)
 
-    self:Exec("GetEnumValueFunction", GetEnumValueFunction, Loop, TestActor)
+    self:Exec("GetCppEnumValueFunction", GetCppEnumValueFunction, Loop, TestActor)
 
     -- UEnum Class
-    self:Exec("SetEnumClassValueFunction", SetEnumClassValueFunction, Loop, TestActor, TestEnumClass)
+    self:Exec("SetCppEnumClassValueFunction", SetCppEnumClassValueFunction, Loop, TestActor, TestEnumClass)
 
-    self:Exec("GetEnumClassValueFunction", GetEnumClassValueFunction, Loop, TestActor)
+    self:Exec("GetCppEnumClassValueFunction", GetCppEnumClassValueFunction, Loop, TestActor)
 
     -- UStruct
-    self:Exec("SetStructValueFunction", SetStructValueFunction, Loop, TestActor, TestStruct)
+    self:Exec("SetCppStructValueFunction", SetCppStructValueFunction, Loop, TestActor, TestStruct)
 
-    self:Exec("GetStructValueFunction", GetStructValueFunction, Loop, TestActor)
+    self:Exec("GetCppStructValueFunction", GetCppStructValueFunction, Loop, TestActor)
 
     -- UObject
-    self:Exec("SetObjectValueFunction", SetObjectValueFunction, Loop, TestActor, TestActor)
+    self:Exec("SetCppObjectValueFunction", SetCppObjectValueFunction, Loop, TestActor, TestActor)
 
-    self:Exec("GetObjectValueFunction", GetObjectValueFunction, Loop, TestActor)
+    self:Exec("GeCpptObjectValueFunction", GetCppObjectValueFunction, Loop, TestActor)
 
     -- UClass
-    self:Exec("SetClassValueFunction", SetClassValueFunction, Loop, TestActor, TestClass)
+    self:Exec("SetCppClassValueFunction", SetCppClassValueFunction, Loop, TestActor, TestClass)
 
-    self:Exec("GetClassValueFunction", GetClassValueFunction, Loop, TestActor)
+    self:Exec("GetCppClassValueFunction", GetCppClassValueFunction, Loop, TestActor)
 
     -- UInterface 
-    self:Exec("SetInterfaceValueFunction", SetInterfaceValueFunction, Loop, TestActor, TestInterface)
+    self:Exec("SetCppInterfaceValueFunction", SetCppInterfaceValueFunction, Loop, TestActor, TestInterface)
 
-    self:Exec("GetInterfaceValueFunction", GetInterfaceValueFunction, Loop, TestActor)
+    self:Exec("GetCppInterfaceValueFunction", GetCppInterfaceValueFunction, Loop, TestActor)
 
     -- TArray
-    self:Exec("SetArrayValueFunction", SetArrayValueFunction, Loop, TestActor, TestArray)
+    self:Exec("SetCppArrayValueFunction", SetCppArrayValueFunction, Loop, TestActor, TestArray)
 
-    self:Exec("GetArrayValueFunction", GetArrayValueFunction, Loop, TestActor)
+    self:Exec("GetCppArrayValueFunction", GetCppArrayValueFunction, Loop, TestActor)
 
     -- TSet
-    self:Exec("SetSetValueFunction", SetSetValueFunction, Loop, TestActor, TestSet)
+    self:Exec("SetCppSetValueFunction", SetCppSetValueFunction, Loop, TestActor, TestSet)
 
-    self:Exec("GetSetValueFunction", GetSetValueFunction, Loop, TestActor)
+    self:Exec("GetCppSetValueFunction", GetCppSetValueFunction, Loop, TestActor)
 
     -- TMap
-    self:Exec("SetMapValueFunction", SetMapValueFunction, Loop, TestActor, TestMap)
+    self:Exec("SetCppMapValueFunction", SetCppMapValueFunction, Loop, TestActor, TestMap)
 
-    self:Exec("GetMapValueFunction", GetMapValueFunction, Loop, TestActor)
+    self:Exec("GetCppMapValueFunction", GetCppMapValueFunction, Loop, TestActor)
 end
 
 function M:EndTest()
