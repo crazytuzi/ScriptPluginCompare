@@ -4,6 +4,7 @@ using System.Text;
 using Script.Common;
 using Script.CoreUObject;
 using Script.Engine;
+using Script.Game.FirstPerson.Blueprints;
 
 namespace Script.ScriptPluginCompare
 {
@@ -31,7 +32,25 @@ namespace Script.ScriptPluginCompare
             Data = new List<KeyValuePair<string, double>>();
         }
 
-        private void ProcessTest()
+        private void TestSelf()
+        {
+            // Empty
+            EmptyFunction(Loop);
+
+            // Add
+            AddFunction(Loop);
+
+            // Subtract
+            SubtractFunction(Loop);
+
+            // Multiply
+            MultiplyFunction(Loop);
+
+            // Divide
+            DivideFunction(Loop);
+        }
+
+        private void TestCpp()
         {
             var TestActor = GetWorld().SpawnActor<ATestActor>(new FTransform());
 
@@ -179,21 +198,6 @@ namespace Script.ScriptPluginCompare
 
             GetCppMapElement(Loop, TestActor, 0);
 
-            // Empty
-            EmptyFunction(Loop);
-
-            // Add
-            AddFunction(Loop);
-
-            // Subtract
-            SubtractFunction(Loop);
-
-            // Multiply
-            MultiplyFunction(Loop);
-
-            // Divide
-            DivideFunction(Loop);
-
             // Static
             StaticCppFunction(Loop);
 
@@ -314,6 +318,225 @@ namespace Script.ScriptPluginCompare
             SetCppMapValueFunction(Loop, TestActor, TestMap);
 
             GetCppMapValueFunction(Loop, TestActor);
+        }
+
+        private void TestBP()
+        {
+            var TestActor = GetWorld().SpawnActor<BP_TestActor_C>(new FTransform());
+
+            var TestClass = TestActor.GetClass();
+
+            var TestInterface = TestActor.InterfaceValue;
+
+            var TestStruct = new FTestStruct
+            {
+                Value = 1
+            };
+
+            var TestEnum = ETestEnum.TestEnumOne;
+
+            var TestEnumClass = ETestEnumClass.TestEnumClassOne;
+
+            var TestArray = new TArray<Int32> { 1 };
+
+            var TestSet = new TSet<Int32> { 1 };
+
+            var TestMap = new TMap<Int32, Int32> { { 0, 1 } };
+
+            // Bool
+            SetBPBoolValue(Loop, TestActor, true);
+
+            GetBPBoolValue(Loop, TestActor);
+
+            // Int32
+            SetBPInt32Value(Loop, TestActor, 1);
+
+            GetBPInt32Value(Loop, TestActor);
+
+            // Int64
+            SetBPInt64Value(Loop, TestActor, 1);
+
+            GetBPInt64Value(Loop, TestActor);
+
+            // UInt8
+            SetBPUInt8Value(Loop, TestActor, 1);
+
+            GetBPUInt8Value(Loop, TestActor);
+
+            // Double
+            SetBPDoubleValue(Loop, TestActor, 1.0);
+
+            GetBPDoubleValue(Loop, TestActor);
+
+            // FName
+            SetBPNameValue(Loop, TestActor, "Name");
+
+            GetBPNameValue(Loop, TestActor);
+
+            // FText
+            SetBPTextValue(Loop, TestActor, "Text");
+
+            GetBPTextValue(Loop, TestActor);
+
+            // FString
+            SetBPStringValue(Loop, TestActor, "String");
+
+            GetBPStringValue(Loop, TestActor);
+
+            // UEnum
+            SetBPEnumValue(Loop, TestActor, TestEnum);
+
+            GetBPEnumValue(Loop, TestActor);
+
+            // UEnum Class
+            SetBPEnumClassValue(Loop, TestActor, TestEnumClass);
+
+            GetBPEnumClassValue(Loop, TestActor);
+
+            // UStruct
+            SetBPStructValue(Loop, TestActor, TestStruct);
+
+            GetBPStructValue(Loop, TestActor);
+
+            // UObject
+            SetBPObjectValue(Loop, TestActor, TestActor);
+
+            GetBPObjectValue(Loop, TestActor);
+
+            // UClass
+            SetBPClassValue(Loop, TestActor, TestClass);
+
+            GetBPClassValue(Loop, TestActor);
+
+            // UInterface
+            SetBPInterfaceValue(Loop, TestActor, TestInterface);
+
+            GetBPInterfaceValue(Loop, TestActor);
+
+            // TArray
+            SetBPArrayValue(Loop, TestActor, TestArray);
+
+            GetBPArrayValue(Loop, TestActor);
+
+            // TArray Element
+            SetBPArrayElement(Loop, TestActor, 0, 1);
+
+            GetBPArrayElement(Loop, TestActor, 0);
+
+            // TSet
+            SetBPSetValue(Loop, TestActor, TestSet);
+
+            GetBPSetValue(Loop, TestActor);
+
+            // TMap
+            SetBPMapValue(Loop, TestActor, TestMap);
+
+            GetBPMapValue(Loop, TestActor);
+
+            // TMap Element
+            SetBPMapElement(Loop, TestActor, 0, 1);
+
+            GetBPMapElement(Loop, TestActor, 0);
+
+            // Static
+            StaticBPFunction(Loop, TestActor);
+
+            // Member
+            MemberBPFunction(Loop, TestActor);
+
+            // Bool
+            SetBPBoolValueFunction(Loop, TestActor, true);
+
+            GetBPBoolValueFunction(Loop, TestActor);
+
+            // Int32
+            SetBPInt32ValueFunction(Loop, TestActor, 1);
+
+            GetBPInt32ValueFunction(Loop, TestActor);
+
+            // Int64
+            SetBPInt64ValueFunction(Loop, TestActor, 1);
+
+            GetBPInt64ValueFunction(Loop, TestActor);
+
+            // UInt8
+            SetBPUInt8ValueFunction(Loop, TestActor, 1);
+
+            GetBPUInt8ValueFunction(Loop, TestActor);
+
+            // Double
+            SetBPDoubleValueFunction(Loop, TestActor, 1.0);
+
+            GetBPDoubleValueFunction(Loop, TestActor);
+
+            // FName
+            SetBPNameValueFunction(Loop, TestActor, "Name");
+
+            GetBPNameValueFunction(Loop, TestActor);
+
+            // FText
+            SetBPTextValueFunction(Loop, TestActor, "Text");
+
+            GetBPTextValueFunction(Loop, TestActor);
+
+            // FString
+            SetBPStringValueFunction(Loop, TestActor, "String");
+
+            GetBPStringValueFunction(Loop, TestActor);
+
+            // UEnum
+            SetBPEnumValueFunction(Loop, TestActor, TestEnum);
+
+            GetBPEnumValueFunction(Loop, TestActor);
+
+            // UEnum Class
+            SetBPEnumClassValueFunction(Loop, TestActor, TestEnumClass);
+
+            GetBPEnumClassValueFunction(Loop, TestActor);
+
+            // UStruct
+            SetBPStructValueFunction(Loop, TestActor, TestStruct);
+
+            GetBPStructValueFunction(Loop, TestActor);
+
+            // UObject
+            SetBPObjectValueFunction(Loop, TestActor, TestActor);
+
+            GetBPObjectValueFunction(Loop, TestActor);
+
+            // UClass
+            SetBPClassValueFunction(Loop, TestActor, TestClass);
+
+            GetBPClassValueFunction(Loop, TestActor);
+
+            // UInterface
+            SetBPInterfaceValueFunction(Loop, TestActor, TestInterface);
+
+            GetBPInterfaceValueFunction(Loop, TestActor);
+
+            // TArray
+            SetBPArrayValueFunction(Loop, TestActor, TestArray);
+
+            GetBPArrayValueFunction(Loop, TestActor);
+
+            // TSet
+            SetBPSetValueFunction(Loop, TestActor, TestSet);
+
+            GetBPSetValueFunction(Loop, TestActor);
+
+            // TMap
+            SetBPMapValueFunction(Loop, TestActor, TestMap);
+
+            GetBPMapValueFunction(Loop, TestActor);
+        }
+
+        private void ProcessTest()
+        {
+            TestSelf();
+
+            TestCpp();
+
+            TestBP();
         }
 
         private void EndTest()
@@ -2080,6 +2303,1230 @@ namespace Script.ScriptPluginCompare
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
             Data.Add(new KeyValuePair<string, double>("GetCppMapValueFunction", TotalSeconds));
+        }
+
+        // Bool
+        private void SetBPBoolValue(Int32 InLoop, BP_TestActor_C InObject, Boolean InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.BoolValue = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPBoolValue", TotalSeconds));
+        }
+
+        private void GetBPBoolValue(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.BoolValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPBoolValue", TotalSeconds));
+        }
+
+        // Int32
+        private void SetBPInt32Value(Int32 InLoop, BP_TestActor_C InObject, Int32 InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.Int32Value = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPInt32Value", TotalSeconds));
+        }
+
+        private void GetBPInt32Value(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.Int32Value;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPInt32Value", TotalSeconds));
+        }
+
+        // Int64
+        private void SetBPInt64Value(Int32 InLoop, BP_TestActor_C InObject, Int64 InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.Int64Value = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPInt64Value", TotalSeconds));
+        }
+
+        private void GetBPInt64Value(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.Int64Value;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPInt64Value", TotalSeconds));
+        }
+
+        // UInt8
+        private void SetBPUInt8Value(Int32 InLoop, BP_TestActor_C InObject, Byte InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.UInt8Value = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPUInt8Value", TotalSeconds));
+        }
+
+        private void GetBPUInt8Value(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.UInt8Value;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPUInt8Value", TotalSeconds));
+        }
+
+        // Double
+        private void SetBPDoubleValue(Int32 InLoop, BP_TestActor_C InObject, Double InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.DoubleValue = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPDoubleValue", TotalSeconds));
+        }
+
+        private void GetBPDoubleValue(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.DoubleValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPDoubleValue", TotalSeconds));
+        }
+
+        // FName
+        private void SetBPNameValue(Int32 InLoop, BP_TestActor_C InObject, FName InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.NameValue = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPNameValue", TotalSeconds));
+        }
+
+        private void GetBPNameValue(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.NameValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPNameValue", TotalSeconds));
+        }
+
+        // FText
+        private void SetBPTextValue(Int32 InLoop, BP_TestActor_C InObject, FText InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.TextValue = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPTextValue", TotalSeconds));
+        }
+
+        private void GetBPTextValue(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.TextValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPTextValue", TotalSeconds));
+        }
+
+        // FString
+        private void SetBPStringValue(Int32 InLoop, BP_TestActor_C InObject, FString InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.StringValue = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPStringValue", TotalSeconds));
+        }
+
+        private void GetBPStringValue(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.StringValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPStringValue", TotalSeconds));
+        }
+
+        // UEnum
+        private void SetBPEnumValue(Int32 InLoop, BP_TestActor_C InObject, ETestEnum InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.EnumValue = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPEnumValue", TotalSeconds));
+        }
+
+        private void GetBPEnumValue(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.EnumValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPEnumValue", TotalSeconds));
+        }
+
+        // UEnum Class
+        private void SetBPEnumClassValue(Int32 InLoop, BP_TestActor_C InObject, ETestEnumClass InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.EnumClassValue = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPEnumClassValue", TotalSeconds));
+        }
+
+        private void GetBPEnumClassValue(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.EnumClassValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPEnumClassValue", TotalSeconds));
+        }
+
+        // UStruct
+        private void SetBPStructValue(Int32 InLoop, BP_TestActor_C InObject, FTestStruct InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.StructValue = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPStructValue", TotalSeconds));
+        }
+
+        private void GetBPStructValue(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.StructValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPStructValue", TotalSeconds));
+        }
+
+        // UObject
+        private void SetBPObjectValue(Int32 InLoop, BP_TestActor_C InObject, BP_TestActor_C InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.ObjectValue = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPObjectValue", TotalSeconds));
+        }
+
+        private void GetBPObjectValue(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.ObjectValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPObjectValue", TotalSeconds));
+        }
+
+        // UClass
+        private void SetBPClassValue(Int32 InLoop, BP_TestActor_C InObject, TSubclassOf<UObject> InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.ClassValue = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPClassValue", TotalSeconds));
+        }
+
+        private void GetBPClassValue(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.ClassValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPClassValue", TotalSeconds));
+        }
+
+        // UInterface 
+        private void SetBPInterfaceValue(Int32 InLoop, BP_TestActor_C InObject,
+            TScriptInterface<ITestInterface> InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.InterfaceValue = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPInterfaceValue", TotalSeconds));
+        }
+
+        private void GetBPInterfaceValue(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.InterfaceValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPInterfaceValue", TotalSeconds));
+        }
+
+        // TArray
+        private void SetBPArrayValue(Int32 InLoop, BP_TestActor_C InObject, TArray<Int32> InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.ArrayValue = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPArrayValue", TotalSeconds));
+        }
+
+        private void GetBPArrayValue(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.ArrayValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPArrayValue", TotalSeconds));
+        }
+
+        // TArray Element
+        private void SetBPArrayElement(Int32 InLoop, BP_TestActor_C InObject, Int32 InIndex, Int32 InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.ArrayValue[InIndex] = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPArrayElement", TotalSeconds));
+        }
+
+        private void GetBPArrayElement(Int32 InLoop, BP_TestActor_C InObject, Int32 InIndex)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.ArrayValue[InIndex];
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPArrayElement", TotalSeconds));
+        }
+
+        // TSet
+        private void SetBPSetValue(Int32 InLoop, BP_TestActor_C InObject, TSet<Int32> InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetValue = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPSetValue", TotalSeconds));
+        }
+
+        private void GetBPSetValue(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.SetValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPSetValue", TotalSeconds));
+        }
+
+        // TMap
+        private void SetBPMapValue(Int32 InLoop, BP_TestActor_C InObject, TMap<Int32, Int32> InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.MapValue = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPMapValue", TotalSeconds));
+        }
+
+        private void GetBPMapValue(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.MapValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPMapValue", TotalSeconds));
+        }
+
+        // TMap Element
+        private void SetBPMapElement(Int32 InLoop, BP_TestActor_C InObject, Int32 InIndex, Int32 InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.MapValue[InIndex] = InValue;
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPMapElement", TotalSeconds));
+        }
+
+        private void GetBPMapElement(Int32 InLoop, BP_TestActor_C InObject, Int32 InIndex)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                var Value = InObject.MapValue[InIndex];
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPMapElement", TotalSeconds));
+        }
+
+        // Static
+        private void StaticBPFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.StaticFunction();
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("StaticBPFunction", TotalSeconds));
+        }
+
+        // Member
+        private void MemberBPFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.MemberFunction();
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("MemberBPFunction", TotalSeconds));
+        }
+
+        // Bool
+        private void SetBPBoolValueFunction(Int32 InLoop, BP_TestActor_C InObject, Boolean InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetBoolValueFunction(InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPBoolValueFunction", TotalSeconds));
+        }
+
+        private void GetBPBoolValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetBoolValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPBoolValueFunction", TotalSeconds));
+        }
+
+        // Int32
+        private void SetBPInt32ValueFunction(Int32 InLoop, BP_TestActor_C InObject, Int32 InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetInt32ValueFunction(InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPInt32ValueFunction", TotalSeconds));
+        }
+
+        private void GetBPInt32ValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetInt32ValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPInt32ValueFunction", TotalSeconds));
+        }
+
+        // Int64
+        private void SetBPInt64ValueFunction(Int32 InLoop, BP_TestActor_C InObject, Int64 InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetInt64ValueFunction(InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPInt64ValueFunction", TotalSeconds));
+        }
+
+        private void GetBPInt64ValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetInt64ValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPInt64ValueFunction", TotalSeconds));
+        }
+
+        // UInt8
+        private void SetBPUInt8ValueFunction(Int32 InLoop, BP_TestActor_C InObject, Byte InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetUInt8ValueFunction(InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPUInt8ValueFunction", TotalSeconds));
+        }
+
+        private void GetBPUInt8ValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetUInt8ValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPUInt8ValueFunction", TotalSeconds));
+        }
+
+        // Double
+        private void SetBPDoubleValueFunction(Int32 InLoop, BP_TestActor_C InObject, Double InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetDoubleValueFunction(InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPDoubleValueFunction", TotalSeconds));
+        }
+
+        private void GetBPDoubleValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetDoubleValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPDoubleValueFunction", TotalSeconds));
+        }
+
+        // FName
+        private void SetBPNameValueFunction(Int32 InLoop, BP_TestActor_C InObject, FName InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetNameValueFunction(InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPNameValueFunction", TotalSeconds));
+        }
+
+        private void GetBPNameValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetNameValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPNameValueFunction", TotalSeconds));
+        }
+
+        // FText
+        private void SetBPTextValueFunction(Int32 InLoop, BP_TestActor_C InObject, FText InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetTextValueFunction(InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPTextValueFunction", TotalSeconds));
+        }
+
+        private void GetBPTextValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetTextValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPTextValueFunction", TotalSeconds));
+        }
+
+        // FString
+        private void SetBPStringValueFunction(Int32 InLoop, BP_TestActor_C InObject, FString InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetStringValueFunction(InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPStringValueFunction", TotalSeconds));
+        }
+
+        private void GetBPStringValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetStringValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPStringValueFunction", TotalSeconds));
+        }
+
+        // UEnum
+        private void SetBPEnumValueFunction(Int32 InLoop, BP_TestActor_C InObject, ETestEnum InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetEnumValueFunction(InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPEnumValueFunction", TotalSeconds));
+        }
+
+        private void GetBPEnumValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetEnumValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPEnumValueFunction", TotalSeconds));
+        }
+
+        // UEnum Class
+        private void SetBPEnumClassValueFunction(Int32 InLoop, BP_TestActor_C InObject, ETestEnumClass InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetEnumClassValueFunction(InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPEnumClassValueFunction", TotalSeconds));
+        }
+
+        private void GetBPEnumClassValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetEnumClassValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPEnumClassValueFunction", TotalSeconds));
+        }
+
+        // UStruct
+        private void SetBPStructValueFunction(Int32 InLoop, BP_TestActor_C InObject, FTestStruct InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetStructValueFunction(InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPStructValueFunction", TotalSeconds));
+        }
+
+        private void GetBPStructValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetStructValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPStructValueFunction", TotalSeconds));
+        }
+
+        // UObject
+        private void SetBPObjectValueFunction(Int32 InLoop, BP_TestActor_C InObject, BP_TestActor_C InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetObjectValueFunction(InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPObjectValueFunction", TotalSeconds));
+        }
+
+        private void GetBPObjectValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetObjectValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPObjectValueFunction", TotalSeconds));
+        }
+
+        // UClass
+        private void SetBPClassValueFunction(Int32 InLoop, BP_TestActor_C InObject, TSubclassOf<UObject> InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetClassValueFunction(InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPClassValueFunction", TotalSeconds));
+        }
+
+        private void GetBPClassValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetClassValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPClassValueFunction", TotalSeconds));
+        }
+
+        // UInterface 
+        private void SetBPInterfaceValueFunction(Int32 InLoop, BP_TestActor_C InObject,
+            TScriptInterface<ITestInterface> InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetInterfaceValueFunction(InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPInterfaceValueFunction", TotalSeconds));
+        }
+
+        private void GetBPInterfaceValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetInterfaceValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPInterfaceValueFunction", TotalSeconds));
+        }
+
+        // TArray
+        private void SetBPArrayValueFunction(Int32 InLoop, BP_TestActor_C InObject, TArray<Int32> InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetArrayValueFunction(ref InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPArrayValueFunction", TotalSeconds));
+        }
+
+        private void GetBPArrayValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetArrayValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPArrayValueFunction", TotalSeconds));
+        }
+
+        // TSet
+        private void SetBPSetValueFunction(Int32 InLoop, BP_TestActor_C InObject, TSet<Int32> InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetSetValueFunction(ref InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPSetValueFunction", TotalSeconds));
+        }
+
+        private void GetBPSetValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetSetValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPSetValueFunction", TotalSeconds));
+        }
+
+        // TMap
+        private void SetBPMapValueFunction(Int32 InLoop, BP_TestActor_C InObject, TMap<Int32, Int32> InValue)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.SetMapValueFunction(ref InValue);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("SetBPMapValueFunction", TotalSeconds));
+        }
+
+        private void GetBPMapValueFunction(Int32 InLoop, BP_TestActor_C InObject)
+        {
+            var Start = UKismetMathLibrary.Now();
+
+            for (var i = 0; i < InLoop; i++)
+            {
+                InObject.GetMapValueFunction(out var Value);
+            }
+
+            var End = UKismetMathLibrary.Now();
+
+            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+            Data.Add(new KeyValuePair<string, double>("GetBPMapValueFunction", TotalSeconds));
         }
 
         private List<KeyValuePair<string, double>> Data;
