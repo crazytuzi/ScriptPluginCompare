@@ -939,13 +939,6 @@ local function GetBPMapElement(InLoop, InObject, InIndex)
     end
 end
 
--- Static
-local function StaticBPFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        InObject:StaticFunction()
-    end
-end
-
 -- Member
 local function MemberBPFunction(InLoop, InObject)
     for i = 0, InLoop do
@@ -1067,19 +1060,6 @@ end
 local function GetBPEnumValueFunction(InLoop, InObject)
     for i = 0, InLoop do
         local Value = InObject:GetEnumValueFunction()
-    end
-end
-
--- UEnum Class
-local function SetBPEnumClassValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetEnumClassValueFunction(InValue)
-    end
-end
-
-local function GetBPEnumClassValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetEnumClassValueFunction()
     end
 end
 
@@ -1494,13 +1474,11 @@ function M:TestBP()
 
     local TestInterface = TestActor.InterfaceValue
 
-    local TestStruct = UE.FTestStruct()
+    local TestStruct = UE.UObject.Load("/Game/FirstPerson/Blueprints/BP_TestStruct.BP_TestStruct")()
 
     TestStruct.Value = 1
 
-    local TestEnum = UE.ETestEnum.TestEnumOne
-
-    local TestEnumClass = UE.ETestEnumClass.TestEnumClassOne
+    local TestEnum = UE.UObject.Load("/Game/FirstPerson/Blueprints/BP_TestEnum.BP_TestEnum").TestEnumOne
 
     local TestArray = UE.TArray(0)
 
@@ -1609,9 +1587,6 @@ function M:TestBP()
 
     self:Exec("GetBPMapElement", GetBPMapValue, Loop, TestActor, 0)
 
-    -- Static
-    self:Exec("StaticBPFunction", StaticBPFunction, Loop, TestActor)
-
     -- Member
     self:Exec("MemberBPFunction", MemberBPFunction, Loop, TestActor)
 
@@ -1659,11 +1634,6 @@ function M:TestBP()
     self:Exec("SetBPEnumValueFunction", SetBPEnumValueFunction, Loop, TestActor, TestEnum)
 
     self:Exec("GetBPEnumValueFunction", GetBPEnumValueFunction, Loop, TestActor)
-
-    -- UEnum Class
-    self:Exec("SetBPEnumClassValueFunction", SetBPEnumClassValueFunction, Loop, TestActor, TestEnumClass)
-
-    self:Exec("GetBPEnumClassValueFunction", GetBPEnumClassValueFunction, Loop, TestActor)
 
     -- UStruct
     self:Exec("SetBPStructValueFunction", SetBPStructValueFunction, Loop, TestActor, TestStruct)

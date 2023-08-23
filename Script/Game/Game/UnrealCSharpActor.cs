@@ -328,14 +328,12 @@ namespace Script.ScriptPluginCompare
 
             var TestInterface = TestActor.InterfaceValue;
 
-            var TestStruct = new FTestStruct
+            var TestStruct = new BP_TestStruct
             {
                 Value = 1
             };
 
-            var TestEnum = ETestEnum.TestEnumOne;
-
-            var TestEnumClass = ETestEnumClass.TestEnumClassOne;
+            var TestEnum = BP_TestEnum.TestEnumOne;
 
             var TestArray = new TArray<Int32> { 1 };
 
@@ -388,11 +386,6 @@ namespace Script.ScriptPluginCompare
 
             GetBPEnumValue(Loop, TestActor);
 
-            // UEnum Class
-            SetBPEnumClassValue(Loop, TestActor, TestEnumClass);
-
-            GetBPEnumClassValue(Loop, TestActor);
-
             // UStruct
             SetBPStructValue(Loop, TestActor, TestStruct);
 
@@ -437,9 +430,6 @@ namespace Script.ScriptPluginCompare
             SetBPMapElement(Loop, TestActor, 0, 1);
 
             GetBPMapElement(Loop, TestActor, 0);
-
-            // Static
-            StaticBPFunction(Loop, TestActor);
 
             // Member
             MemberBPFunction(Loop, TestActor);
@@ -488,11 +478,6 @@ namespace Script.ScriptPluginCompare
             SetBPEnumValueFunction(Loop, TestActor, TestEnum);
 
             GetBPEnumValueFunction(Loop, TestActor);
-
-            // UEnum Class
-            SetBPEnumClassValueFunction(Loop, TestActor, TestEnumClass);
-
-            GetBPEnumClassValueFunction(Loop, TestActor);
 
             // UStruct
             SetBPStructValueFunction(Loop, TestActor, TestStruct);
@@ -2570,7 +2555,7 @@ namespace Script.ScriptPluginCompare
         }
 
         // UEnum
-        private void SetBPEnumValue(Int32 InLoop, BP_TestActor_C InObject, ETestEnum InValue)
+        private void SetBPEnumValue(Int32 InLoop, BP_TestActor_C InObject, BP_TestEnum InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
@@ -2602,41 +2587,8 @@ namespace Script.ScriptPluginCompare
             Data.Add(new KeyValuePair<string, double>("GetBPEnumValue", TotalSeconds));
         }
 
-        // UEnum Class
-        private void SetBPEnumClassValue(Int32 InLoop, BP_TestActor_C InObject, ETestEnumClass InValue)
-        {
-            var Start = UKismetMathLibrary.Now();
-
-            for (var i = 0; i < InLoop; i++)
-            {
-                InObject.EnumClassValue = InValue;
-            }
-
-            var End = UKismetMathLibrary.Now();
-
-            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
-
-            Data.Add(new KeyValuePair<string, double>("SetBPEnumClassValue", TotalSeconds));
-        }
-
-        private void GetBPEnumClassValue(Int32 InLoop, BP_TestActor_C InObject)
-        {
-            var Start = UKismetMathLibrary.Now();
-
-            for (var i = 0; i < InLoop; i++)
-            {
-                var Value = InObject.EnumClassValue;
-            }
-
-            var End = UKismetMathLibrary.Now();
-
-            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
-
-            Data.Add(new KeyValuePair<string, double>("GetBPEnumClassValue", TotalSeconds));
-        }
-
         // UStruct
-        private void SetBPStructValue(Int32 InLoop, BP_TestActor_C InObject, FTestStruct InValue)
+        private void SetBPStructValue(Int32 InLoop, BP_TestActor_C InObject, BP_TestStruct InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
@@ -2736,7 +2688,7 @@ namespace Script.ScriptPluginCompare
 
         // UInterface 
         private void SetBPInterfaceValue(Int32 InLoop, BP_TestActor_C InObject,
-            TScriptInterface<ITestInterface> InValue)
+            TScriptInterface<IBP_TestInterface_C> InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
@@ -2931,23 +2883,6 @@ namespace Script.ScriptPluginCompare
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
             Data.Add(new KeyValuePair<string, double>("GetBPMapElement", TotalSeconds));
-        }
-
-        // Static
-        private void StaticBPFunction(Int32 InLoop, BP_TestActor_C InObject)
-        {
-            var Start = UKismetMathLibrary.Now();
-
-            for (var i = 0; i < InLoop; i++)
-            {
-                InObject.StaticFunction();
-            }
-
-            var End = UKismetMathLibrary.Now();
-
-            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
-
-            Data.Add(new KeyValuePair<string, double>("StaticBPFunction", TotalSeconds));
         }
 
         // Member
@@ -3232,7 +3167,7 @@ namespace Script.ScriptPluginCompare
         }
 
         // UEnum
-        private void SetBPEnumValueFunction(Int32 InLoop, BP_TestActor_C InObject, ETestEnum InValue)
+        private void SetBPEnumValueFunction(Int32 InLoop, BP_TestActor_C InObject, BP_TestEnum InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
@@ -3264,41 +3199,8 @@ namespace Script.ScriptPluginCompare
             Data.Add(new KeyValuePair<string, double>("GetBPEnumValueFunction", TotalSeconds));
         }
 
-        // UEnum Class
-        private void SetBPEnumClassValueFunction(Int32 InLoop, BP_TestActor_C InObject, ETestEnumClass InValue)
-        {
-            var Start = UKismetMathLibrary.Now();
-
-            for (var i = 0; i < InLoop; i++)
-            {
-                InObject.SetEnumClassValueFunction(InValue);
-            }
-
-            var End = UKismetMathLibrary.Now();
-
-            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
-
-            Data.Add(new KeyValuePair<string, double>("SetBPEnumClassValueFunction", TotalSeconds));
-        }
-
-        private void GetBPEnumClassValueFunction(Int32 InLoop, BP_TestActor_C InObject)
-        {
-            var Start = UKismetMathLibrary.Now();
-
-            for (var i = 0; i < InLoop; i++)
-            {
-                InObject.GetEnumClassValueFunction(out var Value);
-            }
-
-            var End = UKismetMathLibrary.Now();
-
-            var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
-
-            Data.Add(new KeyValuePair<string, double>("GetBPEnumClassValueFunction", TotalSeconds));
-        }
-
         // UStruct
-        private void SetBPStructValueFunction(Int32 InLoop, BP_TestActor_C InObject, FTestStruct InValue)
+        private void SetBPStructValueFunction(Int32 InLoop, BP_TestActor_C InObject, BP_TestStruct InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
@@ -3398,7 +3300,7 @@ namespace Script.ScriptPluginCompare
 
         // UInterface 
         private void SetBPInterfaceValueFunction(Int32 InLoop, BP_TestActor_C InObject,
-            TScriptInterface<ITestInterface> InValue)
+            TScriptInterface<IBP_TestInterface_C> InValue)
         {
             var Start = UKismetMathLibrary.Now();
 
