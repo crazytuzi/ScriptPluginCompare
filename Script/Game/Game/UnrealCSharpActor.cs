@@ -2925,7 +2925,7 @@ namespace Script.ScriptPluginCompare
 
             for (var i = 0; i < InLoop; i++)
             {
-                InObject.GetBoolValueFunction(out var Value);
+                var Value = InObject.GetBoolValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
@@ -2958,7 +2958,7 @@ namespace Script.ScriptPluginCompare
 
             for (var i = 0; i < InLoop; i++)
             {
-                InObject.GetInt32ValueFunction(out var Value);
+                var Value = InObject.GetInt32ValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
@@ -2991,7 +2991,7 @@ namespace Script.ScriptPluginCompare
 
             for (var i = 0; i < InLoop; i++)
             {
-                InObject.GetInt64ValueFunction(out var Value);
+                var Value = InObject.GetInt64ValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
@@ -3024,7 +3024,7 @@ namespace Script.ScriptPluginCompare
 
             for (var i = 0; i < InLoop; i++)
             {
-                InObject.GetUInt8ValueFunction(out var Value);
+                var Value = InObject.GetUInt8ValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
@@ -3057,7 +3057,7 @@ namespace Script.ScriptPluginCompare
 
             for (var i = 0; i < InLoop; i++)
             {
-                InObject.GetDoubleValueFunction(out var Value);
+                var Value = InObject.GetDoubleValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
@@ -3090,7 +3090,7 @@ namespace Script.ScriptPluginCompare
 
             for (var i = 0; i < InLoop; i++)
             {
-                InObject.GetNameValueFunction(out var Value);
+                var Value = InObject.GetNameValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
@@ -3123,7 +3123,7 @@ namespace Script.ScriptPluginCompare
 
             for (var i = 0; i < InLoop; i++)
             {
-                InObject.GetTextValueFunction(out var Value);
+                var Value = InObject.GetTextValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
@@ -3156,7 +3156,7 @@ namespace Script.ScriptPluginCompare
 
             for (var i = 0; i < InLoop; i++)
             {
-                InObject.GetStringValueFunction(out var Value);
+                var Value = InObject.GetStringValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
@@ -3189,7 +3189,7 @@ namespace Script.ScriptPluginCompare
 
             for (var i = 0; i < InLoop; i++)
             {
-                InObject.GetEnumValueFunction(out var Value);
+                var Value = InObject.GetEnumValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
@@ -3222,7 +3222,7 @@ namespace Script.ScriptPluginCompare
 
             for (var i = 0; i < InLoop; i++)
             {
-                InObject.GetStructValueFunction(out var Value);
+                var Value = InObject.GetStructValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
@@ -3255,7 +3255,7 @@ namespace Script.ScriptPluginCompare
 
             for (var i = 0; i < InLoop; i++)
             {
-                InObject.GetObjectValueFunction(out var Value);
+                var Value = InObject.GetObjectValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
@@ -3288,7 +3288,7 @@ namespace Script.ScriptPluginCompare
 
             for (var i = 0; i < InLoop; i++)
             {
-                InObject.GetClassValueFunction(out var Value);
+                var Value = InObject.GetClassValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
@@ -3322,7 +3322,7 @@ namespace Script.ScriptPluginCompare
 
             for (var i = 0; i < InLoop; i++)
             {
-                InObject.GetInterfaceValueFunction(out var Value);
+                var Value = InObject.GetInterfaceValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
@@ -3355,7 +3355,7 @@ namespace Script.ScriptPluginCompare
 
             for (var i = 0; i < InLoop; i++)
             {
-                InObject.GetArrayValueFunction(out var Value);
+                var Value = InObject.GetArrayValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
@@ -3388,7 +3388,7 @@ namespace Script.ScriptPluginCompare
 
             for (var i = 0; i < InLoop; i++)
             {
-                InObject.GetSetValueFunction(out var Value);
+                var Value = InObject.GetSetValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
@@ -3421,7 +3421,7 @@ namespace Script.ScriptPluginCompare
 
             for (var i = 0; i < InLoop; i++)
             {
-                InObject.GetMapValueFunction(out var Value);
+                var Value = InObject.GetMapValueFunction();
             }
 
             var End = UKismetMathLibrary.Now();
