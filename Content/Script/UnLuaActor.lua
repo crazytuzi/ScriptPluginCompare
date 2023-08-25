@@ -1,1170 +1,3035 @@
 local M = UnLua.Class()
 
-local function Empty()
+function M:Empty()
 end
 
 -- Empty
-local function EmptyFunction(InLoop)
-    for i = 0, InLoop do
-        Empty()
-    end
-end
-
-local function Add(A, B)
-    local Value = A + B;
-end
-
--- Add
-local function AddFunction(InLoop)
-    for i = 0, InLoop do
-        Add(1, 1)
-    end
-end
-
-local function Subtract(A, B)
-    local Value = A - B;
-end
-
--- Subtract
-local function SubtractFunction(InLoop)
-    for i = 0, InLoop do
-        Subtract(1, 1)
-    end
-end
-
-local function Multiply(A, B)
-    local Value = A * B;
-end
-
--- Multiply
-local function MultiplyFunction(InLoop)
-    for i = 0, InLoop do
-        Multiply(1, 1)
-    end
-end
-
-local function Divide(A, B)
-    local Value = A / B;
-end
-
--- Divide
-local function DivideFunction(InLoop)
-    for i = 0, InLoop do
-        Divide(1, 1)
-    end
-end
-
--- Bool
-local function SetCppBoolValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.BoolValue = InValue
-    end
-end
-
-local function GetCppBoolValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.BoolValue
-    end
-end
-
--- Int8
-local function SetCppInt8Value(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.Int8Value = InValue
-    end
-end
-
-local function GetCppInt8Value(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.Int8Value
-    end
-end
-
--- Int16
-local function SetCppInt16Value(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.Int16Value = InValue
-    end
-end
-
-local function GetCppInt16Value(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.Int16Value
-    end
-end
-
--- Int32
-local function SetCppInt32Value(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.Int32Value = InValue
-    end
-end
-
-local function GetCppInt32Value(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.Int32Value
-    end
-end
-
--- Int64
-local function SetCppInt64Value(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.Int64Value = InValue
-    end
-end
-
-local function GetCppInt64Value(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.Int64Value
-    end
-end
-
--- UInt8
-local function SetCppUInt8Value(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.UInt8Value = InValue
-    end
-end
-
-local function GetCppUInt8Value(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.UInt8Value
-    end
-end
-
--- UInt16
-local function SetCppUInt16Value(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.UInt16Value = InValue
-    end
-end
-
-local function GetCppUInt16Value(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.UInt16Value
-    end
-end
-
--- UInt32
-local function SetCppUInt32Value(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.UInt32Value = InValue
-    end
-end
-
-local function GetCppUInt32Value(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.UInt32Value
-    end
-end
-
--- UInt64
-local function SetCppUInt64Value(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.UInt64Value = InValue
-    end
-end
-
-local function GetCppUInt64Value(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.UInt64Value
-    end
-end
-
--- Float
-local function SetCppFloatValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.FloatValue = InValue
-    end
-end
-
-local function GetCppFloatValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.FloatValue
-    end
-end
-
--- Double
-local function SetCppDoubleValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.DoubleValue = InValue
-    end
-end
-
-local function GetCppDoubleValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.DoubleValue
-    end
-end
-
--- FName
-local function SetCppNameValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.NameValue = InValue
-    end
-end
-
-local function GetCppNameValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.NameValue
-    end
-end
-
--- FText
-local function SetCppTextValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.TextValue = InValue
-    end
-end
-
-local function GetCppTextValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.TextValue
-    end
-end
-
--- FString
-local function SetCppStringValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.StringValue = InValue
-    end
-end
-
-local function GetCppStringValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.StringValue
-    end
-end
-
--- UEnum
-local function SetCppEnumValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.EnumValue = InValue
-    end
-end
-
-local function GetCppEnumValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.EnumValue
-    end
-end
-
--- UEnum Class
-local function SetCppEnumClassValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.EnumClassValue = InValue
-    end
-end
-
-local function GetCppEnumClassValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.EnumClassValue
-    end
-end
-
--- UStruct
-local function SetCppStructValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.StructValue = InValue
-    end
-end
-
-local function GetCppStructValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.StructValue
-    end
-end
-
--- UObject
-local function SetCppObjectValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.ObjectValue = InValue
-    end
-end
-
-local function GetCppObjectValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.ObjectValue
-    end
-end
-
--- UClass
-local function SetCppClassValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.ClassValue = InValue
-    end
-end
-
-local function GetCppClassValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.ClassValue
-    end
-end
-
--- UInterface 
-local function SetCppInterfaceValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.InterfaceValue = InValue
-    end
-end
-
-local function GetCppInterfaceValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.InterfaceValue
-    end
-end
-
--- TArray
-local function SetCppArrayValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.ArrayValue = InValue
-    end
-end
-
-local function GetCppArrayValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.ArrayValue
-    end
-end
-
--- TArray Element
-local function SetCppArrayElement(InLoop, InObject, InIndex, InValue)
-    for i = 0, InLoop do
-        InObject.ArrayValue[InIndex] = InValue
-    end
-end
-
-local function GetCppArrayElement(InLoop, InObject, InIndex)
-    for i = 0, InLoop do
-        local Value = InObject.ArrayValue[InIndex]
-    end
-end
-
--- TSet
-local function SetCppSetValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.SetValue = InValue
-    end
-end
-
-local function GetCppSetValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.SetValue
-    end
-end
-
--- TMap
-local function SetCppMapValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.MapValue = InValue
-    end
-end
-
-local function GetCppMapValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.MapValue
-    end
-end
-
--- TMap Element
-local function SetCppMapElement(InLoop, InObject, InIndex, InValue)
-    for i = 0, InLoop do
-        InObject.MapValue:Add(InIndex, InValue)
-    end
-end
-
-local function GetCppMapElement(InLoop, InObject, InIndex)
-    for i = 0, InLoop do
-        local Value = InObject.MapValue:Find(InIndex)
-    end
-end
-
--- Static
-local function StaticCppFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        InObject.StaticFunction()
-    end
-end
-
--- Member
-local function MemberCppFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        InObject:MemberFunction()
-    end
-end
-
--- Bool
-local function SetCppBoolValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetBoolValueFunction(InValue)
-    end
-end
-
-local function GetCppBoolValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetBoolValueFunction()
-    end
-end
-
--- Int8
-local function SetCppInt8ValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetInt8ValueFunction(InValue)
-    end
-end
-
-local function GetCppInt8ValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetInt8ValueFunction()
-    end
-end
-
--- Int16
-local function SetCppInt16ValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetInt16ValueFunction(InValue)
-    end
-end
-
-local function GetCppInt16ValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetInt16ValueFunction()
-    end
-end
-
--- Int32
-local function SetCppInt32ValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetInt32ValueFunction(InValue)
-    end
-end
-
-local function GetCppInt32ValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetInt32ValueFunction()
-    end
-end
-
--- Int64
-local function SetCppInt64ValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetInt64ValueFunction(InValue)
-    end
-end
-
-local function GetCppInt64ValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetInt64ValueFunction()
-    end
-end
-
--- UInt8
-local function SetCppUInt8ValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetUInt8ValueFunction(InValue)
-    end
-end
-
-local function GetCppUInt8ValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetUInt8ValueFunction()
-    end
-end
-
--- UInt16
-local function SetCppUInt16ValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetUInt16ValueFunction(InValue)
-    end
-end
-
-local function GetCppUInt16ValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetUInt16ValueFunction()
-    end
-end
-
--- UInt32
-local function SetCppUInt32ValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetUInt32ValueFunction(InValue)
-    end
-end
-
-local function GetCppUInt32ValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetUInt32ValueFunction()
-    end
-end
-
--- UInt64
-local function SetCppUInt64ValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetUInt64ValueFunction(InValue)
-    end
-end
-
-local function GetCppUInt64ValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetUInt64ValueFunction()
-    end
-end
-
--- Float
-local function SetCppFloatValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetFloatValueFunction(InValue)
-    end
-end
-
-local function GetCppFloatValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetFloatValueFunction()
-    end
-end
-
--- Double
-local function SetCppDoubleValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetDoubleValueFunction(InValue)
-    end
-end
-
-local function GetCppDoubleValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetDoubleValueFunction()
-    end
-end
-
--- FName
-local function SetCppNameValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetNameValueFunction(InValue)
-    end
-end
-
-local function GetCppNameValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetNameValueFunction()
-    end
-end
-
--- FText
-local function SetCppTextValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetTextValueFunction(InValue)
-    end
-end
-
-local function GetCppTextValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetTextValueFunction()
-    end
-end
-
--- FString
-local function SetCppStringValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetStringValueFunction(InValue)
-    end
-end
-
-local function GetCppStringValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetStringValueFunction()
-    end
-end
-
--- UEnum
-local function SetCppEnumValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetEnumValueFunction(InValue)
-    end
-end
-
-local function GetCppEnumValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetEnumValueFunction()
-    end
-end
-
--- UEnum Class
-local function SetCppEnumClassValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetEnumClassValueFunction(InValue)
-    end
-end
-
-local function GetCppEnumClassValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetEnumClassValueFunction()
-    end
-end
-
--- UStruct
-local function SetCppStructValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetStructValueFunction(InValue)
-    end
-end
-
-local function GetCppStructValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetStructValueFunction()
-    end
-end
-
--- UObject
-local function SetCppObjectValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetObjectValueFunction(InValue)
-    end
-end
-
-local function GetCppObjectValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetObjectValueFunction()
-    end
-end
-
--- UClass
-local function SetCppClassValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetClassValueFunction(InValue)
-    end
-end
-
-local function GetCppClassValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetClassValueFunction()
-    end
-end
-
--- UInterface 
-local function SetCppInterfaceValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetInterfaceValueFunction(InValue)
-    end
-end
-
-local function GetCppInterfaceValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetInterfaceValueFunction()
-    end
-end
-
--- TArray
-local function SetCppArrayValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetArrayValueFunction(InValue)
-    end
-end
-
-local function GetCppArrayValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetArrayValueFunction()
-    end
-end
-
--- TSet
-local function SetCppSetValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetSetValueFunction(InValue)
-    end
-end
-
-local function GetCppSetValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetSetValueFunction()
-    end
-end
-
--- TMap
-local function SetCppMapValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetMapValueFunction(InValue)
-    end
-end
-
-local function GetCppMapValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetMapValueFunction()
-    end
-end
-
--- Bool
-local function SetBPBoolValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.BoolValue = InValue
-    end
-end
-
-local function GetBPBoolValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.BoolValue
-    end
-end
-
--- Int32
-local function SetBPInt32Value(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.Int32Value = InValue
-    end
-end
-
-local function GetBPInt32Value(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.Int32Value
-    end
-end
-
--- Int64
-local function SetBPInt64Value(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.Int64Value = InValue
-    end
-end
-
-local function GetBPInt64Value(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.Int64Value
-    end
-end
-
--- UInt8
-local function SetBPUInt8Value(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.UInt8Value = InValue
-    end
-end
-
-local function GetBPUInt8Value(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.UInt8Value
-    end
-end
-
--- Double
-local function SetBPDoubleValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.DoubleValue = InValue
-    end
-end
-
-local function GetBPDoubleValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.DoubleValue
-    end
-end
-
--- FName
-local function SetBPNameValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.NameValue = InValue
-    end
-end
-
-local function GetBPNameValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.NameValue
-    end
-end
-
--- FText
-local function SetBPTextValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.TextValue = InValue
-    end
-end
-
-local function GetBPTextValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.TextValue
-    end
-end
-
--- FString
-local function SetBPStringValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.StringValue = InValue
-    end
-end
-
-local function GetBPStringValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.StringValue
-    end
-end
-
--- UEnum
-local function SetBPEnumValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.EnumValue = InValue
-    end
-end
-
-local function GetBPEnumValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.EnumValue
-    end
-end
-
--- UEnum Class
-local function SetBPEnumClassValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.EnumClassValue = InValue
-    end
-end
-
-local function GetBPEnumClassValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.EnumClassValue
-    end
-end
-
--- UStruct
-local function SetBPStructValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.StructValue = InValue
-    end
-end
-
-local function GetBPStructValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.StructValue
-    end
-end
-
--- UObject
-local function SetBPObjectValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.ObjectValue = InValue
-    end
-end
-
-local function GetBPObjectValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.ObjectValue
-    end
-end
-
--- UClass
-local function SetBPClassValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.ClassValue = InValue
-    end
-end
-
-local function GetBPClassValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.ClassValue
-    end
-end
-
--- UInterface 
-local function SetBPInterfaceValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.InterfaceValue = InValue
-    end
-end
-
-local function GetBPInterfaceValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.InterfaceValue
-    end
-end
-
--- TArray
-local function SetBPArrayValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.ArrayValue = InValue
-    end
-end
-
-local function GetBPArrayValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.ArrayValue
-    end
-end
-
--- TArray Element
-local function SetBPArrayElement(InLoop, InObject, InIndex, InValue)
-    for i = 0, InLoop do
-        InObject.ArrayValue[InIndex] = InValue
-    end
-end
-
-local function GetBPArrayElement(InLoop, InObject, InIndex)
-    for i = 0, InLoop do
-        local Value = InObject.ArrayValue[InIndex]
-    end
-end
-
--- TSet
-local function SetBPSetValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.SetValue = InValue
-    end
-end
-
-local function GetBPSetValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.SetValue
-    end
-end
-
--- TMap
-local function SetBPMapValue(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject.MapValue = InValue
-    end
-end
-
-local function GetBPMapValue(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject.MapValue
-    end
-end
-
--- TMap Element
-local function SetBPMapElement(InLoop, InObject, InIndex, InValue)
-    for i = 0, InLoop do
-        InObject.MapValue:Add(InIndex, InValue)
-    end
-end
-
-local function GetBPMapElement(InLoop, InObject, InIndex)
-    for i = 0, InLoop do
-        local Value = InObject.MapValue:Find(InIndex)
-    end
-end
-
--- Member
-local function MemberBPFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        InObject:MemberFunction()
-    end
-end
-
--- Bool
-local function SetBPBoolValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetBoolValueFunction(InValue)
-    end
-end
-
-local function GetBPBoolValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetBoolValueFunction()
-    end
-end
-
--- Int32
-local function SetBPInt32ValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetInt32ValueFunction(InValue)
-    end
-end
-
-local function GetBPInt32ValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetInt32ValueFunction()
-    end
-end
-
--- Int64
-local function SetBPInt64ValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetInt64ValueFunction(InValue)
-    end
-end
-
-local function GetBPInt64ValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetInt64ValueFunction()
-    end
-end
-
--- UInt8
-local function SetBPUInt8ValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetUInt8ValueFunction(InValue)
-    end
-end
-
-local function GetBPUInt8ValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetUInt8ValueFunction()
-    end
-end
-
--- Double
-local function SetBPDoubleValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetDoubleValueFunction(InValue)
-    end
-end
-
-local function GetBPDoubleValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetDoubleValueFunction()
-    end
-end
-
--- FName
-local function SetBPNameValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetNameValueFunction(InValue)
-    end
-end
-
-local function GetBPNameValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetNameValueFunction()
-    end
-end
-
--- FText
-local function SetBPTextValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetTextValueFunction(InValue)
-    end
-end
-
-local function GetBPTextValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetTextValueFunction()
-    end
-end
-
--- FString
-local function SetBPStringValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetStringValueFunction(InValue)
-    end
-end
-
-local function GetBPStringValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetStringValueFunction()
-    end
-end
-
--- UEnum
-local function SetBPEnumValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetEnumValueFunction(InValue)
-    end
-end
-
-local function GetBPEnumValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetEnumValueFunction()
-    end
-end
-
--- UStruct
-local function SetBPStructValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetStructValueFunction(InValue)
-    end
-end
-
-local function GetBPStructValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetStructValueFunction()
-    end
-end
-
--- UObject
-local function SetBPObjectValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetObjectValueFunction(InValue)
-    end
-end
-
-local function GetBPObjectValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetObjectValueFunction()
-    end
-end
-
--- UClass
-local function SetBPClassValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetClassValueFunction(InValue)
-    end
-end
-
-local function GetBPClassValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetClassValueFunction()
-    end
-end
-
--- UInterface 
-local function SetBPInterfaceValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetInterfaceValueFunction(InValue)
-    end
-end
-
-local function GetBPInterfaceValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetInterfaceValueFunction()
-    end
-end
-
--- TArray
-local function SetBPArrayValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetArrayValueFunction(InValue)
-    end
-end
-
-local function GetBPArrayValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetArrayValueFunction()
-    end
-end
-
--- TSet
-local function SetBPSetValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetSetValueFunction(InValue)
-    end
-end
-
-local function GetBPSetValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetSetValueFunction()
-    end
-end
-
--- TMap
-local function SetBPMapValueFunction(InLoop, InObject, InValue)
-    for i = 0, InLoop do
-        InObject:SetMapValueFunction(InValue)
-    end
-end
-
-local function GetBPMapValueFunction(InLoop, InObject)
-    for i = 0, InLoop do
-        local Value = InObject:GetMapValueFunction()
-    end
-end
-
-function M:Exec(InName, InFunction, ...)
+function M:EmptyFunction(InLoop)
     local Start = UE.UKismetMathLibrary.Now()
 
-    InFunction(...)
+    for i = 0, InLoop do
+        self:Empty()
+    end
 
     local End = UE.UKismetMathLibrary.Now()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
     table.insert(self.Data, {
-        ["Name"] = InName,
+        ["Name"] = "EmptyFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:Add(A, B)
+    local Value = A + B;
+end
+
+-- Add
+function M:AddFunction(InLoop)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        self:Add(1, 1)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "AddFunction",
+        ["Time"] = TotalSeconds
+    })
+
+end
+
+function M:Subtract(A, B)
+    local Value = A - B;
+end
+
+-- Subtract
+function M:SubtractFunction(InLoop)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        self:Subtract(1, 1)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SubtractFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:Multiply(A, B)
+    local Value = A * B;
+end
+
+-- Multiply
+function M:MultiplyFunction(InLoop)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        self:Multiply(1, 1)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "MultiplyFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:Divide(A, B)
+    local Value = A / B;
+end
+
+-- Divide
+function M:DivideFunction(InLoop)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        self:Divide(1, 1)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "DivideFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Bool
+function M:SetCppBoolValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.BoolValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppBoolValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppBoolValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.BoolValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppBoolValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Int8
+function M:SetCppInt8Value(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.Int8Value = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppInt8Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppInt8Value(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.Int8Value
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppInt8Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Int16
+function M:SetCppInt16Value(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.Int16Value = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppInt16Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppInt16Value(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.Int16Value
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppInt16Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Int32
+function M:SetCppInt32Value(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.Int32Value = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppInt32Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppInt32Value(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.Int32Value
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppInt32Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Int64
+function M:SetCppInt64Value(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.Int64Value = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppInt64Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppInt64Value(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.Int64Value
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppInt64Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UInt8
+function M:SetCppUInt8Value(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.UInt8Value = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppUInt8Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppUInt8Value(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.UInt8Value
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppUInt8Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UInt16
+function M:SetCppUInt16Value(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.UInt16Value = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppUInt16Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppUInt16Value(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.UInt16Value
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppUInt16Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UInt32
+function M:SetCppUInt32Value(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.UInt32Value = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppUInt32Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppUInt32Value(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.UInt32Value
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppUInt32Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UInt64
+function M:SetCppUInt64Value(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.UInt64Value = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppUInt64Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppUInt64Value(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.UInt64Value
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppUInt64Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Float
+function M:SetCppFloatValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.FloatValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppFloatValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppFloatValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.FloatValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppFloatValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Double
+function M:SetCppDoubleValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.DoubleValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppDoubleValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppDoubleValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.DoubleValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppDoubleValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- FName
+function M:SetCppNameValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.NameValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppNameValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppNameValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.NameValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppNameValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- FText
+function M:SetCppTextValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.TextValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppTextValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppTextValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.TextValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppTextValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- FString
+function M:SetCppStringValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.StringValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppStringValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppStringValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.StringValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppStringValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UEnum
+function M:SetCppEnumValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.EnumValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppEnumValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppEnumValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.EnumValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppEnumValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UEnum Class
+function M:SetCppEnumClassValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.EnumClassValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppEnumClassValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppEnumClassValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.EnumClassValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppEnumClassValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UStruct
+function M:SetCppStructValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.StructValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppStructValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppStructValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.StructValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppStructValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UObject
+function M:SetCppObjectValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.ObjectValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppObjectValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppObjectValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.ObjectValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppObjectValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UClass
+function M:SetCppClassValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.ClassValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppClassValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppClassValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.ClassValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppClassValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UInterface 
+function M:SetCppInterfaceValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.InterfaceValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppInterfaceValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppInterfaceValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.InterfaceValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppInterfaceValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- TArray
+function M:SetCppArrayValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.ArrayValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppArrayValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppArrayValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.ArrayValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppArrayValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- TArray Element
+function M:SetCppArrayElement(InLoop, InObject, InIndex, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.ArrayValue[InIndex] = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppArrayElement",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppArrayElement(InLoop, InObject, InIndex)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.ArrayValue[InIndex]
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppArrayElement",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- TSet
+function M:SetCppSetValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.SetValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppSetValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppSetValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.SetValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppSetValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- TMap
+function M:SetCppMapValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.MapValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppMapValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppMapValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.MapValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppMapValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- TMap Element
+function M:SetCppMapElement(InLoop, InObject, InIndex, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.MapValue:Add(InIndex, InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppMapElement",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppMapElement(InLoop, InObject, InIndex)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.MapValue:Find(InIndex)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppMapElement",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Static
+function M:StaticCppFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.StaticFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "StaticCppFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Member
+function M:MemberCppFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:MemberFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "MemberCppFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Bool
+function M:SetCppBoolValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetBoolValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppBoolValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppBoolValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetBoolValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppBoolValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Int8
+function M:SetCppInt8ValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetInt8ValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppInt8ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppInt8ValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetInt8ValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppInt8ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Int16
+function M:SetCppInt16ValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetInt16ValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppInt16ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppInt16ValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetInt16ValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppInt16ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Int32
+function M:SetCppInt32ValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetInt32ValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppInt32ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppInt32ValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetInt32ValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppInt32ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Int64
+function M:SetCppInt64ValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetInt64ValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppInt64ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppInt64ValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetInt64ValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppInt64ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UInt8
+function M:SetCppUInt8ValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetUInt8ValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppUInt8ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppUInt8ValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetUInt8ValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppUInt8ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UInt16
+function M:SetCppUInt16ValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetUInt16ValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppUInt16ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppUInt16ValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetUInt16ValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppUInt16ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UInt32
+function M:SetCppUInt32ValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetUInt32ValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppUInt32ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppUInt32ValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetUInt32ValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppUInt32ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UInt64
+function M:SetCppUInt64ValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetUInt64ValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppUInt64ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppUInt64ValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetUInt64ValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppUInt64ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Float
+function M:SetCppFloatValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetFloatValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppFloatValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppFloatValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetFloatValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppFloatValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Double
+function M:SetCppDoubleValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetDoubleValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppDoubleValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppDoubleValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetDoubleValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppDoubleValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- FName
+function M:SetCppNameValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetNameValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppNameValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppNameValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetNameValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppNameValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- FText
+function M:SetCppTextValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetTextValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppTextValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppTextValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetTextValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppTextValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- FString
+function M:SetCppStringValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetStringValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppStringValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppStringValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetStringValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppStringValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UEnum
+function M:SetCppEnumValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetEnumValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppEnumValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppEnumValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetEnumValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppEnumValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UEnum Class
+function M:SetCppEnumClassValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetEnumClassValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppEnumClassValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppEnumClassValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetEnumClassValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppEnumClassValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UStruct
+function M:SetCppStructValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetStructValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppStructValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppStructValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetStructValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppStructValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UObject
+function M:SetCppObjectValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetObjectValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppObjectValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppObjectValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetObjectValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppObjectValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UClass
+function M:SetCppClassValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetClassValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppClassValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppClassValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetClassValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppClassValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UInterface 
+function M:SetCppInterfaceValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetInterfaceValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppInterfaceValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppInterfaceValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetInterfaceValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppInterfaceValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- TArray
+function M:SetCppArrayValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetArrayValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppArrayValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppArrayValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetArrayValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppArrayValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- TSet
+function M:SetCppSetValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetSetValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppSetValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppSetValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetSetValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppSetValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- TMap
+function M:SetCppMapValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetMapValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetCppMapValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetCppMapValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetMapValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetCppMapValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Bool
+function M:SetBPBoolValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.BoolValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPBoolValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPBoolValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.BoolValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPBoolValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Int32
+function M:SetBPInt32Value(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.Int32Value = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPInt32Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPInt32Value(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.Int32Value
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPInt32Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Int64
+function M:SetBPInt64Value(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.Int64Value = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPInt64Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPInt64Value(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.Int64Value
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPInt64Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UInt8
+function M:SetBPUInt8Value(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.UInt8Value = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPUInt8Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPUInt8Value(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.UInt8Value
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPUInt8Value",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Double
+function M:SetBPDoubleValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.DoubleValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPDoubleValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPDoubleValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.DoubleValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPDoubleValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- FName
+function M:SetBPNameValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.NameValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPNameValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPNameValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.NameValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPNameValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- FText
+function M:SetBPTextValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.TextValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPTextValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPTextValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.TextValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPTextValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- FString
+function M:SetBPStringValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.StringValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPStringValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPStringValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.StringValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPStringValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UEnum
+function M:SetBPEnumValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.EnumValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPEnumValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPEnumValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.EnumValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPEnumValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UStruct
+function M:SetBPStructValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.StructValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPStructValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPStructValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.StructValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPStructValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UObject
+function M:SetBPObjectValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.ObjectValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPObjectValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPObjectValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.ObjectValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPObjectValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UClass
+function M:SetBPClassValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.ClassValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPClassValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPClassValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.ClassValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPClassValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UInterface 
+function M:SetBPInterfaceValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.InterfaceValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPInterfaceValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPInterfaceValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.InterfaceValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPInterfaceValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- TArray
+function M:SetBPArrayValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.ArrayValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPArrayValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPArrayValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.ArrayValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPArrayValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- TArray Element
+function M:SetBPArrayElement(InLoop, InObject, InIndex, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.ArrayValue[InIndex] = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPArrayElement",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPArrayElement(InLoop, InObject, InIndex)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.ArrayValue[InIndex]
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPArrayElement",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- TSet
+function M:SetBPSetValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.SetValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPSetValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPSetValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.SetValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPSetValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- TMap
+function M:SetBPMapValue(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.MapValue = InValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPMapValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPMapValue(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.MapValue
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPMapValue",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- TMap Element
+function M:SetBPMapElement(InLoop, InObject, InIndex, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject.MapValue:Add(InIndex, InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPMapElement",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPMapElement(InLoop, InObject, InIndex)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject.MapValue:Find(InIndex)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPMapElement",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Member
+function M:MemberBPFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:MemberFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "MemberBPFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Bool
+function M:SetBPBoolValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetBoolValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPBoolValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPBoolValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetBoolValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPBoolValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Int32
+function M:SetBPInt32ValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetInt32ValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPInt32ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPInt32ValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetInt32ValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPInt32ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Int64
+function M:SetBPInt64ValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetInt64ValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPInt64ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPInt64ValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetInt64ValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPInt64ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UInt8
+function M:SetBPUInt8ValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetUInt8ValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPUInt8ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPUInt8ValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetUInt8ValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPUInt8ValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- Double
+function M:SetBPDoubleValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetDoubleValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPDoubleValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPDoubleValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetDoubleValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPDoubleValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- FName
+function M:SetBPNameValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetNameValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPNameValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPNameValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetNameValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPNameValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- FText
+function M:SetBPTextValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetTextValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPTextValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPTextValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetTextValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPTextValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- FString
+function M:SetBPStringValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetStringValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPStringValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPStringValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetStringValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPStringValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UEnum
+function M:SetBPEnumValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetEnumValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPEnumValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPEnumValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetEnumValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPEnumValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UStruct
+function M:SetBPStructValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetStructValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPStructValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPStructValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetStructValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPStructValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UObject
+function M:SetBPObjectValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetObjectValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPObjectValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPObjectValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetObjectValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPObjectValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UClass
+function M:SetBPClassValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetClassValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPClassValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPClassValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetClassValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPClassValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- UInterface 
+function M:SetBPInterfaceValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetInterfaceValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPInterfaceValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPInterfaceValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetInterfaceValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPInterfaceValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- TArray
+function M:SetBPArrayValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetArrayValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPArrayValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPArrayValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetArrayValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPArrayValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- TSet
+function M:SetBPSetValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetSetValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPSetValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPSetValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetSetValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPSetValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+-- TMap
+function M:SetBPMapValueFunction(InLoop, InObject, InValue)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        InObject:SetMapValueFunction(InValue)
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "SetBPMapValueFunction",
+        ["Time"] = TotalSeconds
+    })
+end
+
+function M:GetBPMapValueFunction(InLoop, InObject)
+    local Start = UE.UKismetMathLibrary.Now()
+
+    for i = 0, InLoop do
+        local Value = InObject:GetMapValueFunction()
+    end
+
+    local End = UE.UKismetMathLibrary.Now()
+
+    local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+    table.insert(self.Data, {
+        ["Name"] = "GetBPMapValueFunction",
         ["Time"] = TotalSeconds
     })
 end
@@ -1173,19 +3038,19 @@ function M:TestSelf()
     local Loop = self.Loop
 
     -- Empty
-    self:Exec("EmptyFunction", EmptyFunction, Loop)
+    self:EmptyFunction(Loop)
 
     -- Add
-    self:Exec("AddFunction", AddFunction, Loop)
+    self:AddFunction(Loop)
 
     -- Subtract
-    self:Exec("SubtractFunction", SubtractFunction, Loop)
+    self:SubtractFunction(Loop)
 
     -- Multiply
-    self:Exec("MultiplyFunction", MultiplyFunction, Loop)
+    self:MultiplyFunction(Loop)
 
     -- Divide
-    self:Exec("DivideFunction", DivideFunction, Loop)
+    self:DivideFunction(Loop)
 end
 
 function M:TestCpp()
@@ -1218,250 +3083,250 @@ function M:TestCpp()
     TestMap:Add(0, 1)
 
     -- Bool
-    self:Exec("SetCppBoolValue", SetCppBoolValue, Loop, TestActor, true)
+    self:SetCppBoolValue(Loop, TestActor, true)
 
-    self:Exec("GetCppBoolValue", GetCppBoolValue, Loop, TestActor)
+    self:GetCppBoolValue(Loop, TestActor)
 
     -- Int8
-    self:Exec("SetCppInt8Value", SetCppInt8Value, Loop, TestActor, 1)
+    self:SetCppInt8Value(Loop, TestActor, 1)
 
-    self:Exec("GetCppInt8Value", GetCppInt8Value, Loop, TestActor)
+    self:GetCppInt8Value(Loop, TestActor)
 
     -- Int16
-    self:Exec("SetCppInt16Value", SetCppInt16Value, Loop, TestActor, 1)
+    self:SetCppInt16Value(Loop, TestActor, 1)
 
-    self:Exec("GetCppInt16Value", GetCppInt16Value, Loop, TestActor)
+    self:GetCppInt16Value(Loop, TestActor)
 
     -- Int32
-    self:Exec("SetCppInt32Value", SetCppInt32Value, Loop, TestActor, 1)
+    self:SetCppInt32Value(Loop, TestActor, 1)
 
-    self:Exec("GetCppInt32Value", GetCppInt32Value, Loop, TestActor)
+    self:GetCppInt32Value(Loop, TestActor)
 
     -- Int64
-    self:Exec("SetCppInt64Value", SetCppInt64Value, Loop, TestActor, 1)
+    self:SetCppInt64Value(Loop, TestActor, 1)
 
-    self:Exec("GetCppInt64Value", GetCppInt64Value, Loop, TestActor)
+    self:GetCppInt64Value(Loop, TestActor)
 
     -- UInt8
-    self:Exec("SetCppUInt8Value", SetCppUInt8Value, Loop, TestActor, 1)
+    self:SetCppUInt8Value(Loop, TestActor, 1)
 
-    self:Exec("GetCppUInt8Value", GetCppUInt8Value, Loop, TestActor)
+    self:GetCppUInt8Value(Loop, TestActor)
 
     -- UInt16
-    self:Exec("SetCppUInt16Value", SetCppUInt16Value, Loop, TestActor, 1)
+    self:SetCppUInt16Value(Loop, TestActor, 1)
 
-    self:Exec("GetCppUInt16Value", GetCppUInt16Value, Loop, TestActor)
+    self:GetCppUInt16Value(Loop, TestActor)
 
     -- UInt32
-    self:Exec("SetCppUInt32Value", SetCppUInt32Value, Loop, TestActor, 1)
+    self:SetCppUInt32Value(Loop, TestActor, 1)
 
-    self:Exec("GetCppUInt32Value", GetCppUInt32Value, Loop, TestActor)
+    self:GetCppUInt32Value(Loop, TestActor)
 
     -- UInt64
-    self:Exec("SetCppUInt64Value", SetCppUInt64Value, Loop, TestActor, 1)
+    self:SetCppUInt64Value(Loop, TestActor, 1)
 
-    self:Exec("GetCppUInt64Value", GetCppUInt64Value, Loop, TestActor)
+    self:GetCppUInt64Value(Loop, TestActor)
 
     -- Float
-    self:Exec("SetCppFloatValue", SetCppFloatValue, Loop, TestActor, 1.0)
+    self:SetCppFloatValue(Loop, TestActor, 1.0)
 
-    self:Exec("GetCppFloatValue", GetCppFloatValue, Loop, TestActor)
+    self:GetCppFloatValue(Loop, TestActor)
 
     -- Double
-    self:Exec("SetCppDoubleValue", SetCppDoubleValue, Loop, TestActor, 1.0)
+    self:SetCppDoubleValue(Loop, TestActor, 1.0)
 
-    self:Exec("GetCppDoubleValue", GetCppDoubleValue, Loop, TestActor)
+    self:GetCppDoubleValue(Loop, TestActor)
 
     -- FName
-    self:Exec("SetCppNameValue", SetCppNameValue, Loop, TestActor, "Name")
+    self:SetCppNameValue(Loop, TestActor, "Name")
 
-    self:Exec("GetCppNameValue", GetCppNameValue, Loop, TestActor)
+    self:GetCppNameValue(Loop, TestActor)
 
     -- FText
-    self:Exec("SetCppTextValue", SetCppNameValue, Loop, TestActor, "Text")
+    self:SetCppTextValue(Loop, TestActor, "Text")
 
-    self:Exec("GetCppTextValue", GetCppNameValue, Loop, TestActor)
+    self:GetCppTextValue(Loop, TestActor)
 
     -- FString
-    self:Exec("SetCppStringValue", SetCppStringValue, Loop, TestActor, "String")
+    self:SetCppStringValue(Loop, TestActor, "String")
 
-    self:Exec("GetCppStringValue", GetCppStringValue, Loop, TestActor)
+    self:GetCppStringValue(Loop, TestActor)
 
     -- UEnum
-    self:Exec("SetCppEnumValue", SetCppEnumValue, Loop, TestActor, TestEnum)
+    self:SetCppEnumValue(Loop, TestActor, TestEnum)
 
-    self:Exec("GetCppEnumValue", GetCppEnumValue, Loop, TestActor)
+    self:GetCppEnumValue(Loop, TestActor)
 
     -- UEnum Class
-    self:Exec("SetCppEnumClassValue", SetCppEnumClassValue, Loop, TestActor, TestEnumClass)
+    self:SetCppEnumClassValue(Loop, TestActor, TestEnumClass)
 
-    self:Exec("GetCppEnumClassValue", GetCppEnumClassValue, Loop, TestActor)
+    self:GetCppEnumClassValue(Loop, TestActor)
 
     -- UStruct
-    self:Exec("SetCppStructValue", SetCppStructValue, Loop, TestActor, TestStruct)
+    self:SetCppStructValue(Loop, TestActor, TestStruct)
 
-    self:Exec("GetCppStructValue", GetCppStructValue, Loop, TestActor)
+    self:GetCppStructValue(Loop, TestActor)
 
     -- UObject
-    self:Exec("SetCppObjectValue", SetCppObjectValue, Loop, TestActor, TestActor)
+    self:SetCppObjectValue(Loop, TestActor, TestActor)
 
-    self:Exec("GetCppObjectValue", GetCppObjectValue, Loop, TestActor)
+    self:GetCppObjectValue(Loop, TestActor)
 
     -- UClass
-    self:Exec("SetCppClassValue", SetCppClassValue, Loop, TestActor, TestClass)
+    self:SetCppClassValue(Loop, TestActor, TestClass)
 
-    self:Exec("GetCppClassValue", GetCppClassValue, Loop, TestActor)
+    self:GetCppClassValue(Loop, TestActor)
 
     -- UInterface 
-    self:Exec("SetCppInterfaceValue", SetCppInterfaceValue, Loop, TestActor, TestInterface)
+    self:SetCppInterfaceValue(Loop, TestActor, TestInterface)
 
-    self:Exec("GetCppInterfaceValue", GetCppInterfaceValue, Loop, TestActor)
+    self:GetCppInterfaceValue(Loop, TestActor)
 
     -- TArray
-    self:Exec("SeCppArrayValue", SetCppArrayValue, Loop, TestActor, TestArray)
+    self:SetCppArrayValue(Loop, TestActor, TestArray)
 
-    self:Exec("GeCppArrayValue", GetCppArrayValue, Loop, TestActor)
+    self:GetCppArrayValue(Loop, TestActor)
 
     -- TArray Element
-    self:Exec("SetCppArrayElement", SetCppArrayElement, Loop, TestActor, 1, 1)
+    self:SetCppArrayElement(Loop, TestActor, 1, 1)
 
-    self:Exec("GetCppArrayElement", GetCppArrayValue, Loop, TestActor, 1)
+    self:GetCppArrayElement(Loop, TestActor, 1)
 
     -- TSet
-    self:Exec("SetCppSetValue", SetCppSetValue, Loop, TestActor, TestSet)
+    self:SetCppSetValue(Loop, TestActor, TestSet)
 
-    self:Exec("GetCppSetValue", GetCppSetValue, Loop, TestActor)
+    self:GetCppSetValue(Loop, TestActor)
 
     -- TMap
-    self:Exec("SeCppMapValue", SetCppMapValue, Loop, TestActor, TestMap)
+    self:SetCppMapValue(Loop, TestActor, TestMap)
 
-    self:Exec("GetCppMapValue", GetCppMapValue, Loop, TestActor)
+    self:GetCppMapValue(Loop, TestActor)
 
     -- TMap Element
-    self:Exec("SetCppMapElement", SetCppMapElement, Loop, TestActor, 0, 1)
+    self:SetCppMapElement(Loop, TestActor, 0, 1)
 
-    self:Exec("GetCppMapElement", GetCppMapValue, Loop, TestActor, 0)
+    self:GetCppMapElement(Loop, TestActor, 0)
 
     -- Static
-    self:Exec("StaticCppFunction", StaticCppFunction, Loop, TestActor)
+    self:StaticCppFunction(Loop, TestActor)
 
     -- Member
-    self:Exec("MemberCppFunction", MemberCppFunction, Loop, TestActor)
+    self:MemberCppFunction(Loop, TestActor)
 
     -- Bool
-    self:Exec("SetCppBoolValueFunction", SetCppBoolValueFunction, Loop, TestActor, true)
+    self:SetCppBoolValueFunction(Loop, TestActor, true)
 
-    self:Exec("GetCppBoolValueFunction", GetCppBoolValueFunction, Loop, TestActor)
+    self:GetCppBoolValueFunction(Loop, TestActor)
 
     -- Int8
-    self:Exec("SetCppInt8ValueFunction", SetCppInt8ValueFunction, Loop, TestActor, 1)
+    self:SetCppInt8ValueFunction(Loop, TestActor, 1)
 
-    self:Exec("GetCppInt8ValueFunction", GetCppInt8ValueFunction, Loop, TestActor)
+    self:GetCppInt8ValueFunction(Loop, TestActor)
 
     -- Int16
-    self:Exec("SetCppInt16ValueFunction", SetCppInt16ValueFunction, Loop, TestActor, 1)
+    self:SetCppInt16ValueFunction(Loop, TestActor, 1)
 
-    self:Exec("GetCppInt16ValueFunction", GetCppInt16ValueFunction, Loop, TestActor)
+    self:GetCppInt16ValueFunction(Loop, TestActor)
 
     -- Int32
-    self:Exec("SetCppInt32ValueFunction", SetCppInt32ValueFunction, Loop, TestActor, 1)
+    self:SetCppInt32ValueFunction(Loop, TestActor, 1)
 
-    self:Exec("GetCppInt32ValueFunction", GetCppInt32ValueFunction, Loop, TestActor)
+    self:GetCppInt32ValueFunction(Loop, TestActor)
 
     -- Int64
-    self:Exec("SetCppInt64ValueFunction", SetCppInt64ValueFunction, Loop, TestActor, 1)
+    self:SetCppInt64ValueFunction(Loop, TestActor, 1)
 
-    self:Exec("GetCppInt64ValueFunction", GetCppInt64ValueFunction, Loop, TestActor)
+    self:GetCppInt64ValueFunction(Loop, TestActor)
 
     -- UInt8
-    self:Exec("SetCppUInt8ValueFunction", SetCppUInt8ValueFunction, Loop, TestActor, 1)
+    self:SetCppUInt8ValueFunction(Loop, TestActor, 1)
 
-    self:Exec("GetCppUInt8ValueFunction", GetCppUInt8ValueFunction, Loop, TestActor)
+    self:GetCppUInt8ValueFunction(Loop, TestActor)
 
     -- UInt16
-    self:Exec("SetCppUInt16ValueFunction", SetCppUInt16ValueFunction, Loop, TestActor, 1)
+    self:SetCppUInt16ValueFunction(Loop, TestActor, 1)
 
-    self:Exec("GetCppUInt16ValueFunction", GetCppUInt16ValueFunction, Loop, TestActor)
+    self:GetCppUInt16ValueFunction(Loop, TestActor)
 
     -- UInt32
-    self:Exec("SetCppUInt32ValueFunction", SetCppUInt32ValueFunction, Loop, TestActor, 1)
+    self:SetCppUInt32ValueFunction(Loop, TestActor, 1)
 
-    self:Exec("GetCppUInt32ValueFunction", GetCppUInt32ValueFunction, Loop, TestActor)
+    self:GetCppUInt32ValueFunction(Loop, TestActor)
 
     -- UInt64
-    self:Exec("SetCppUInt64ValueFunction", SetCppUInt64ValueFunction, Loop, TestActor, 1)
+    self:SetCppUInt64ValueFunction(Loop, TestActor, 1)
 
-    self:Exec("GetCppUInt64ValueFunction", GetCppUInt64ValueFunction, Loop, TestActor)
+    self:GetCppUInt64ValueFunction(Loop, TestActor)
 
     -- Float
-    self:Exec("SetCppFloatValueFunction", SetCppFloatValueFunction, Loop, TestActor, 1.0)
+    self:SetCppFloatValueFunction(Loop, TestActor, 1.0)
 
-    self:Exec("GetCppFloatValueFunction", GetCppFloatValueFunction, Loop, TestActor)
+    self:GetCppFloatValueFunction(Loop, TestActor)
 
     -- Double
-    self:Exec("SetCppDoubleValueFunction", SetCppDoubleValueFunction, Loop, TestActor, 1.0)
+    self:SetCppDoubleValueFunction(Loop, TestActor, 1.0)
 
-    self:Exec("GetCppDoubleValueFunction", GetCppDoubleValueFunction, Loop, TestActor)
+    self:GetCppDoubleValueFunction(Loop, TestActor)
 
     -- FName
-    self:Exec("SetCppNameValueFunction", SetCppNameValueFunction, Loop, TestActor, "Name")
+    self:SetCppNameValueFunction(Loop, TestActor, "Name")
 
-    self:Exec("GetCppNameValueFunction", GetCppNameValueFunction, Loop, TestActor)
+    self:GetCppNameValueFunction(Loop, TestActor)
 
     -- FText
-    self:Exec("SetCppTextValueFunction", SetCppTextValueFunction, Loop, TestActor, "Text")
+    self:SetCppTextValueFunction(Loop, TestActor, "Text")
 
-    self:Exec("GetCppTextValueFunction", GetCppTextValueFunction, Loop, TestActor)
+    self:GetCppTextValueFunction(Loop, TestActor)
 
     -- FString
-    self:Exec("SetCppStringValueFunction", SetCppStringValueFunction, Loop, TestActor, "String")
+    self:SetCppStringValueFunction(Loop, TestActor, "String")
 
-    self:Exec("GetCppStringValueFunction", GetCppStringValueFunction, Loop, TestActor)
+    self:GetCppStringValueFunction(Loop, TestActor)
 
     -- UEnum
-    self:Exec("SetCppEnumValueFunction", SetCppEnumValueFunction, Loop, TestActor, TestEnum)
+    self:SetCppEnumValueFunction(Loop, TestActor, TestEnum)
 
-    self:Exec("GetCppEnumValueFunction", GetCppEnumValueFunction, Loop, TestActor)
+    self:GetCppEnumValueFunction(Loop, TestActor)
 
     -- UEnum Class
-    self:Exec("SetCppEnumClassValueFunction", SetCppEnumClassValueFunction, Loop, TestActor, TestEnumClass)
+    self:SetCppEnumClassValueFunction(Loop, TestActor, TestEnumClass)
 
-    self:Exec("GetCppEnumClassValueFunction", GetCppEnumClassValueFunction, Loop, TestActor)
+    self:GetCppEnumClassValueFunction(Loop, TestActor)
 
     -- UStruct
-    self:Exec("SetCppStructValueFunction", SetCppStructValueFunction, Loop, TestActor, TestStruct)
+    self:SetCppStructValueFunction(Loop, TestActor, TestStruct)
 
-    self:Exec("GetCppStructValueFunction", GetCppStructValueFunction, Loop, TestActor)
+    self:GetCppStructValueFunction(Loop, TestActor)
 
     -- UObject
-    self:Exec("SetCppObjectValueFunction", SetCppObjectValueFunction, Loop, TestActor, TestActor)
+    self:SetCppObjectValueFunction(Loop, TestActor, TestActor)
 
-    self:Exec("GetCppObjectValueFunction", GetCppObjectValueFunction, Loop, TestActor)
+    self:GetCppObjectValueFunction(Loop, TestActor)
 
     -- UClass
-    self:Exec("SetCppClassValueFunction", SetCppClassValueFunction, Loop, TestActor, TestClass)
+    self:SetCppClassValueFunction(Loop, TestActor, TestClass)
 
-    self:Exec("GetCppClassValueFunction", GetCppClassValueFunction, Loop, TestActor)
+    self:GetCppClassValueFunction(Loop, TestActor)
 
     -- UInterface 
-    self:Exec("SetCppInterfaceValueFunction", SetCppInterfaceValueFunction, Loop, TestActor, TestInterface)
+    self:SetCppInterfaceValueFunction(Loop, TestActor, TestInterface)
 
-    self:Exec("GetCppInterfaceValueFunction", GetCppInterfaceValueFunction, Loop, TestActor)
+    self:GetCppInterfaceValueFunction(Loop, TestActor)
 
     -- TArray
-    self:Exec("SetCppArrayValueFunction", SetCppArrayValueFunction, Loop, TestActor, TestArray)
+    self:SetCppArrayValueFunction(Loop, TestActor, TestArray)
 
-    self:Exec("GetCppArrayValueFunction", GetCppArrayValueFunction, Loop, TestActor)
+    self:GetCppArrayValueFunction(Loop, TestActor)
 
     -- TSet
-    self:Exec("SetCppSetValueFunction", SetCppSetValueFunction, Loop, TestActor, TestSet)
+    self:SetCppSetValueFunction(Loop, TestActor, TestSet)
 
-    self:Exec("GetCppSetValueFunction", GetCppSetValueFunction, Loop, TestActor)
+    self:GetCppSetValueFunction(Loop, TestActor)
 
     -- TMap
-    self:Exec("SetCppMapValueFunction", SetCppMapValueFunction, Loop, TestActor, TestMap)
+    self:SetCppMapValueFunction(Loop, TestActor, TestMap)
 
-    self:Exec("GetCppMapValueFunction", GetCppMapValueFunction, Loop, TestActor)
+    self:GetCppMapValueFunction(Loop, TestActor)
 end
 
 function M:TestBP()
@@ -1493,182 +3358,177 @@ function M:TestBP()
     TestMap:Add(0, 1)
 
     -- Bool
-    self:Exec("SetBPBoolValue", SetBPBoolValue, Loop, TestActor, true)
+    self:SetBPBoolValue(Loop, TestActor, true)
 
-    self:Exec("GetBPBoolValue", GetBPBoolValue, Loop, TestActor)
+    self:GetBPBoolValue(Loop, TestActor)
 
     -- Int32
-    self:Exec("SetBPInt32Value", SetBPInt32Value, Loop, TestActor, 1)
+    self:SetBPInt32Value(Loop, TestActor, 1)
 
-    self:Exec("GetBPInt32Value", GetBPInt32Value, Loop, TestActor)
+    self:GetBPInt32Value(Loop, TestActor)
 
     -- Int64
-    self:Exec("SetBPInt64Value", SetBPInt64Value, Loop, TestActor, 1)
+    self:SetBPInt64Value(Loop, TestActor, 1)
 
-    self:Exec("GetBPInt64Value", GetBPInt64Value, Loop, TestActor)
+    self:GetBPInt64Value(Loop, TestActor)
 
     -- UInt8
-    self:Exec("SetBPUInt8Value", SetBPUInt8Value, Loop, TestActor, 1)
+    self:SetBPUInt8Value(Loop, TestActor, 1)
 
-    self:Exec("GetBPUInt8Value", GetBPUInt8Value, Loop, TestActor)
+    self:GetBPUInt8Value(Loop, TestActor)
 
     -- Double
-    self:Exec("SetBPDoubleValue", SetBPDoubleValue, Loop, TestActor, 1.0)
+    self:SetBPDoubleValue(Loop, TestActor, 1.0)
 
-    self:Exec("GetBPDoubleValue", GetBPDoubleValue, Loop, TestActor)
+    self:GetBPDoubleValue(Loop, TestActor)
 
     -- FName
-    self:Exec("SetBPNameValue", SetBPNameValue, Loop, TestActor, "Name")
+    self:SetBPNameValue(Loop, TestActor, "Name")
 
-    self:Exec("GetBPNameValue", GetBPNameValue, Loop, TestActor)
+    self:GetBPNameValue(Loop, TestActor)
 
     -- FText
-    self:Exec("SetBPTextValue", SetBPNameValue, Loop, TestActor, "Text")
+    self:SetBPTextValue(Loop, TestActor, "Text")
 
-    self:Exec("GetBPTextValue", GetBPNameValue, Loop, TestActor)
+    self:GetBPTextValue(Loop, TestActor)
 
     -- FString
-    self:Exec("SetBPStringValue", SetBPStringValue, Loop, TestActor, "String")
+    self:SetBPStringValue(Loop, TestActor, "String")
 
-    self:Exec("GetBPStringValue", GetBPStringValue, Loop, TestActor)
+    self:GetBPStringValue(Loop, TestActor)
 
     -- UEnum
-    self:Exec("SetBPEnumValue", SetBPEnumValue, Loop, TestActor, TestEnum)
+    self:SetBPEnumValue(Loop, TestActor, TestEnum)
 
-    self:Exec("GetBPEnumValue", GetBPEnumValue, Loop, TestActor)
-
-    -- UEnum Class
-    self:Exec("SetBPEnumClassValue", SetBPEnumClassValue, Loop, TestActor, TestEnumClass)
-
-    self:Exec("GetBPEnumClassValue", GetBPEnumClassValue, Loop, TestActor)
+    self:GetBPEnumValue(Loop, TestActor)
 
     -- UStruct
-    self:Exec("SetBPStructValue", SetBPStructValue, Loop, TestActor, TestStruct)
+    self:SetBPStructValue(Loop, TestActor, TestStruct)
 
-    self:Exec("GetBPStructValue", GetBPStructValue, Loop, TestActor)
+    self:GetBPStructValue(Loop, TestActor)
 
     -- UObject
-    self:Exec("SetBPObjectValue", SetBPObjectValue, Loop, TestActor, TestActor)
+    self:SetBPObjectValue(Loop, TestActor, TestActor)
 
-    self:Exec("GetBPObjectValue", GetBPObjectValue, Loop, TestActor)
+    self:GetBPObjectValue(Loop, TestActor)
 
     -- UClass
-    self:Exec("SetBPClassValue", SetBPClassValue, Loop, TestActor, TestClass)
+    self:SetBPClassValue(Loop, TestActor, TestClass)
 
-    self:Exec("GetBPClassValue", GetBPClassValue, Loop, TestActor)
+    self:GetBPClassValue(Loop, TestActor)
 
     -- UInterface 
-    self:Exec("SetBPInterfaceValue", SetBPInterfaceValue, Loop, TestActor, TestInterface)
+    self:SetBPInterfaceValue(Loop, TestActor, TestInterface)
 
-    self:Exec("GetBPInterfaceValue", GetBPInterfaceValue, Loop, TestActor)
+    self:GetBPInterfaceValue(Loop, TestActor)
 
     -- TArray
-    self:Exec("SeBPArrayValue", SetBPArrayValue, Loop, TestActor, TestArray)
+    self:SetBPArrayValue(Loop, TestActor, TestArray)
 
-    self:Exec("GeBPArrayValue", GetBPArrayValue, Loop, TestActor)
+    self:GetBPArrayValue(Loop, TestActor)
 
     -- TArray Element
-    self:Exec("SetBPArrayElement", SetBPArrayElement, Loop, TestActor, 1, 1)
+    self:SetBPArrayElement(Loop, TestActor, 1, 1)
 
-    self:Exec("GetBPArrayElement", GetBPArrayValue, Loop, TestActor, 1)
+    self:GetBPArrayElement(Loop, TestActor, 1)
 
     -- TSet
-    self:Exec("SetBPSetValue", SetBPSetValue, Loop, TestActor, TestSet)
+    self:SetBPSetValue(Loop, TestActor, TestSet)
 
-    self:Exec("GetBPSetValue", GetBPSetValue, Loop, TestActor)
+    self:GetBPSetValue(Loop, TestActor)
 
     -- TMap
-    self:Exec("SeBPMapValue", SetBPMapValue, Loop, TestActor, TestMap)
+    self:SetBPMapValue(Loop, TestActor, TestMap)
 
-    self:Exec("GetBPMapValue", GetBPMapValue, Loop, TestActor)
+    self:GetBPMapValue(Loop, TestActor)
 
     -- TMap Element
-    self:Exec("SetBPMapElement", SetBPMapElement, Loop, TestActor, 0, 1)
+    self:SetBPMapElement(Loop, TestActor, 0, 1)
 
-    self:Exec("GetBPMapElement", GetBPMapValue, Loop, TestActor, 0)
+    self:GetBPMapElement(Loop, TestActor, 0)
 
     -- Member
-    self:Exec("MemberBPFunction", MemberBPFunction, Loop, TestActor)
+    self:MemberBPFunction(Loop, TestActor)
 
     -- Bool
-    self:Exec("SetBPBoolValueFunction", SetBPBoolValueFunction, Loop, TestActor, true)
+    self:SetBPBoolValueFunction(Loop, TestActor, true)
 
-    self:Exec("GetBPBoolValueFunction", GetBPBoolValueFunction, Loop, TestActor)
+    self:GetBPBoolValueFunction(Loop, TestActor)
 
     -- Int32
-    self:Exec("SetBPInt32ValueFunction", SetBPInt32ValueFunction, Loop, TestActor, 1)
+    self:SetBPInt32ValueFunction(Loop, TestActor, 1)
 
-    self:Exec("GetBPInt32ValueFunction", GetBPInt32ValueFunction, Loop, TestActor)
+    self:GetBPInt32ValueFunction(Loop, TestActor)
 
     -- Int64
-    self:Exec("SetBPInt64ValueFunction", SetBPInt64ValueFunction, Loop, TestActor, 1)
+    self:SetBPInt64ValueFunction(Loop, TestActor, 1)
 
-    self:Exec("GetBPInt64ValueFunction", GetBPInt64ValueFunction, Loop, TestActor)
+    self:GetBPInt64ValueFunction(Loop, TestActor)
 
     -- UInt8
-    self:Exec("SetBPUInt8ValueFunction", SetBPUInt8ValueFunction, Loop, TestActor, 1)
+    self:SetBPUInt8ValueFunction(Loop, TestActor, 1)
 
-    self:Exec("GetBPUInt8ValueFunction", GetBPUInt8ValueFunction, Loop, TestActor)
+    self:GetBPUInt8ValueFunction(Loop, TestActor)
 
     -- Double
-    self:Exec("SetBPDoubleValueFunction", SetBPDoubleValueFunction, Loop, TestActor, 1.0)
+    self:SetBPDoubleValueFunction(Loop, TestActor, 1.0)
 
-    self:Exec("GetBPDoubleValueFunction", GetBPDoubleValueFunction, Loop, TestActor)
+    self:GetBPDoubleValueFunction(Loop, TestActor)
 
     -- FName
-    self:Exec("SetBPNameValueFunction", SetBPNameValueFunction, Loop, TestActor, "Name")
+    self:SetBPNameValueFunction(Loop, TestActor, "Name")
 
-    self:Exec("GetBPNameValueFunction", GetBPNameValueFunction, Loop, TestActor)
+    self:GetBPNameValueFunction(Loop, TestActor)
 
     -- FText
-    self:Exec("SetBPTextValueFunction", SetBPTextValueFunction, Loop, TestActor, "Text")
+    self:SetBPTextValueFunction(Loop, TestActor, "Text")
 
-    self:Exec("GetBPTextValueFunction", GetBPTextValueFunction, Loop, TestActor)
+    self:GetBPTextValueFunction(Loop, TestActor)
 
     -- FString
-    self:Exec("SetBPStringValueFunction", SetBPStringValueFunction, Loop, TestActor, "String")
+    self:SetBPStringValueFunction(Loop, TestActor, "String")
 
-    self:Exec("GetBPStringValueFunction", GetBPStringValueFunction, Loop, TestActor)
+    self:GetBPStringValueFunction(Loop, TestActor)
 
     -- UEnum
-    self:Exec("SetBPEnumValueFunction", SetBPEnumValueFunction, Loop, TestActor, TestEnum)
+    self:SetBPEnumValueFunction(Loop, TestActor, TestEnum)
 
-    self:Exec("GetBPEnumValueFunction", GetBPEnumValueFunction, Loop, TestActor)
+    self:GetBPEnumValueFunction(Loop, TestActor)
 
     -- UStruct
-    self:Exec("SetBPStructValueFunction", SetBPStructValueFunction, Loop, TestActor, TestStruct)
+    self:SetBPStructValueFunction(Loop, TestActor, TestStruct)
 
-    self:Exec("GetBPStructValueFunction", GetBPStructValueFunction, Loop, TestActor)
+    self:GetBPStructValueFunction(Loop, TestActor)
 
     -- UObject
-    self:Exec("SetBPObjectValueFunction", SetBPObjectValueFunction, Loop, TestActor, TestActor)
+    self:SetBPObjectValueFunction(Loop, TestActor, TestActor)
 
-    self:Exec("GetBPObjectValueFunction", GetBPObjectValueFunction, Loop, TestActor)
+    self:GetBPObjectValueFunction(Loop, TestActor)
 
     -- UClass
-    self:Exec("SetBPClassValueFunction", SetBPClassValueFunction, Loop, TestActor, TestClass)
+    self:SetBPClassValueFunction(Loop, TestActor, TestClass)
 
-    self:Exec("GetBPClassValueFunction", GetBPClassValueFunction, Loop, TestActor)
+    self:GetBPClassValueFunction(Loop, TestActor)
 
     -- UInterface 
-    self:Exec("SetBPInterfaceValueFunction", SetBPInterfaceValueFunction, Loop, TestActor, TestInterface)
+    self:SetBPInterfaceValueFunction(Loop, TestActor, TestInterface)
 
-    self:Exec("GetBPInterfaceValueFunction", GetBPInterfaceValueFunction, Loop, TestActor)
+    self:GetBPInterfaceValueFunction(Loop, TestActor)
 
     -- TArray
-    self:Exec("SetBPArrayValueFunction", SetBPArrayValueFunction, Loop, TestActor, TestArray)
+    self:SetBPArrayValueFunction(Loop, TestActor, TestArray)
 
-    self:Exec("GetBPArrayValueFunction", GetBPArrayValueFunction, Loop, TestActor)
+    self:GetBPArrayValueFunction(Loop, TestActor)
 
     -- TSet
-    self:Exec("SetBPSetValueFunction", SetBPSetValueFunction, Loop, TestActor, TestSet)
+    self:SetBPSetValueFunction(Loop, TestActor, TestSet)
 
-    self:Exec("GetBPSetValueFunction", GetBPSetValueFunction, Loop, TestActor)
+    self:GetBPSetValueFunction(Loop, TestActor)
 
     -- TMap
-    self:Exec("SetBPMapValueFunction", SetBPMapValueFunction, Loop, TestActor, TestMap)
+    self:SetBPMapValueFunction(Loop, TestActor, TestMap)
 
-    self:Exec("GetBPMapValueFunction", GetBPMapValueFunction, Loop, TestActor)
+    self:GetBPMapValueFunction(Loop, TestActor)
 end
 
 function M:StartTest()
