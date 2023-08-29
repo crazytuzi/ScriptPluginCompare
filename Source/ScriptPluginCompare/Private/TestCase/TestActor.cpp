@@ -28,7 +28,7 @@ void ATestActor::StaticFunction()
 {
 }
 
-void ATestActor::MemberFunction()
+void ATestActor::MemberFunction() const
 {
 }
 

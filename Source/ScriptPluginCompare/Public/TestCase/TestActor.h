@@ -52,7 +52,7 @@ public:
 	static void StaticFunction();
 
 	UFUNCTION(BlueprintCallable)
-	void MemberFunction();
+	void MemberFunction() const;
 
 	UFUNCTION(BlueprintCallable)
 	void SetBoolValueFunction(bool InBoolValue);
