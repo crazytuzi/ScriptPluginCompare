@@ -3,21 +3,20 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Subsystems/GameInstanceSubsystem.h"
+#include "TestCase/TestSubsystem.h"
 #include "UnLuaSubsystem.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class SCRIPTPLUGINCOMPARE_API UUnLuaSubsystem : public UGameInstanceSubsystem
+class SCRIPTPLUGINCOMPARE_API UUnLuaSubsystem : public UTestSubsystem
 {
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintCallable)
-	void Test(int32 InLoop);
+	UUnLuaSubsystem();
 
-	UPROPERTY()
-	int32 Loop;
+public:
+	virtual void Test_Implementation(int32 InLoop) override;
 };

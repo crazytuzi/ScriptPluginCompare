@@ -4,9 +4,12 @@
 #include "UnLua/UnLuaSubsystem.h"
 #include "UnLua/UnLuaActor.h"
 
-void UUnLuaSubsystem::Test(const int32 InLoop)
+UUnLuaSubsystem::UUnLuaSubsystem()
 {
-	Loop = InLoop;
+	Class = AUnLuaActor::StaticClass();
+}
 
-	GetWorld()->SpawnActor<AUnLuaActor>();
+void UUnLuaSubsystem::Test_Implementation(const int32 InLoop)
+{
+	Super::Test_Implementation(InLoop);
 }

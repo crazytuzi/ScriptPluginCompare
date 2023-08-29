@@ -10,9 +10,7 @@ UBlueprintSubsystem::UBlueprintSubsystem()
 	Class = Blueprint.Class;
 }
 
-void UBlueprintSubsystem::Test(const int32 InLoop)
+void UBlueprintSubsystem::Test_Implementation(const int32 InLoop)
 {
-	Loop = InLoop;
-
-	GetWorld()->SpawnActor<AActor>(Class);
+	Super::Test_Implementation(InLoop);
 }

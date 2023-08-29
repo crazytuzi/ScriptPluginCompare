@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Subsystems/GameInstanceSubsystem.h"
+#include "TestCase/TestSubsystem.h"
 #include "BlueprintSubsystem.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class SCRIPTPLUGINCOMPARE_API UBlueprintSubsystem : public UGameInstanceSubsystem
+class SCRIPTPLUGINCOMPARE_API UBlueprintSubsystem : public UTestSubsystem
 {
 	GENERATED_BODY()
 
@@ -18,11 +18,5 @@ public:
 	UBlueprintSubsystem();
 
 public:
-	UFUNCTION(BlueprintCallable)
-	void Test(int32 InLoop);
-
-	UPROPERTY(BlueprintReadWrite)
-	int32 Loop;
-
-	TSubclassOf<AActor> Class;
+	virtual void Test_Implementation(int32 InLoop) override;
 };

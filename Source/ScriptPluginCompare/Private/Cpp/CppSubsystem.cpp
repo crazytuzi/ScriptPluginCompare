@@ -4,9 +4,12 @@
 #include "Cpp/CppSubsystem.h"
 #include "Cpp/CppActor.h"
 
-void UCppSubsystem::Test(const int32 InLoop)
+UCppSubsystem::UCppSubsystem()
 {
-	Loop = InLoop;
+	Class = ACppActor::StaticClass();
+}
 
-	GetWorld()->SpawnActor<ACppActor>();
+void UCppSubsystem::Test_Implementation(const int32 InLoop)
+{
+	Super::Test_Implementation(InLoop);
 }

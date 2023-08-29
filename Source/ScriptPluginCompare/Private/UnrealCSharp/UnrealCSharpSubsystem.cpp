@@ -4,9 +4,12 @@
 #include "UnrealCSharp/UnrealCSharpSubsystem.h"
 #include "UnrealCSharp/UnrealCSharpActor.h"
 
-void UUnrealCSharpSubsystem::Test(const int32 InLoop)
+UUnrealCSharpSubsystem::UUnrealCSharpSubsystem()
 {
-	Loop = InLoop;
+	Class = AUnrealCSharpActor::StaticClass();
+}
 
-	GetWorld()->SpawnActor<AUnrealCSharpActor>();
+void UUnrealCSharpSubsystem::Test_Implementation(const int32 InLoop)
+{
+	Super::Test_Implementation(InLoop);
 }
