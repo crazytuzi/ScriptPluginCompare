@@ -1,0 +1,2 @@
+/Plugins/Puerts/ThirdParty/v8/Lib/Win64/wee8.lib filter=lfs diff=lfs merge=lfs -text
+/Plugins/Puerts/ThirdParty/v8/Lib/Win64MD/wee8.lib filter=lfs diff=lfs merge=lfs -text
