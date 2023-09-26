@@ -19,7 +19,20 @@ class PuerTSActor extends UE.Actor {
     }
 
     private TestSelf(): void {
+        // Empty
+        this.EmptyFunction(this.Loop);
 
+        // Add
+        this.AddFunction(this.Loop);
+
+        // Subtract
+        this.SubtractFunction(this.Loop);
+
+        // Multiply
+        this.MultiplyFunction(this.Loop);
+
+        // Divide
+        this.DivideFunction(this.Loop);
     }
 
     private TestCpp(): void {
@@ -72,6 +85,101 @@ class PuerTSActor extends UE.Actor {
         var File = `PuerTS-${Platform}-${BuildConfiguration}-${this.Loop}-${Year}-${Month}-${Day}-${Hour}-${Minute}-${Second}-${Millisecond}.csv`;
 
         UE.TestCaseBlueprintFunctionLibrary.SaveStringToFile(File, Value);
+    }
+
+    private Empty(): void {
+
+    }
+
+    // Empty
+    private EmptyFunction(InLoop: number): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            this.Empty();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["EmptyFunction", TotalSeconds]);
+    }
+
+    private Add(A: number, B: number): void {
+        var Value = A + B;
+    }
+
+    // Add
+    private AddFunction(InLoop: number): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            this.Add(1, 1);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["AddFunction", TotalSeconds]);
+    }
+
+    private Subtract(A: number, B: number): void {
+        var Value = A + B;
+    }
+
+    // Subtract
+    private SubtractFunction(InLoop: number): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            this.Subtract(1, 1);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SubtractFunction", TotalSeconds]);
+    }
+
+    private Multiply(A: number, B: number): void {
+        var Value = A * B;
+    }
+
+    // Multiply
+    private MultiplyFunction(InLoop: number): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            this.Multiply(1, 1);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["MultiplyFunction", TotalSeconds]);
+    }
+
+    private Divide(A: number, B: number): void {
+        var Value = A / B;
+    }
+
+    // Divide
+    private DivideFunction(InLoop: number): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            this.Divide(1, 1);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["DivideFunction", TotalSeconds]);
     }
 
     private Data: [String, number][];
