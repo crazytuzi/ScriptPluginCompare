@@ -1,4 +1,4 @@
-import { $ref } from 'puerts';
+import { $ref, blueprint } from 'puerts';
 import * as UE from 'ue'
 
 class PuerTSActor extends UE.Actor {
@@ -305,11 +305,207 @@ class PuerTSActor extends UE.Actor {
         this.SetCppMapValueFunction(this.Loop, TestActor, TestMap);
 
         this.GetCppMapValueFunction(this.Loop, TestActor);
-
     }
 
     private TestBP(): void {
+        blueprint.load(UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C);
 
+        var TestActor = new UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C();
+
+        var TestClass = TestActor.GetClass();
+
+        var TestInterface = TestActor.InterfaceValue;
+
+        blueprint.load(UE.Game.FirstPerson.Blueprints.BP_TestStruct.BP_TestStruct);
+
+        var TestStruct = new UE.Game.FirstPerson.Blueprints.BP_TestStruct.BP_TestStruct(1);
+
+        var TestEnum = UE.Game.FirstPerson.Blueprints.BP_TestEnum.BP_TestEnum.TestEnumOne;
+
+        var TestArray = UE.NewArray(UE.BuiltinInt);
+
+        TestArray.Add(1);
+
+        var TestSet = UE.NewSet(UE.BuiltinInt);
+
+        TestSet.Add(1);
+
+        var TestMap = UE.NewMap(UE.BuiltinInt, UE.BuiltinInt);
+
+        TestMap.Add(0, 1);
+
+        // Bool
+        this.SetBPBoolValue(this.Loop, TestActor, true);
+
+        this.GetBPBoolValue(this.Loop, TestActor);
+
+        // Int32
+        this.SetBPInt32Value(this.Loop, TestActor, 1);
+
+        this.GetBPInt32Value(this.Loop, TestActor);
+
+        // Int64
+        this.SetBPInt64Value(this.Loop, TestActor, 1n);
+
+        this.GetBPInt64Value(this.Loop, TestActor);
+
+        // UInt8
+        this.SetBPUInt8Value(this.Loop, TestActor, 1);
+
+        this.GetBPUInt8Value(this.Loop, TestActor);
+
+        // Double
+        this.SetBPDoubleValue(this.Loop, TestActor, 1.0);
+
+        this.GetBPDoubleValue(this.Loop, TestActor);
+
+        // FName
+        this.SetBPNameValue(this.Loop, TestActor, "Name");
+
+        this.GetBPNameValue(this.Loop, TestActor);
+
+        // FText
+        this.SetBPTextValue(this.Loop, TestActor, "Text");
+
+        this.GetBPTextValue(this.Loop, TestActor);
+
+        // FString
+        this.SetBPStringValue(this.Loop, TestActor, "String");
+
+        this.GetBPStringValue(this.Loop, TestActor);
+
+        // UEnum
+        this.SetBPEnumValue(this.Loop, TestActor, TestEnum);
+
+        this.GetBPEnumValue(this.Loop, TestActor);
+
+        // UStruct
+        this.SetBPStructValue(this.Loop, TestActor, TestStruct);
+
+        this.GetBPStructValue(this.Loop, TestActor);
+
+        // UObject
+        this.SetBPObjectValue(this.Loop, TestActor, TestActor);
+
+        this.GetBPObjectValue(this.Loop, TestActor);
+
+        // UClass
+        this.SetBPClassValue(this.Loop, TestActor, TestClass);
+
+        this.GetBPClassValue(this.Loop, TestActor);
+
+        // UInterface
+        this.SetBPInterfaceValue(this.Loop, TestActor, TestInterface);
+
+        this.GetBPInterfaceValue(this.Loop, TestActor);
+
+        // TArray
+        this.SetBPArrayValue(this.Loop, TestActor, TestArray);
+
+        this.GetBPArrayValue(this.Loop, TestActor);
+
+        // TArray Element
+        this.SetBPArrayElement(this.Loop, TestActor, 0, 1);
+
+        this.GetBPArrayElement(this.Loop, TestActor, 0);
+
+        // TSet
+        this.SetBPSetValue(this.Loop, TestActor, TestSet);
+
+        this.GetBPSetValue(this.Loop, TestActor);
+
+        // TMap
+        this.SetBPMapValue(this.Loop, TestActor, TestMap);
+
+        this.GetBPMapValue(this.Loop, TestActor);
+
+        // TMap Element
+        this.SetBPMapElement(this.Loop, TestActor, 0, 1);
+
+        this.GetBPMapElement(this.Loop, TestActor, 0);
+
+        // Member
+        this.MemberBPFunction(this.Loop, TestActor);
+
+        // Bool
+        this.SetBPBoolValueFunction(this.Loop, TestActor, true);
+
+        this.GetBPBoolValueFunction(this.Loop, TestActor);
+
+        // Int32
+        this.SetBPInt32ValueFunction(this.Loop, TestActor, 1);
+
+        this.GetBPInt32ValueFunction(this.Loop, TestActor);
+
+        // Int64
+        this.SetBPInt64ValueFunction(this.Loop, TestActor, 1n);
+
+        this.GetBPInt64ValueFunction(this.Loop, TestActor);
+
+        // UInt8
+        this.SetBPUInt8ValueFunction(this.Loop, TestActor, 1);
+
+        this.GetBPUInt8ValueFunction(this.Loop, TestActor);
+
+        // Double
+        this.SetBPDoubleValueFunction(this.Loop, TestActor, 1.0);
+
+        this.GetBPDoubleValueFunction(this.Loop, TestActor);
+
+        // FName
+        this.SetBPNameValueFunction(this.Loop, TestActor, "Name");
+
+        this.GetBPNameValueFunction(this.Loop, TestActor);
+
+        // FText
+        this.SetBPTextValueFunction(this.Loop, TestActor, "Text");
+
+        this.GetBPTextValueFunction(this.Loop, TestActor);
+
+        // FString
+        this.SetBPStringValueFunction(this.Loop, TestActor, "String");
+
+        this.GetBPStringValueFunction(this.Loop, TestActor);
+
+        // UEnum
+        this.SetBPEnumValueFunction(this.Loop, TestActor, TestEnum);
+
+        this.GetBPEnumValueFunction(this.Loop, TestActor);
+
+        // UStruct
+        this.SetBPStructValueFunction(this.Loop, TestActor, TestStruct);
+
+        this.GetBPStructValueFunction(this.Loop, TestActor);
+
+        // UObject
+        this.SetBPObjectValueFunction(this.Loop, TestActor, TestActor);
+
+        this.GetBPObjectValueFunction(this.Loop, TestActor);
+
+        // UClass
+        this.SetBPClassValueFunction(this.Loop, TestActor, TestClass);
+
+        this.GetBPClassValueFunction(this.Loop, TestActor);
+
+        // UInterface
+        this.SetBPInterfaceValueFunction(this.Loop, TestActor, TestInterface);
+
+        this.GetBPInterfaceValueFunction(this.Loop, TestActor);
+
+        // TArray
+        this.SetBPArrayValueFunction(this.Loop, TestActor, TestArray);
+
+        this.GetBPArrayValueFunction(this.Loop, TestActor);
+
+        // TSet
+        this.SetBPSetValueFunction(this.Loop, TestActor, TestSet);
+
+        this.GetBPSetValueFunction(this.Loop, TestActor);
+
+        // TMap
+        this.SetBPMapValueFunction(this.Loop, TestActor, TestMap);
+
+        this.GetBPMapValueFunction(this.Loop, TestActor);
     }
 
     private ProcessTest(): void {
@@ -1873,10 +2069,1009 @@ class PuerTSActor extends UE.Actor {
         this.Data.push(["GetCppMapValueFunction", TotalSeconds]);
     }
 
+    // Bool
+    private SetBPBoolValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: boolean): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.BoolValue = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPBoolValue", TotalSeconds]);
+    }
+
+    private GetBPBoolValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.BoolValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPBoolValue", TotalSeconds]);
+    }
+
+    // Int32
+    private SetBPInt32Value(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: number): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.Int32Value = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPInt32Value", TotalSeconds]);
+    }
+
+    private GetBPInt32Value(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.Int32Value;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPInt32Value", TotalSeconds]);
+    }
+
+    // Int64
+    private SetBPInt64Value(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: bigint): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.Int64Value = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPInt64Value", TotalSeconds]);
+    }
+
+    private GetBPInt64Value(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.Int64Value;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPInt64Value", TotalSeconds]);
+    }
+
+    // UInt8
+    private SetBPUInt8Value(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: number): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.UInt8Value = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPUInt8Value", TotalSeconds]);
+    }
+
+    private GetBPUInt8Value(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.UInt8Value;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPUInt8Value", TotalSeconds]);
+    }
+
+    // Double
+    private SetBPDoubleValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: number): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.DoubleValue = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPDoubleValue", TotalSeconds]);
+    }
+
+    private GetBPDoubleValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.DoubleValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPDoubleValue", TotalSeconds]);
+    }
+
+    // FName
+    private SetBPNameValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: string): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.NameValue = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPNameValue", TotalSeconds]);
+    }
+
+    private GetBPNameValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.NameValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPNameValue", TotalSeconds]);
+    }
+
+    // FText
+    private SetBPTextValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: string): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.TextValue = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPTextValue", TotalSeconds]);
+    }
+
+    private GetBPTextValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.TextValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPTextValue", TotalSeconds]);
+    }
+
+    // FString
+    private SetBPStringValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: string): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.StringValue = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPStringValue", TotalSeconds]);
+    }
+
+    private GetBPStringValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.StringValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPStringValue", TotalSeconds]);
+    }
+
+    // UEnum
+    private SetBPEnumValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: UE.Game.FirstPerson.Blueprints.BP_TestEnum.BP_TestEnum): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.EnumValue = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPEnumValue", TotalSeconds]);
+    }
+
+    private GetBPEnumValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.EnumValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPEnumValue", TotalSeconds]);
+    }
+
+    // UStruct
+    private SetBPStructValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: UE.Game.FirstPerson.Blueprints.BP_TestStruct.BP_TestStruct): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.StructValue = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPStructValue", TotalSeconds]);
+    }
+
+    private GetBPStructValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.StructValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPStructValue", TotalSeconds]);
+    }
+
+    // UObject
+    private SetBPObjectValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.ObjectValue = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPObjectValue", TotalSeconds]);
+    }
+
+    private GetBPObjectValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.ObjectValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPObjectValue", TotalSeconds]);
+    }
+
+    // UClass
+    private SetBPClassValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: UE.Class): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.ClassValue = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPClassValue", TotalSeconds]);
+    }
+
+    private GetBPClassValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.ClassValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPClassValue", TotalSeconds]);
+    }
+
+    // UInterface
+    private SetBPInterfaceValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: UE.Game.FirstPerson.Blueprints.BP_TestInterface.BP_TestInterface_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.InterfaceValue = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPInterfaceValue", TotalSeconds]);
+    }
+
+    private GetBPInterfaceValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.InterfaceValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPInterfaceValue", TotalSeconds]);
+    }
+
+    // TArray
+    private SetBPArrayValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: UE.TArray<number>): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.ArrayValue = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPArrayValue", TotalSeconds]);
+    }
+
+    private GetBPArrayValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.ArrayValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPArrayValue", TotalSeconds]);
+    }
+
+    // TArray Element
+    private SetBPArrayElement(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InIndex: number, InValue: number): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.ArrayValue[InIndex] = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPArrayElement", TotalSeconds]);
+    }
+
+    private GetBPArrayElement(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InIndex: number): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.ArrayValue[InIndex];
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPArrayElement", TotalSeconds]);
+    }
+
+    // TSet
+    private SetBPSetValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: UE.TSet<number>): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetValue = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPSetValue", TotalSeconds]);
+    }
+
+    private GetBPSetValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.SetValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPSetValue", TotalSeconds]);
+    }
+
+    // TMap
+    private SetBPMapValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: UE.TMap<number, number>): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.MapValue = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPMapValue", TotalSeconds]);
+    }
+
+    private GetBPMapValue(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.MapValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPMapValue", TotalSeconds]);
+    }
+
+    // TMap Element
+    private SetBPMapElement(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InIndex: number, InValue: number): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.MapValue[InIndex] = InValue;
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPMapElement", TotalSeconds]);
+    }
+
+    private GetBPMapElement(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InIndex: number): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.MapValue[InIndex];
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPMapElement", TotalSeconds]);
+    }
+
+    private MemberBPFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.MemberFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["MemberBPFunction", TotalSeconds]);
+    }
+
+    // Bool
+    private SetBPBoolValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: boolean): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetBoolValueFunction(InValue);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPBoolValueFunction", TotalSeconds]);
+    }
+
+    private GetBPBoolValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.GetBoolValueFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPBoolValueFunction", TotalSeconds]);
+    }
+
+    // Int32
+    private SetBPInt32ValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: number): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetInt32ValueFunction(InValue);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPInt32ValueFunction", TotalSeconds]);
+    }
+
+    private GetBPInt32ValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.GetInt32ValueFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPInt32ValueFunction", TotalSeconds]);
+    }
+
+    // Int64
+    private SetBPInt64ValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: bigint): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetInt64ValueFunction(InValue);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPInt64ValueFunction", TotalSeconds]);
+    }
+
+    private GetBPInt64ValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.GetInt64ValueFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPInt64ValueFunction", TotalSeconds]);
+    }
+
+    // UInt8
+    private SetBPUInt8ValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: number): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetUInt8ValueFunction(InValue);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPUInt8ValueFunction", TotalSeconds]);
+    }
+
+    private GetBPUInt8ValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.GetUInt8ValueFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPUInt8ValueFunction", TotalSeconds]);
+    }
+
+    // Double
+    private SetBPDoubleValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: number): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetDoubleValueFunction(InValue);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPDoubleValueFunction", TotalSeconds]);
+    }
+
+    private GetBPDoubleValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.GetDoubleValueFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPDoubleValueFunction", TotalSeconds]);
+    }
+
+    // FName
+    private SetBPNameValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: string): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetNameValueFunction(InValue);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPNameValueFunction", TotalSeconds]);
+    }
+
+    private GetBPNameValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.GetNameValueFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPNameValueFunction", TotalSeconds]);
+    }
+
+    // FText
+    private SetBPTextValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: string): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetTextValueFunction(InValue);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPTextValueFunction", TotalSeconds]);
+    }
+
+    private GetBPTextValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.GetTextValueFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPTextValueFunction", TotalSeconds]);
+    }
+
+    // FString
+    private SetBPStringValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: string): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetStringValueFunction(InValue);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPStringValueFunction", TotalSeconds]);
+    }
+
+    private GetBPStringValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.GetStringValueFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPStringValueFunction", TotalSeconds]);
+    }
+
+    // UEnum
+    private SetBPEnumValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: UE.Game.FirstPerson.Blueprints.BP_TestEnum.BP_TestEnum): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetEnumValueFunction(InValue);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPEnumValueFunction", TotalSeconds]);
+    }
+
+    private GetBPEnumValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.GetEnumValueFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPEnumValueFunction", TotalSeconds]);
+    }
+
+    // UStruct
+    private SetBPStructValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: UE.Game.FirstPerson.Blueprints.BP_TestStruct.BP_TestStruct): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetStructValueFunction(InValue);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPStructValueFunction", TotalSeconds]);
+    }
+
+    private GetBPStructValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.GetStructValueFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPStructValueFunction", TotalSeconds]);
+    }
+
+    // UObject
+    private SetBPObjectValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetObjectValueFunction(InValue);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPObjectValueFunction", TotalSeconds]);
+    }
+
+    private GetBPObjectValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.GetObjectValueFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPObjectValueFunction", TotalSeconds]);
+    }
+
+    // UClass
+    private SetBPClassValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: UE.Class): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetClassValueFunction(InValue);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPClassValueFunction", TotalSeconds]);
+    }
+
+    private GetBPClassValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.GetClassValueFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPClassValueFunction", TotalSeconds]);
+    }
+
+    // UInterface
+    private SetBPInterfaceValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: UE.Game.FirstPerson.Blueprints.BP_TestInterface.BP_TestInterface_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetInterfaceValueFunction(InValue);
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPInterfaceValueFunction", TotalSeconds]);
+    }
+
+    private GetBPInterfaceValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.GetInterfaceValueFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPInterfaceValueFunction", TotalSeconds]);
+    }
+
+    // TArray
+    private SetBPArrayValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: UE.TArray<number>): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetArrayValueFunction($ref(InValue));
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPArrayValueFunction", TotalSeconds]);
+    }
+
+    private GetBPArrayValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.GetArrayValueFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPArrayValueFunction", TotalSeconds]);
+    }
+
+    // TSet
+    private SetBPSetValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: UE.TSet<number>): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetSetValueFunction($ref(InValue));
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPSetValueFunction", TotalSeconds]);
+    }
+
+    private GetBPSetValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.GetSetValueFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPSetValueFunction", TotalSeconds]);
+    }
+
+    // TMap
+    private SetBPMapValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C, InValue: UE.TMap<number, number>): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            InObject.SetMapValueFunction($ref(InValue));
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["SetBPMapValueFunction", TotalSeconds]);
+    }
+
+    private GetBPMapValueFunction(InLoop: number, InObject: UE.Game.FirstPerson.Blueprints.BP_TestActor.BP_TestActor_C): void {
+        var Start = UE.KismetMathLibrary.Now();
+
+        for (var i = 0; i < InLoop; i++) {
+            var Value = InObject.GetMapValueFunction();
+        }
+
+        var End = UE.KismetMathLibrary.Now();
+
+        var TotalSeconds = UE.TestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
+
+        this.Data.push(["GetBPMapValueFunction", TotalSeconds]);
+    }
+
     private Data: [String, number][];
 
     private Loop: number;
-
 }
 
 export default PuerTSActor;
