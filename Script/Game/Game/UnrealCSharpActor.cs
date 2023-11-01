@@ -546,8 +546,8 @@ namespace Script.ScriptPluginCompare
 
             var Millisecond = 0;
 
-            UKismetMathLibrary.BreakDateTime(Now, out Year, out Month, out Day, out Hour, out Minute, out Second,
-                out Millisecond);
+            UKismetMathLibrary.BreakDateTime(Now, ref Year, ref Month, ref Day, ref Hour, ref Minute, ref Second,
+                ref Millisecond);
 
             foreach (var Var in Data)
             {
@@ -565,14 +565,14 @@ namespace Script.ScriptPluginCompare
         // Bool
         private void SetCppBoolValue(Int32 InLoop, ATestActor InObject, Boolean InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.BoolValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -581,14 +581,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppBoolValue(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.BoolValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -598,14 +598,14 @@ namespace Script.ScriptPluginCompare
         // Int8
         private void SetCppInt8Value(Int32 InLoop, ATestActor InObject, SByte InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.Int8Value = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -614,14 +614,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppInt8Value(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.Int8Value;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -631,14 +631,14 @@ namespace Script.ScriptPluginCompare
         // Int16
         private void SetCppInt16Value(Int32 InLoop, ATestActor InObject, Int16 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.Int16Value = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -647,14 +647,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppInt16Value(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.Int16Value;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -664,14 +664,14 @@ namespace Script.ScriptPluginCompare
         // Int32
         private void SetCppInt32Value(Int32 InLoop, ATestActor InObject, Int32 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.Int32Value = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -680,14 +680,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppInt32Value(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.Int32Value;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -697,14 +697,14 @@ namespace Script.ScriptPluginCompare
         // Int64
         private void SetCppInt64Value(Int32 InLoop, ATestActor InObject, Int64 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.Int64Value = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -713,14 +713,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppInt64Value(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.Int64Value;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -730,14 +730,14 @@ namespace Script.ScriptPluginCompare
         // UInt8
         private void SetCppUInt8Value(Int32 InLoop, ATestActor InObject, Byte InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.UInt8Value = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -746,14 +746,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppUInt8Value(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.UInt8Value;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -763,14 +763,14 @@ namespace Script.ScriptPluginCompare
         // UInt16
         private void SetCppUInt16Value(Int32 InLoop, ATestActor InObject, UInt16 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.UInt16Value = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -779,14 +779,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppUInt16Value(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.UInt16Value;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -796,14 +796,14 @@ namespace Script.ScriptPluginCompare
         // UInt32
         private void SetCppUInt32Value(Int32 InLoop, ATestActor InObject, UInt32 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.UInt32Value = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -812,14 +812,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppUInt32Value(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.UInt32Value;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -829,14 +829,14 @@ namespace Script.ScriptPluginCompare
         // UInt64
         private void SetCppUInt64Value(Int32 InLoop, ATestActor InObject, UInt64 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.UInt64Value = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -845,14 +845,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppUInt64Value(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.UInt64Value;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -862,14 +862,14 @@ namespace Script.ScriptPluginCompare
         // Float
         private void SetCppFloatValue(Int32 InLoop, ATestActor InObject, Single InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.FloatValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -878,14 +878,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppFloatValue(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.FloatValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -895,14 +895,14 @@ namespace Script.ScriptPluginCompare
         // Double
         private void SetCppDoubleValue(Int32 InLoop, ATestActor InObject, Double InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.DoubleValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -911,14 +911,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppDoubleValue(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.DoubleValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -928,14 +928,14 @@ namespace Script.ScriptPluginCompare
         // FName
         private void SetCppNameValue(Int32 InLoop, ATestActor InObject, FName InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.NameValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -944,14 +944,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppNameValue(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.NameValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -961,14 +961,14 @@ namespace Script.ScriptPluginCompare
         // FText
         private void SetCppTextValue(Int32 InLoop, ATestActor InObject, FText InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.TextValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -977,14 +977,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppTextValue(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.TextValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -994,14 +994,14 @@ namespace Script.ScriptPluginCompare
         // FString
         private void SetCppStringValue(Int32 InLoop, ATestActor InObject, FString InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.StringValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1010,14 +1010,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppStringValue(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.StringValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1027,14 +1027,14 @@ namespace Script.ScriptPluginCompare
         // UEnum
         private void SetCppEnumValue(Int32 InLoop, ATestActor InObject, ETestEnum InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.EnumValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1043,14 +1043,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppEnumValue(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.EnumValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1060,14 +1060,14 @@ namespace Script.ScriptPluginCompare
         // UEnum Class
         private void SetCppEnumClassValue(Int32 InLoop, ATestActor InObject, ETestEnumClass InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.EnumClassValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1076,14 +1076,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppEnumClassValue(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.EnumClassValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1093,14 +1093,14 @@ namespace Script.ScriptPluginCompare
         // UStruct
         private void SetCppStructValue(Int32 InLoop, ATestActor InObject, FTestStruct InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.StructValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1109,14 +1109,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppStructValue(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.StructValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1126,14 +1126,14 @@ namespace Script.ScriptPluginCompare
         // UObject
         private void SetCppObjectValue(Int32 InLoop, ATestActor InObject, ATestActor InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.ObjectValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1142,14 +1142,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppObjectValue(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.ObjectValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1159,14 +1159,14 @@ namespace Script.ScriptPluginCompare
         // UClass
         private void SetCppClassValue(Int32 InLoop, ATestActor InObject, TSubclassOf<UObject> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.ClassValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1175,14 +1175,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppClassValue(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.ClassValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1192,14 +1192,14 @@ namespace Script.ScriptPluginCompare
         // UInterface 
         private void SetCppInterfaceValue(Int32 InLoop, ATestActor InObject, TScriptInterface<ITestInterface> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.InterfaceValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1208,14 +1208,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppInterfaceValue(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.InterfaceValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1225,14 +1225,14 @@ namespace Script.ScriptPluginCompare
         // TArray
         private void SetCppArrayValue(Int32 InLoop, ATestActor InObject, TArray<Int32> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.ArrayValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1241,14 +1241,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppArrayValue(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.ArrayValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1258,14 +1258,14 @@ namespace Script.ScriptPluginCompare
         // TArray Element
         private void SetCppArrayElement(Int32 InLoop, ATestActor InObject, Int32 InIndex, Int32 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.ArrayValue[InIndex] = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1274,14 +1274,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppArrayElement(Int32 InLoop, ATestActor InObject, Int32 InIndex)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.ArrayValue[InIndex];
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1291,14 +1291,14 @@ namespace Script.ScriptPluginCompare
         // TSet
         private void SetCppSetValue(Int32 InLoop, ATestActor InObject, TSet<Int32> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1307,14 +1307,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppSetValue(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.SetValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1324,14 +1324,14 @@ namespace Script.ScriptPluginCompare
         // TMap
         private void SetCppMapValue(Int32 InLoop, ATestActor InObject, TMap<Int32, Int32> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.MapValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1340,14 +1340,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppMapValue(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.MapValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1357,14 +1357,14 @@ namespace Script.ScriptPluginCompare
         // TMap Element
         private void SetCppMapElement(Int32 InLoop, ATestActor InObject, Int32 InIndex, Int32 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.MapValue[InIndex] = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1373,14 +1373,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppMapElement(Int32 InLoop, ATestActor InObject, Int32 InIndex)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.MapValue[InIndex];
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1394,14 +1394,14 @@ namespace Script.ScriptPluginCompare
         // Empty
         private void EmptyFunction(Int32 InLoop)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 Empty();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1416,14 +1416,14 @@ namespace Script.ScriptPluginCompare
         // Add
         private void AddFunction(Int32 InLoop)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 Add(1, 1);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1438,14 +1438,14 @@ namespace Script.ScriptPluginCompare
         // Subtract
         private void SubtractFunction(Int32 InLoop)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 Subtract(1, 1);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1460,14 +1460,14 @@ namespace Script.ScriptPluginCompare
         // Multiply
         private void MultiplyFunction(Int32 InLoop)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 Multiply(1, 1);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1482,14 +1482,14 @@ namespace Script.ScriptPluginCompare
         // Divide
         private void DivideFunction(Int32 InLoop)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 Divide(1, 1);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1499,14 +1499,14 @@ namespace Script.ScriptPluginCompare
         // Static
         private void StaticCppFunction(Int32 InLoop)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 ATestActor.StaticFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1516,14 +1516,14 @@ namespace Script.ScriptPluginCompare
         // Member
         private void MemberCppFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.MemberFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1533,14 +1533,14 @@ namespace Script.ScriptPluginCompare
         // Bool
         private void SetCppBoolValueFunction(Int32 InLoop, ATestActor InObject, Boolean InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetBoolValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1549,14 +1549,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppBoolValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetBoolValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1566,14 +1566,14 @@ namespace Script.ScriptPluginCompare
         // Int8
         private void SetCppInt8ValueFunction(Int32 InLoop, ATestActor InObject, SByte InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetInt8ValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1582,14 +1582,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppInt8ValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetInt8ValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1599,14 +1599,14 @@ namespace Script.ScriptPluginCompare
         // Int16
         private void SetCppInt16ValueFunction(Int32 InLoop, ATestActor InObject, Int16 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetInt16ValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1615,14 +1615,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppInt16ValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetUInt16ValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1632,14 +1632,14 @@ namespace Script.ScriptPluginCompare
         // Int32
         private void SetCppInt32ValueFunction(Int32 InLoop, ATestActor InObject, Int32 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetInt32ValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1648,14 +1648,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppInt32ValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetInt32ValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1665,14 +1665,14 @@ namespace Script.ScriptPluginCompare
         // Int64
         private void SetCppInt64ValueFunction(Int32 InLoop, ATestActor InObject, Int64 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetInt64ValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1681,14 +1681,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppInt64ValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetInt64ValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1698,14 +1698,14 @@ namespace Script.ScriptPluginCompare
         // UInt8
         private void SetCppUInt8ValueFunction(Int32 InLoop, ATestActor InObject, Byte InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetUInt8ValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1714,14 +1714,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppUInt8ValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetUInt8ValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1731,14 +1731,14 @@ namespace Script.ScriptPluginCompare
         // UInt16
         private void SetCppUInt16ValueFunction(Int32 InLoop, ATestActor InObject, UInt16 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetUInt16ValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1747,14 +1747,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppUInt16ValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetUInt16ValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1764,14 +1764,14 @@ namespace Script.ScriptPluginCompare
         // UInt32
         private void SetCppUInt32ValueFunction(Int32 InLoop, ATestActor InObject, UInt32 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetUInt32ValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1780,14 +1780,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppUInt32ValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetUInt32ValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1797,14 +1797,14 @@ namespace Script.ScriptPluginCompare
         // UInt64
         private void SetCppUInt64ValueFunction(Int32 InLoop, ATestActor InObject, UInt64 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetUInt64ValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1813,14 +1813,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppUInt64ValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetUInt64ValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1830,14 +1830,14 @@ namespace Script.ScriptPluginCompare
         // Float
         private void SetCppFloatValueFunction(Int32 InLoop, ATestActor InObject, Single InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetFloatValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1846,14 +1846,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppFloatValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetFloatValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1863,14 +1863,14 @@ namespace Script.ScriptPluginCompare
         // Double
         private void SetCppDoubleValueFunction(Int32 InLoop, ATestActor InObject, Double InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetDoubleValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1879,14 +1879,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppDoubleValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetDoubleValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1896,14 +1896,14 @@ namespace Script.ScriptPluginCompare
         // FName
         private void SetCppNameValueFunction(Int32 InLoop, ATestActor InObject, FName InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetNameValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1912,14 +1912,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppNameValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetNameValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1929,14 +1929,14 @@ namespace Script.ScriptPluginCompare
         // FText
         private void SetCppTextValueFunction(Int32 InLoop, ATestActor InObject, FText InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetTextValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1945,14 +1945,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppTextValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetTextValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1962,14 +1962,14 @@ namespace Script.ScriptPluginCompare
         // FString
         private void SetCppStringValueFunction(Int32 InLoop, ATestActor InObject, FString InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetStringValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1978,14 +1978,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppStringValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetStringValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1995,14 +1995,14 @@ namespace Script.ScriptPluginCompare
         // UEnum
         private void SetCppEnumValueFunction(Int32 InLoop, ATestActor InObject, ETestEnum InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetEnumValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2011,14 +2011,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppEnumValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetEnumValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2028,14 +2028,14 @@ namespace Script.ScriptPluginCompare
         // UEnum Class
         private void SetCppEnumClassValueFunction(Int32 InLoop, ATestActor InObject, ETestEnumClass InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetEnumClassValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2044,14 +2044,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppEnumClassValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetEnumClassValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2061,14 +2061,14 @@ namespace Script.ScriptPluginCompare
         // UStruct
         private void SetCppStructValueFunction(Int32 InLoop, ATestActor InObject, FTestStruct InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetStructValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2077,14 +2077,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppStructValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetStructValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2094,14 +2094,14 @@ namespace Script.ScriptPluginCompare
         // UObject
         private void SetCppObjectValueFunction(Int32 InLoop, ATestActor InObject, ATestActor InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetObjectValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2110,14 +2110,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppObjectValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetObjectValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2127,14 +2127,14 @@ namespace Script.ScriptPluginCompare
         // UClass
         private void SetCppClassValueFunction(Int32 InLoop, ATestActor InObject, TSubclassOf<UObject> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetClassValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2143,14 +2143,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppClassValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetClassValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2161,14 +2161,14 @@ namespace Script.ScriptPluginCompare
         private void SetCppInterfaceValueFunction(Int32 InLoop, ATestActor InObject,
             TScriptInterface<ITestInterface> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetInterfaceValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2177,14 +2177,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppInterfaceValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetInterfaceValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2194,14 +2194,14 @@ namespace Script.ScriptPluginCompare
         // TArray
         private void SetCppArrayValueFunction(Int32 InLoop, ATestActor InObject, TArray<Int32> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetArrayValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2210,14 +2210,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppArrayValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetArrayValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2227,14 +2227,14 @@ namespace Script.ScriptPluginCompare
         // TSet
         private void SetCppSetValueFunction(Int32 InLoop, ATestActor InObject, TSet<Int32> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetSetValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2243,14 +2243,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppSetValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetSetValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2260,14 +2260,14 @@ namespace Script.ScriptPluginCompare
         // TMap
         private void SetCppMapValueFunction(Int32 InLoop, ATestActor InObject, TMap<Int32, Int32> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetMapValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2276,14 +2276,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetCppMapValueFunction(Int32 InLoop, ATestActor InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetMapValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2293,14 +2293,14 @@ namespace Script.ScriptPluginCompare
         // Bool
         private void SetBPBoolValue(Int32 InLoop, BP_TestActor_C InObject, Boolean InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.BoolValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2309,14 +2309,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPBoolValue(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.BoolValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2326,14 +2326,14 @@ namespace Script.ScriptPluginCompare
         // Int32
         private void SetBPInt32Value(Int32 InLoop, BP_TestActor_C InObject, Int32 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.Int32Value = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2342,14 +2342,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPInt32Value(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.Int32Value;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2359,14 +2359,14 @@ namespace Script.ScriptPluginCompare
         // Int64
         private void SetBPInt64Value(Int32 InLoop, BP_TestActor_C InObject, Int64 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.Int64Value = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2375,14 +2375,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPInt64Value(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.Int64Value;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2392,14 +2392,14 @@ namespace Script.ScriptPluginCompare
         // UInt8
         private void SetBPUInt8Value(Int32 InLoop, BP_TestActor_C InObject, Byte InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.UInt8Value = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2408,14 +2408,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPUInt8Value(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.UInt8Value;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2425,14 +2425,14 @@ namespace Script.ScriptPluginCompare
         // Double
         private void SetBPDoubleValue(Int32 InLoop, BP_TestActor_C InObject, Double InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.DoubleValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2441,14 +2441,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPDoubleValue(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.DoubleValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2458,14 +2458,14 @@ namespace Script.ScriptPluginCompare
         // FName
         private void SetBPNameValue(Int32 InLoop, BP_TestActor_C InObject, FName InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.NameValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2474,14 +2474,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPNameValue(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.NameValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2491,14 +2491,14 @@ namespace Script.ScriptPluginCompare
         // FText
         private void SetBPTextValue(Int32 InLoop, BP_TestActor_C InObject, FText InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.TextValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2507,14 +2507,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPTextValue(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.TextValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2524,14 +2524,14 @@ namespace Script.ScriptPluginCompare
         // FString
         private void SetBPStringValue(Int32 InLoop, BP_TestActor_C InObject, FString InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.StringValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2540,14 +2540,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPStringValue(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.StringValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2557,14 +2557,14 @@ namespace Script.ScriptPluginCompare
         // UEnum
         private void SetBPEnumValue(Int32 InLoop, BP_TestActor_C InObject, BP_TestEnum InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.EnumValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2573,14 +2573,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPEnumValue(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.EnumValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2590,14 +2590,14 @@ namespace Script.ScriptPluginCompare
         // UStruct
         private void SetBPStructValue(Int32 InLoop, BP_TestActor_C InObject, BP_TestStruct InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.StructValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2606,14 +2606,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPStructValue(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.StructValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2623,14 +2623,14 @@ namespace Script.ScriptPluginCompare
         // UObject
         private void SetBPObjectValue(Int32 InLoop, BP_TestActor_C InObject, BP_TestActor_C InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.ObjectValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2639,14 +2639,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPObjectValue(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.ObjectValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2656,14 +2656,14 @@ namespace Script.ScriptPluginCompare
         // UClass
         private void SetBPClassValue(Int32 InLoop, BP_TestActor_C InObject, TSubclassOf<UObject> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.ClassValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2672,14 +2672,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPClassValue(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.ClassValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2690,14 +2690,14 @@ namespace Script.ScriptPluginCompare
         private void SetBPInterfaceValue(Int32 InLoop, BP_TestActor_C InObject,
             TScriptInterface<IBP_TestInterface_C> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.InterfaceValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2706,14 +2706,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPInterfaceValue(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.InterfaceValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2723,14 +2723,14 @@ namespace Script.ScriptPluginCompare
         // TArray
         private void SetBPArrayValue(Int32 InLoop, BP_TestActor_C InObject, TArray<Int32> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.ArrayValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2739,14 +2739,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPArrayValue(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.ArrayValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2756,14 +2756,14 @@ namespace Script.ScriptPluginCompare
         // TArray Element
         private void SetBPArrayElement(Int32 InLoop, BP_TestActor_C InObject, Int32 InIndex, Int32 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.ArrayValue[InIndex] = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2772,14 +2772,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPArrayElement(Int32 InLoop, BP_TestActor_C InObject, Int32 InIndex)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.ArrayValue[InIndex];
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2789,14 +2789,14 @@ namespace Script.ScriptPluginCompare
         // TSet
         private void SetBPSetValue(Int32 InLoop, BP_TestActor_C InObject, TSet<Int32> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2805,14 +2805,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPSetValue(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.SetValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2822,14 +2822,14 @@ namespace Script.ScriptPluginCompare
         // TMap
         private void SetBPMapValue(Int32 InLoop, BP_TestActor_C InObject, TMap<Int32, Int32> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.MapValue = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2838,14 +2838,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPMapValue(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.MapValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2855,14 +2855,14 @@ namespace Script.ScriptPluginCompare
         // TMap Element
         private void SetBPMapElement(Int32 InLoop, BP_TestActor_C InObject, Int32 InIndex, Int32 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.MapValue[InIndex] = InValue;
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2871,14 +2871,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPMapElement(Int32 InLoop, BP_TestActor_C InObject, Int32 InIndex)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.MapValue[InIndex];
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2888,14 +2888,14 @@ namespace Script.ScriptPluginCompare
         // Member
         private void MemberBPFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.MemberFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2905,14 +2905,14 @@ namespace Script.ScriptPluginCompare
         // Bool
         private void SetBPBoolValueFunction(Int32 InLoop, BP_TestActor_C InObject, Boolean InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetBoolValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2921,14 +2921,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPBoolValueFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetBoolValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2938,14 +2938,14 @@ namespace Script.ScriptPluginCompare
         // Int32
         private void SetBPInt32ValueFunction(Int32 InLoop, BP_TestActor_C InObject, Int32 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetInt32ValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2954,14 +2954,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPInt32ValueFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetInt32ValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2971,14 +2971,14 @@ namespace Script.ScriptPluginCompare
         // Int64
         private void SetBPInt64ValueFunction(Int32 InLoop, BP_TestActor_C InObject, Int64 InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetInt64ValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2987,14 +2987,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPInt64ValueFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetInt64ValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3004,14 +3004,14 @@ namespace Script.ScriptPluginCompare
         // UInt8
         private void SetBPUInt8ValueFunction(Int32 InLoop, BP_TestActor_C InObject, Byte InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetUInt8ValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3020,14 +3020,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPUInt8ValueFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetUInt8ValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3037,14 +3037,14 @@ namespace Script.ScriptPluginCompare
         // Double
         private void SetBPDoubleValueFunction(Int32 InLoop, BP_TestActor_C InObject, Double InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetDoubleValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3053,14 +3053,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPDoubleValueFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetDoubleValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3070,14 +3070,14 @@ namespace Script.ScriptPluginCompare
         // FName
         private void SetBPNameValueFunction(Int32 InLoop, BP_TestActor_C InObject, FName InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetNameValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3086,14 +3086,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPNameValueFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetNameValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3103,14 +3103,14 @@ namespace Script.ScriptPluginCompare
         // FText
         private void SetBPTextValueFunction(Int32 InLoop, BP_TestActor_C InObject, FText InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetTextValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3119,14 +3119,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPTextValueFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetTextValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3136,14 +3136,14 @@ namespace Script.ScriptPluginCompare
         // FString
         private void SetBPStringValueFunction(Int32 InLoop, BP_TestActor_C InObject, FString InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetStringValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3152,14 +3152,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPStringValueFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetStringValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3169,14 +3169,14 @@ namespace Script.ScriptPluginCompare
         // UEnum
         private void SetBPEnumValueFunction(Int32 InLoop, BP_TestActor_C InObject, BP_TestEnum InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetEnumValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3185,14 +3185,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPEnumValueFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetEnumValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3202,14 +3202,14 @@ namespace Script.ScriptPluginCompare
         // UStruct
         private void SetBPStructValueFunction(Int32 InLoop, BP_TestActor_C InObject, BP_TestStruct InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetStructValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3218,14 +3218,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPStructValueFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetStructValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3235,14 +3235,14 @@ namespace Script.ScriptPluginCompare
         // UObject
         private void SetBPObjectValueFunction(Int32 InLoop, BP_TestActor_C InObject, BP_TestActor_C InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetObjectValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3251,14 +3251,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPObjectValueFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetObjectValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3268,14 +3268,14 @@ namespace Script.ScriptPluginCompare
         // UClass
         private void SetBPClassValueFunction(Int32 InLoop, BP_TestActor_C InObject, TSubclassOf<UObject> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetClassValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3284,14 +3284,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPClassValueFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetClassValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3302,14 +3302,14 @@ namespace Script.ScriptPluginCompare
         private void SetBPInterfaceValueFunction(Int32 InLoop, BP_TestActor_C InObject,
             TScriptInterface<IBP_TestInterface_C> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetInterfaceValueFunction(InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3318,14 +3318,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPInterfaceValueFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetInterfaceValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3335,14 +3335,14 @@ namespace Script.ScriptPluginCompare
         // TArray
         private void SetBPArrayValueFunction(Int32 InLoop, BP_TestActor_C InObject, TArray<Int32> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetArrayValueFunction(ref InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3351,14 +3351,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPArrayValueFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetArrayValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3368,14 +3368,14 @@ namespace Script.ScriptPluginCompare
         // TSet
         private void SetBPSetValueFunction(Int32 InLoop, BP_TestActor_C InObject, TSet<Int32> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetSetValueFunction(ref InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3384,14 +3384,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPSetValueFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetSetValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3401,14 +3401,14 @@ namespace Script.ScriptPluginCompare
         // TMap
         private void SetBPMapValueFunction(Int32 InLoop, BP_TestActor_C InObject, TMap<Int32, Int32> InValue)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 InObject.SetMapValueFunction(ref InValue);
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3417,14 +3417,14 @@ namespace Script.ScriptPluginCompare
 
         private void GetBPMapValueFunction(Int32 InLoop, BP_TestActor_C InObject)
         {
-            var Start = UKismetMathLibrary.Now();
+            var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             for (var i = 0; i < InLoop; i++)
             {
                 var Value = InObject.GetMapValueFunction();
             }
 
-            var End = UKismetMathLibrary.Now();
+            var End = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
             var TotalSeconds = UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 

@@ -2,10 +2,17 @@
 
 
 #include "TestCase/TestCaseBlueprintFunctionLibrary.h"
+#include <chrono>
 
-double UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(const FDateTime& A, const FDateTime& B)
+int64 UTestCaseBlueprintFunctionLibrary::GetTimestamp()
 {
-	return (A - B).GetTotalSeconds();
+	return std::chrono::duration_cast<std::chrono::milliseconds>(
+		std::chrono::system_clock::now().time_since_epoch()).count();
+}
+
+double UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(const int64& A, const int64& B)
+{
+	return std::chrono::duration<double>(std::chrono::milliseconds(A) - std::chrono::milliseconds(B)).count();;
 }
 
 FString UTestCaseBlueprintFunctionLibrary::GetPlatform()

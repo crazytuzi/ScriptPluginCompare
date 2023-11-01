@@ -572,7 +572,7 @@ void ACppActor::EndTest()
 
 	Value.Append(TEXT("Name, Time\n"));
 
-	const auto Now = UKismetMathLibrary::Now();
+	const auto Now = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto Year = 0;
 
@@ -622,14 +622,14 @@ void ACppActor::Empty()
 
 void ACppActor::EmptyFunction(const int32 InLoop)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		Empty();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -643,14 +643,14 @@ void ACppActor::Add(const int32 A, const int32 B)
 
 void ACppActor::AddFunction(const int32 InLoop)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		Add(1, 1);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -664,14 +664,14 @@ void ACppActor::Subtract(const int32 A, const int32 B)
 
 void ACppActor::SubtractFunction(const int32 InLoop)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		Subtract(1, 1);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -685,14 +685,14 @@ void ACppActor::Multiply(const int32 A, const int32 B)
 
 void ACppActor::MultiplyFunction(const int32 InLoop)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		Multiply(1, 1);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -706,14 +706,14 @@ void ACppActor::Divide(const int32 A, const int32 B)
 
 void ACppActor::DivideFunction(const int32 InLoop)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		Divide(1, 1);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -722,14 +722,14 @@ void ACppActor::DivideFunction(const int32 InLoop)
 
 void ACppActor::SetCppBoolValue(const int32 InLoop, ATestActor* InObject, const bool InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->BoolValue = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -738,14 +738,14 @@ void ACppActor::SetCppBoolValue(const int32 InLoop, ATestActor* InObject, const 
 
 void ACppActor::GetCppBoolValue(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->BoolValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -754,14 +754,14 @@ void ACppActor::GetCppBoolValue(const int32 InLoop, const ATestActor* InObject)
 
 void ACppActor::SetCppInt8Value(const int32 InLoop, ATestActor* InObject, const int8 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->Int8Value = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -770,14 +770,14 @@ void ACppActor::SetCppInt8Value(const int32 InLoop, ATestActor* InObject, const 
 
 void ACppActor::GetCppInt8Value(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->Int8Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -786,14 +786,14 @@ void ACppActor::GetCppInt8Value(const int32 InLoop, const ATestActor* InObject)
 
 void ACppActor::SetCppInt16Value(const int32 InLoop, ATestActor* InObject, const int16 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->Int16Value = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -802,14 +802,14 @@ void ACppActor::SetCppInt16Value(const int32 InLoop, ATestActor* InObject, const
 
 void ACppActor::GetCppInt16Value(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->Int16Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -818,14 +818,14 @@ void ACppActor::GetCppInt16Value(const int32 InLoop, const ATestActor* InObject)
 
 void ACppActor::SetCppInt32Value(const int32 InLoop, ATestActor* InObject, const int32 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->Int32Value = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -834,14 +834,14 @@ void ACppActor::SetCppInt32Value(const int32 InLoop, ATestActor* InObject, const
 
 void ACppActor::GetCppInt32Value(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->Int32Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -850,14 +850,14 @@ void ACppActor::GetCppInt32Value(const int32 InLoop, const ATestActor* InObject)
 
 void ACppActor::SetCppInt64Value(const int32 InLoop, ATestActor* InObject, const int64 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->Int64Value = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -866,14 +866,14 @@ void ACppActor::SetCppInt64Value(const int32 InLoop, ATestActor* InObject, const
 
 void ACppActor::GetCppInt64Value(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->Int64Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -882,14 +882,14 @@ void ACppActor::GetCppInt64Value(const int32 InLoop, const ATestActor* InObject)
 
 void ACppActor::SetCppUInt8Value(const int32 InLoop, ATestActor* InObject, const uint8 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->UInt8Value = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -898,14 +898,14 @@ void ACppActor::SetCppUInt8Value(const int32 InLoop, ATestActor* InObject, const
 
 void ACppActor::GetCppUInt8Value(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->UInt8Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -914,14 +914,14 @@ void ACppActor::GetCppUInt8Value(const int32 InLoop, const ATestActor* InObject)
 
 void ACppActor::SetCppUInt16Value(const int32 InLoop, ATestActor* InObject, const uint16 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->UInt16Value = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -930,14 +930,14 @@ void ACppActor::SetCppUInt16Value(const int32 InLoop, ATestActor* InObject, cons
 
 void ACppActor::GetCppUInt16Value(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->UInt16Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -946,14 +946,14 @@ void ACppActor::GetCppUInt16Value(const int32 InLoop, const ATestActor* InObject
 
 void ACppActor::SetCppUInt32Value(const int32 InLoop, ATestActor* InObject, const uint32 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->UInt32Value = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -962,14 +962,14 @@ void ACppActor::SetCppUInt32Value(const int32 InLoop, ATestActor* InObject, cons
 
 void ACppActor::GetCppUInt32Value(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->UInt32Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -978,14 +978,14 @@ void ACppActor::GetCppUInt32Value(const int32 InLoop, const ATestActor* InObject
 
 void ACppActor::SetCppUInt64Value(const int32 InLoop, ATestActor* InObject, const uint64 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->UInt64Value = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -994,14 +994,14 @@ void ACppActor::SetCppUInt64Value(const int32 InLoop, ATestActor* InObject, cons
 
 void ACppActor::GetCppUInt64Value(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->UInt64Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1010,14 +1010,14 @@ void ACppActor::GetCppUInt64Value(const int32 InLoop, const ATestActor* InObject
 
 void ACppActor::SetCppFloatValue(const int32 InLoop, ATestActor* InObject, const float InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->FloatValue = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1026,14 +1026,14 @@ void ACppActor::SetCppFloatValue(const int32 InLoop, ATestActor* InObject, const
 
 void ACppActor::GetCppFloatValue(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->FloatValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1042,14 +1042,14 @@ void ACppActor::GetCppFloatValue(const int32 InLoop, const ATestActor* InObject)
 
 void ACppActor::SetCppDoubleValue(const int32 InLoop, ATestActor* InObject, const double InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->DoubleValue = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1058,14 +1058,14 @@ void ACppActor::SetCppDoubleValue(const int32 InLoop, ATestActor* InObject, cons
 
 void ACppActor::GetCppDoubleValue(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->DoubleValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1074,14 +1074,14 @@ void ACppActor::GetCppDoubleValue(const int32 InLoop, const ATestActor* InObject
 
 void ACppActor::SetCppNameValue(const int32 InLoop, ATestActor* InObject, const FName& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->NameValue = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1090,14 +1090,14 @@ void ACppActor::SetCppNameValue(const int32 InLoop, ATestActor* InObject, const 
 
 void ACppActor::GetCppNameValue(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->NameValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1106,14 +1106,14 @@ void ACppActor::GetCppNameValue(const int32 InLoop, const ATestActor* InObject)
 
 void ACppActor::SetCppTextValue(const int32 InLoop, ATestActor* InObject, const FText& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->TextValue = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1122,14 +1122,14 @@ void ACppActor::SetCppTextValue(const int32 InLoop, ATestActor* InObject, const 
 
 void ACppActor::GetCppTextValue(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->TextValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1138,14 +1138,14 @@ void ACppActor::GetCppTextValue(const int32 InLoop, const ATestActor* InObject)
 
 void ACppActor::SetCppStringValue(const int32 InLoop, ATestActor* InObject, const FString& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->StringValue = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1154,14 +1154,14 @@ void ACppActor::SetCppStringValue(const int32 InLoop, ATestActor* InObject, cons
 
 void ACppActor::GetCppStringValue(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->StringValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1170,14 +1170,14 @@ void ACppActor::GetCppStringValue(const int32 InLoop, const ATestActor* InObject
 
 void ACppActor::SetCppEnumValue(const int32 InLoop, ATestActor* InObject, const ETestEnum InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->EnumValue = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1186,14 +1186,14 @@ void ACppActor::SetCppEnumValue(const int32 InLoop, ATestActor* InObject, const 
 
 void ACppActor::GetCppEnumValue(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->EnumValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1202,14 +1202,14 @@ void ACppActor::GetCppEnumValue(const int32 InLoop, const ATestActor* InObject)
 
 void ACppActor::SetCppEnumClassValue(const int32 InLoop, ATestActor* InObject, const ETestEnumClass InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->EnumClassValue = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1218,14 +1218,14 @@ void ACppActor::SetCppEnumClassValue(const int32 InLoop, ATestActor* InObject, c
 
 void ACppActor::GetCppEnumClassValue(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->EnumClassValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1234,14 +1234,14 @@ void ACppActor::GetCppEnumClassValue(const int32 InLoop, const ATestActor* InObj
 
 void ACppActor::SetCppStructValue(const int32 InLoop, ATestActor* InObject, const FTestStruct& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->StructValue = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1250,14 +1250,14 @@ void ACppActor::SetCppStructValue(const int32 InLoop, ATestActor* InObject, cons
 
 void ACppActor::GetCppStructValue(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->StructValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1266,14 +1266,14 @@ void ACppActor::GetCppStructValue(const int32 InLoop, const ATestActor* InObject
 
 void ACppActor::SetCppObjectValue(const int32 InLoop, ATestActor* InObject, ATestActor* InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->ObjectValue = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1282,14 +1282,14 @@ void ACppActor::SetCppObjectValue(const int32 InLoop, ATestActor* InObject, ATes
 
 void ACppActor::GetCppObjectValue(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->ObjectValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1298,14 +1298,14 @@ void ACppActor::GetCppObjectValue(const int32 InLoop, const ATestActor* InObject
 
 void ACppActor::SetCppClassValue(const int32 InLoop, ATestActor* InObject, UClass* InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->ClassValue = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1314,14 +1314,14 @@ void ACppActor::SetCppClassValue(const int32 InLoop, ATestActor* InObject, UClas
 
 void ACppActor::GetCppClassValue(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->ClassValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1331,14 +1331,14 @@ void ACppActor::GetCppClassValue(const int32 InLoop, const ATestActor* InObject)
 void ACppActor::SetCppInterfaceValue(const int32 InLoop, ATestActor* InObject,
                                      const TScriptInterface<ITestInterface>& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->InterfaceValue = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1347,14 +1347,14 @@ void ACppActor::SetCppInterfaceValue(const int32 InLoop, ATestActor* InObject,
 
 void ACppActor::GetCppInterfaceValue(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->InterfaceValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1363,14 +1363,14 @@ void ACppActor::GetCppInterfaceValue(const int32 InLoop, const ATestActor* InObj
 
 void ACppActor::SetCppArrayValue(const int32 InLoop, ATestActor* InObject, const TArray<int32>& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->ArrayValue = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1379,14 +1379,14 @@ void ACppActor::SetCppArrayValue(const int32 InLoop, ATestActor* InObject, const
 
 void ACppActor::GetCppArrayValue(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->ArrayValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1395,14 +1395,14 @@ void ACppActor::GetCppArrayValue(const int32 InLoop, const ATestActor* InObject)
 
 void ACppActor::SetCppArrayElement(const int32 InLoop, ATestActor* InObject, const int32 InIndex, const int32 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->ArrayValue[InIndex] = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1411,14 +1411,14 @@ void ACppActor::SetCppArrayElement(const int32 InLoop, ATestActor* InObject, con
 
 void ACppActor::GetCppArrayElement(const int32 InLoop, const ATestActor* InObject, int32 InIndex)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->ArrayValue[InIndex];
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1427,14 +1427,14 @@ void ACppActor::GetCppArrayElement(const int32 InLoop, const ATestActor* InObjec
 
 void ACppActor::SetCppSetValue(const int32 InLoop, ATestActor* InObject, const TSet<int32>& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetValue = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1443,14 +1443,14 @@ void ACppActor::SetCppSetValue(const int32 InLoop, ATestActor* InObject, const T
 
 void ACppActor::GetCppSetValue(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->SetValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1459,14 +1459,14 @@ void ACppActor::GetCppSetValue(const int32 InLoop, const ATestActor* InObject)
 
 void ACppActor::SetCppMapValue(const int32 InLoop, ATestActor* InObject, const TMap<int32, int32>& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->MapValue = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1475,14 +1475,14 @@ void ACppActor::SetCppMapValue(const int32 InLoop, ATestActor* InObject, const T
 
 void ACppActor::GetCppMapValue(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->MapValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1491,14 +1491,14 @@ void ACppActor::GetCppMapValue(const int32 InLoop, const ATestActor* InObject)
 
 void ACppActor::SetCppMapElement(const int32 InLoop, ATestActor* InObject, const int32 InIndex, const int32 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->MapValue[InIndex] = InValue;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1507,14 +1507,14 @@ void ACppActor::SetCppMapElement(const int32 InLoop, ATestActor* InObject, const
 
 void ACppActor::GetCppMapElement(const int32 InLoop, const ATestActor* InObject, const int32 InIndex)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->MapValue[InIndex];
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1523,14 +1523,14 @@ void ACppActor::GetCppMapElement(const int32 InLoop, const ATestActor* InObject,
 
 void ACppActor::StaticCppFunction(const int32 InLoop)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		ATestActor::StaticFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1539,14 +1539,14 @@ void ACppActor::StaticCppFunction(const int32 InLoop)
 
 void ACppActor::MemberCppFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->MemberFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1555,14 +1555,14 @@ void ACppActor::MemberCppFunction(const int32 InLoop, const ATestActor* InObject
 
 void ACppActor::SetCppBoolValueFunction(const int32 InLoop, ATestActor* InObject, const bool InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetBoolValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1571,14 +1571,14 @@ void ACppActor::SetCppBoolValueFunction(const int32 InLoop, ATestActor* InObject
 
 void ACppActor::GetCppBoolValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetBoolValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1587,14 +1587,14 @@ void ACppActor::GetCppBoolValueFunction(const int32 InLoop, const ATestActor* In
 
 void ACppActor::SetCppInt8ValueFunction(const int32 InLoop, ATestActor* InObject, const int8 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetInt8ValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1603,14 +1603,14 @@ void ACppActor::SetCppInt8ValueFunction(const int32 InLoop, ATestActor* InObject
 
 void ACppActor::GetCppInt8ValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetInt8ValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1619,14 +1619,14 @@ void ACppActor::GetCppInt8ValueFunction(const int32 InLoop, const ATestActor* In
 
 void ACppActor::SetCppInt16ValueFunction(const int32 InLoop, ATestActor* InObject, const int16 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetInt16ValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1635,14 +1635,14 @@ void ACppActor::SetCppInt16ValueFunction(const int32 InLoop, ATestActor* InObjec
 
 void ACppActor::GetCppInt16ValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetInt16ValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1651,14 +1651,14 @@ void ACppActor::GetCppInt16ValueFunction(const int32 InLoop, const ATestActor* I
 
 void ACppActor::SetCppInt32ValueFunction(const int32 InLoop, ATestActor* InObject, const int32 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetInt32ValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1667,14 +1667,14 @@ void ACppActor::SetCppInt32ValueFunction(const int32 InLoop, ATestActor* InObjec
 
 void ACppActor::GetCppInt32ValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetInt32ValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1683,14 +1683,14 @@ void ACppActor::GetCppInt32ValueFunction(const int32 InLoop, const ATestActor* I
 
 void ACppActor::SetCppInt64ValueFunction(const int32 InLoop, ATestActor* InObject, const int64 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetInt64ValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1699,14 +1699,14 @@ void ACppActor::SetCppInt64ValueFunction(const int32 InLoop, ATestActor* InObjec
 
 void ACppActor::GetCppInt64ValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetInt64ValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1715,14 +1715,14 @@ void ACppActor::GetCppInt64ValueFunction(const int32 InLoop, const ATestActor* I
 
 void ACppActor::SetCppUInt8ValueFunction(const int32 InLoop, ATestActor* InObject, const uint8 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetUInt8ValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1731,14 +1731,14 @@ void ACppActor::SetCppUInt8ValueFunction(const int32 InLoop, ATestActor* InObjec
 
 void ACppActor::GetCppUInt8ValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetUInt8ValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1747,14 +1747,14 @@ void ACppActor::GetCppUInt8ValueFunction(const int32 InLoop, const ATestActor* I
 
 void ACppActor::SetCppUInt16ValueFunction(const int32 InLoop, ATestActor* InObject, const uint16 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetUInt16ValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1763,14 +1763,14 @@ void ACppActor::SetCppUInt16ValueFunction(const int32 InLoop, ATestActor* InObje
 
 void ACppActor::GetCppUInt16ValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetUInt16ValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1779,14 +1779,14 @@ void ACppActor::GetCppUInt16ValueFunction(const int32 InLoop, const ATestActor* 
 
 void ACppActor::SetCppUInt32ValueFunction(const int32 InLoop, ATestActor* InObject, const uint32 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetUInt32ValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1795,14 +1795,14 @@ void ACppActor::SetCppUInt32ValueFunction(const int32 InLoop, ATestActor* InObje
 
 void ACppActor::GetCppUInt32ValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetUInt32ValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1811,14 +1811,14 @@ void ACppActor::GetCppUInt32ValueFunction(const int32 InLoop, const ATestActor* 
 
 void ACppActor::SetCppUInt64ValueFunction(const int32 InLoop, ATestActor* InObject, const uint64 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetUInt64ValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1827,14 +1827,14 @@ void ACppActor::SetCppUInt64ValueFunction(const int32 InLoop, ATestActor* InObje
 
 void ACppActor::GetCppUInt64ValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetUInt64ValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1843,14 +1843,14 @@ void ACppActor::GetCppUInt64ValueFunction(const int32 InLoop, const ATestActor* 
 
 void ACppActor::SetCppFloatValueFunction(const int32 InLoop, ATestActor* InObject, const float InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetFloatValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1859,14 +1859,14 @@ void ACppActor::SetCppFloatValueFunction(const int32 InLoop, ATestActor* InObjec
 
 void ACppActor::GetCppFloatValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetFloatValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1875,14 +1875,14 @@ void ACppActor::GetCppFloatValueFunction(const int32 InLoop, const ATestActor* I
 
 void ACppActor::SetCppDoubleValueFunction(const int32 InLoop, ATestActor* InObject, const double InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetDoubleValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1891,14 +1891,14 @@ void ACppActor::SetCppDoubleValueFunction(const int32 InLoop, ATestActor* InObje
 
 void ACppActor::GetCppDoubleValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetDoubleValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1907,14 +1907,14 @@ void ACppActor::GetCppDoubleValueFunction(const int32 InLoop, const ATestActor* 
 
 void ACppActor::SetCppNameValueFunction(const int32 InLoop, ATestActor* InObject, const FName& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetNameValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1923,14 +1923,14 @@ void ACppActor::SetCppNameValueFunction(const int32 InLoop, ATestActor* InObject
 
 void ACppActor::GetCppNameValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetNameValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1939,14 +1939,14 @@ void ACppActor::GetCppNameValueFunction(const int32 InLoop, const ATestActor* In
 
 void ACppActor::SetCppTextValueFunction(const int32 InLoop, ATestActor* InObject, const FText& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetTextValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1955,14 +1955,14 @@ void ACppActor::SetCppTextValueFunction(const int32 InLoop, ATestActor* InObject
 
 void ACppActor::GetCppTextValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetTextValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1971,14 +1971,14 @@ void ACppActor::GetCppTextValueFunction(const int32 InLoop, const ATestActor* In
 
 void ACppActor::SetCppStringValueFunction(const int32 InLoop, ATestActor* InObject, const FString& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetStringValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -1987,14 +1987,14 @@ void ACppActor::SetCppStringValueFunction(const int32 InLoop, ATestActor* InObje
 
 void ACppActor::GetCppStringValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetStringValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2003,14 +2003,14 @@ void ACppActor::GetCppStringValueFunction(const int32 InLoop, const ATestActor* 
 
 void ACppActor::SetCppEnumValueFunction(const int32 InLoop, ATestActor* InObject, const ETestEnum InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetEnumValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2019,14 +2019,14 @@ void ACppActor::SetCppEnumValueFunction(const int32 InLoop, ATestActor* InObject
 
 void ACppActor::GetCppEnumValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetEnumValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2035,14 +2035,14 @@ void ACppActor::GetCppEnumValueFunction(const int32 InLoop, const ATestActor* In
 
 void ACppActor::SetCppEnumClassValueFunction(const int32 InLoop, ATestActor* InObject, const ETestEnumClass InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetEnumClassValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2051,14 +2051,14 @@ void ACppActor::SetCppEnumClassValueFunction(const int32 InLoop, ATestActor* InO
 
 void ACppActor::GetCppEnumClassValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetEnumClassValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2067,14 +2067,14 @@ void ACppActor::GetCppEnumClassValueFunction(const int32 InLoop, const ATestActo
 
 void ACppActor::SetCppStructValueFunction(const int32 InLoop, ATestActor* InObject, const FTestStruct& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetStructValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2083,14 +2083,14 @@ void ACppActor::SetCppStructValueFunction(const int32 InLoop, ATestActor* InObje
 
 void ACppActor::GetCppStructValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetStructValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2099,14 +2099,14 @@ void ACppActor::GetCppStructValueFunction(const int32 InLoop, const ATestActor* 
 
 void ACppActor::SetCppObjectValueFunction(const int32 InLoop, ATestActor* InObject, ATestActor* InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetObjectValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2115,14 +2115,14 @@ void ACppActor::SetCppObjectValueFunction(const int32 InLoop, ATestActor* InObje
 
 void ACppActor::GetCppObjectValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetObjectValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2131,14 +2131,14 @@ void ACppActor::GetCppObjectValueFunction(const int32 InLoop, const ATestActor* 
 
 void ACppActor::SetCppClassValueFunction(const int32 InLoop, ATestActor* InObject, UClass* InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetClassValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2147,14 +2147,14 @@ void ACppActor::SetCppClassValueFunction(const int32 InLoop, ATestActor* InObjec
 
 void ACppActor::GetCppClassValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetClassValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2164,14 +2164,14 @@ void ACppActor::GetCppClassValueFunction(const int32 InLoop, const ATestActor* I
 void ACppActor::SetCppInterfaceValueFunction(const int32 InLoop, ATestActor* InObject,
                                              const TScriptInterface<ITestInterface>& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetInterfaceValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2180,14 +2180,14 @@ void ACppActor::SetCppInterfaceValueFunction(const int32 InLoop, ATestActor* InO
 
 void ACppActor::GetCppInterfaceValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetInterfaceValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2196,14 +2196,14 @@ void ACppActor::GetCppInterfaceValueFunction(const int32 InLoop, const ATestActo
 
 void ACppActor::SetCppArrayValueFunction(const int32 InLoop, ATestActor* InObject, const TArray<int32>& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetArrayValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2212,14 +2212,14 @@ void ACppActor::SetCppArrayValueFunction(const int32 InLoop, ATestActor* InObjec
 
 void ACppActor::GetCppArrayValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetArrayValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2228,14 +2228,14 @@ void ACppActor::GetCppArrayValueFunction(const int32 InLoop, const ATestActor* I
 
 void ACppActor::SetCppSetValueFunction(const int32 InLoop, ATestActor* InObject, const TSet<int32>& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetSetValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2244,14 +2244,14 @@ void ACppActor::SetCppSetValueFunction(const int32 InLoop, ATestActor* InObject,
 
 void ACppActor::GetCppSetValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetSetValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2260,14 +2260,14 @@ void ACppActor::GetCppSetValueFunction(const int32 InLoop, const ATestActor* InO
 
 void ACppActor::SetCppMapValueFunction(const int32 InLoop, ATestActor* InObject, const TMap<int32, int32>& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		InObject->SetMapValueFunction(InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2276,14 +2276,14 @@ void ACppActor::SetCppMapValueFunction(const int32 InLoop, ATestActor* InObject,
 
 void ACppActor::GetCppMapValueFunction(const int32 InLoop, const ATestActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	for (auto i = 0; i < InLoop; i++)
 	{
 		auto Value = InObject->GetMapValueFunction();
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2292,7 +2292,7 @@ void ACppActor::GetCppMapValueFunction(const int32 InLoop, const ATestActor* InO
 
 void ACppActor::SetBPBoolValue(const int32 InLoop, AActor* InObject, const bool InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FBoolProperty>(InObject->GetClass()->FindPropertyByName("BoolValue"));
 
@@ -2301,7 +2301,7 @@ void ACppActor::SetBPBoolValue(const int32 InLoop, AActor* InObject, const bool 
 		Property->CopySingleValue(Property->ContainerPtrToValuePtr<void>(InObject), &InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2310,7 +2310,7 @@ void ACppActor::SetBPBoolValue(const int32 InLoop, AActor* InObject, const bool 
 
 void ACppActor::GetBPBoolValue(const int32 InLoop, const AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FBoolProperty>(InObject->GetClass()->FindPropertyByName("BoolValue"));
 
@@ -2321,7 +2321,7 @@ void ACppActor::GetBPBoolValue(const int32 InLoop, const AActor* InObject)
 		Property->CopySingleValue(&Value, Property->ContainerPtrToValuePtr<void>(InObject));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2330,7 +2330,7 @@ void ACppActor::GetBPBoolValue(const int32 InLoop, const AActor* InObject)
 
 void ACppActor::SetBPInt32Value(const int32 InLoop, AActor* InObject, const int32 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FIntProperty>(InObject->GetClass()->FindPropertyByName("Int32Value"));
 
@@ -2339,7 +2339,7 @@ void ACppActor::SetBPInt32Value(const int32 InLoop, AActor* InObject, const int3
 		Property->CopySingleValue(Property->ContainerPtrToValuePtr<void>(InObject), &InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2348,7 +2348,7 @@ void ACppActor::SetBPInt32Value(const int32 InLoop, AActor* InObject, const int3
 
 void ACppActor::GetBPInt32Value(const int32 InLoop, const AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FIntProperty>(InObject->GetClass()->FindPropertyByName("Int32Value"));
 
@@ -2359,7 +2359,7 @@ void ACppActor::GetBPInt32Value(const int32 InLoop, const AActor* InObject)
 		Property->CopySingleValue(&Value, Property->ContainerPtrToValuePtr<void>(InObject));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2368,7 +2368,7 @@ void ACppActor::GetBPInt32Value(const int32 InLoop, const AActor* InObject)
 
 void ACppActor::SetBPInt64Value(const int32 InLoop, AActor* InObject, const int64 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FInt64Property>(InObject->GetClass()->FindPropertyByName("Int64Value"));
 
@@ -2377,7 +2377,7 @@ void ACppActor::SetBPInt64Value(const int32 InLoop, AActor* InObject, const int6
 		Property->CopySingleValue(Property->ContainerPtrToValuePtr<void>(InObject), &InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2386,7 +2386,7 @@ void ACppActor::SetBPInt64Value(const int32 InLoop, AActor* InObject, const int6
 
 void ACppActor::GetBPInt64Value(const int32 InLoop, const AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FInt64Property>(InObject->GetClass()->FindPropertyByName("Int64Value"));
 
@@ -2397,7 +2397,7 @@ void ACppActor::GetBPInt64Value(const int32 InLoop, const AActor* InObject)
 		Property->CopySingleValue(&Value, Property->ContainerPtrToValuePtr<void>(InObject));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2406,7 +2406,7 @@ void ACppActor::GetBPInt64Value(const int32 InLoop, const AActor* InObject)
 
 void ACppActor::SetBPUInt8Value(const int32 InLoop, AActor* InObject, const uint8 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FByteProperty>(InObject->GetClass()->FindPropertyByName("UInt8Value"));
 
@@ -2415,7 +2415,7 @@ void ACppActor::SetBPUInt8Value(const int32 InLoop, AActor* InObject, const uint
 		Property->CopySingleValue(Property->ContainerPtrToValuePtr<void>(InObject), &InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2424,7 +2424,7 @@ void ACppActor::SetBPUInt8Value(const int32 InLoop, AActor* InObject, const uint
 
 void ACppActor::GetBPUInt8Value(const int32 InLoop, const AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FByteProperty>(InObject->GetClass()->FindPropertyByName("UInt8Value"));
 
@@ -2435,7 +2435,7 @@ void ACppActor::GetBPUInt8Value(const int32 InLoop, const AActor* InObject)
 		Property->CopySingleValue(&Value, Property->ContainerPtrToValuePtr<void>(InObject));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2444,7 +2444,7 @@ void ACppActor::GetBPUInt8Value(const int32 InLoop, const AActor* InObject)
 
 void ACppActor::SetBPDoubleValue(const int32 InLoop, AActor* InObject, const double InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FDoubleProperty>(InObject->GetClass()->FindPropertyByName("DoubleValue"));
 
@@ -2453,7 +2453,7 @@ void ACppActor::SetBPDoubleValue(const int32 InLoop, AActor* InObject, const dou
 		Property->CopySingleValue(Property->ContainerPtrToValuePtr<void>(InObject), &InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2462,7 +2462,7 @@ void ACppActor::SetBPDoubleValue(const int32 InLoop, AActor* InObject, const dou
 
 void ACppActor::GetBPDoubleValue(const int32 InLoop, const AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FDoubleProperty>(InObject->GetClass()->FindPropertyByName("DoubleValue"));
 
@@ -2473,7 +2473,7 @@ void ACppActor::GetBPDoubleValue(const int32 InLoop, const AActor* InObject)
 		Property->CopySingleValue(&Value, Property->ContainerPtrToValuePtr<void>(InObject));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2482,7 +2482,7 @@ void ACppActor::GetBPDoubleValue(const int32 InLoop, const AActor* InObject)
 
 void ACppActor::SetBPNameValue(const int32 InLoop, AActor* InObject, const FName& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FNameProperty>(InObject->GetClass()->FindPropertyByName("NameValue"));
 
@@ -2491,7 +2491,7 @@ void ACppActor::SetBPNameValue(const int32 InLoop, AActor* InObject, const FName
 		Property->CopySingleValue(Property->ContainerPtrToValuePtr<void>(InObject), &InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2500,7 +2500,7 @@ void ACppActor::SetBPNameValue(const int32 InLoop, AActor* InObject, const FName
 
 void ACppActor::GetBPNameValue(const int32 InLoop, const AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FNameProperty>(InObject->GetClass()->FindPropertyByName("NameValue"));
 
@@ -2511,7 +2511,7 @@ void ACppActor::GetBPNameValue(const int32 InLoop, const AActor* InObject)
 		Property->CopySingleValue(&Value, Property->ContainerPtrToValuePtr<void>(InObject));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2520,7 +2520,7 @@ void ACppActor::GetBPNameValue(const int32 InLoop, const AActor* InObject)
 
 void ACppActor::SetBPTextValue(const int32 InLoop, AActor* InObject, const FText& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FTextProperty>(InObject->GetClass()->FindPropertyByName("TextValue"));
 
@@ -2529,7 +2529,7 @@ void ACppActor::SetBPTextValue(const int32 InLoop, AActor* InObject, const FText
 		Property->CopySingleValue(Property->ContainerPtrToValuePtr<void>(InObject), &InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2538,7 +2538,7 @@ void ACppActor::SetBPTextValue(const int32 InLoop, AActor* InObject, const FText
 
 void ACppActor::GetBPTextValue(const int32 InLoop, const AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FTextProperty>(InObject->GetClass()->FindPropertyByName("TextValue"));
 
@@ -2549,7 +2549,7 @@ void ACppActor::GetBPTextValue(const int32 InLoop, const AActor* InObject)
 		Property->CopySingleValue(&Value, Property->ContainerPtrToValuePtr<void>(InObject));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2558,7 +2558,7 @@ void ACppActor::GetBPTextValue(const int32 InLoop, const AActor* InObject)
 
 void ACppActor::SetBPStringValue(const int32 InLoop, AActor* InObject, const FString& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FStrProperty>(InObject->GetClass()->FindPropertyByName("StringValue"));
 
@@ -2567,7 +2567,7 @@ void ACppActor::SetBPStringValue(const int32 InLoop, AActor* InObject, const FSt
 		Property->CopySingleValue(Property->ContainerPtrToValuePtr<void>(InObject), &InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2576,7 +2576,7 @@ void ACppActor::SetBPStringValue(const int32 InLoop, AActor* InObject, const FSt
 
 void ACppActor::GetBPStringValue(const int32 InLoop, const AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FStrProperty>(InObject->GetClass()->FindPropertyByName("StringValue"));
 
@@ -2587,7 +2587,7 @@ void ACppActor::GetBPStringValue(const int32 InLoop, const AActor* InObject)
 		Property->CopySingleValue(&Value, Property->ContainerPtrToValuePtr<void>(InObject));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2596,7 +2596,7 @@ void ACppActor::GetBPStringValue(const int32 InLoop, const AActor* InObject)
 
 void ACppActor::SetBPEnumValue(const int32 InLoop, AActor* InObject, const uint8 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FByteProperty>(InObject->GetClass()->FindPropertyByName("EnumValue"));
 
@@ -2605,7 +2605,7 @@ void ACppActor::SetBPEnumValue(const int32 InLoop, AActor* InObject, const uint8
 		Property->CopySingleValue(Property->ContainerPtrToValuePtr<void>(InObject), &InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2614,7 +2614,7 @@ void ACppActor::SetBPEnumValue(const int32 InLoop, AActor* InObject, const uint8
 
 void ACppActor::GetBPEnumValue(const int32 InLoop, const AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FByteProperty>(InObject->GetClass()->FindPropertyByName("EnumValue"));
 
@@ -2625,7 +2625,7 @@ void ACppActor::GetBPEnumValue(const int32 InLoop, const AActor* InObject)
 		Property->CopySingleValue(&Value, Property->ContainerPtrToValuePtr<void>(InObject));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2634,7 +2634,7 @@ void ACppActor::GetBPEnumValue(const int32 InLoop, const AActor* InObject)
 
 void ACppActor::SetBPStructValue(const int32 InLoop, AActor* InObject, const void* InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FStructProperty>(InObject->GetClass()->FindPropertyByName("StructValue"));
 
@@ -2643,7 +2643,7 @@ void ACppActor::SetBPStructValue(const int32 InLoop, AActor* InObject, const voi
 		Property->CopySingleValue(Property->ContainerPtrToValuePtr<void>(InObject), InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2652,7 +2652,7 @@ void ACppActor::SetBPStructValue(const int32 InLoop, AActor* InObject, const voi
 
 void ACppActor::GetBPStructValue(const int32 InLoop, const AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FStructProperty>(InObject->GetClass()->FindPropertyByName("StructValue"));
 
@@ -2663,7 +2663,7 @@ void ACppActor::GetBPStructValue(const int32 InLoop, const AActor* InObject)
 		Property->CopySingleValue(&Value, Property->ContainerPtrToValuePtr<void>(InObject));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2672,7 +2672,7 @@ void ACppActor::GetBPStructValue(const int32 InLoop, const AActor* InObject)
 
 void ACppActor::SetBPObjectValue(const int32 InLoop, AActor* InObject, const AActor* InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FObjectProperty>(InObject->GetClass()->FindPropertyByName("ObjectValue"));
 
@@ -2682,7 +2682,7 @@ void ACppActor::SetBPObjectValue(const int32 InLoop, AActor* InObject, const AAc
 		                                 const_cast<AActor*>(InValue));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2691,7 +2691,7 @@ void ACppActor::SetBPObjectValue(const int32 InLoop, AActor* InObject, const AAc
 
 void ACppActor::GetBPObjectValue(const int32 InLoop, const AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FObjectProperty>(InObject->GetClass()->FindPropertyByName("ObjectValue"));
 
@@ -2700,7 +2700,7 @@ void ACppActor::GetBPObjectValue(const int32 InLoop, const AActor* InObject)
 		auto Value = Property->GetObjectPropertyValue(Property->ContainerPtrToValuePtr<void>(InObject));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2709,7 +2709,7 @@ void ACppActor::GetBPObjectValue(const int32 InLoop, const AActor* InObject)
 
 void ACppActor::SetBPClassValue(const int32 InLoop, AActor* InObject, const UClass* InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FClassProperty>(InObject->GetClass()->FindPropertyByName("ClassValue"));
 
@@ -2719,7 +2719,7 @@ void ACppActor::SetBPClassValue(const int32 InLoop, AActor* InObject, const UCla
 		                                 const_cast<UClass*>(InValue));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2728,7 +2728,7 @@ void ACppActor::SetBPClassValue(const int32 InLoop, AActor* InObject, const UCla
 
 void ACppActor::GetBPClassValue(const int32 InLoop, const AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FClassProperty>(InObject->GetClass()->FindPropertyByName("ClassValue"));
 
@@ -2737,7 +2737,7 @@ void ACppActor::GetBPClassValue(const int32 InLoop, const AActor* InObject)
 		auto Value = Property->GetObjectPropertyValue(Property->ContainerPtrToValuePtr<void>(InObject));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2746,7 +2746,7 @@ void ACppActor::GetBPClassValue(const int32 InLoop, const AActor* InObject)
 
 void ACppActor::SetBPInterfaceValue(const int32 InLoop, AActor* InObject, const TScriptInterface<IInterface>& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FInterfaceProperty>(InObject->GetClass()->FindPropertyByName("InterfaceValue"));
 
@@ -2759,7 +2759,7 @@ void ACppActor::SetBPInterfaceValue(const int32 InLoop, AActor* InObject, const 
 		Interface->SetInterface(InObject->GetInterfaceAddress(Property->InterfaceClass));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2768,7 +2768,7 @@ void ACppActor::SetBPInterfaceValue(const int32 InLoop, AActor* InObject, const 
 
 void ACppActor::GetBPInterfaceValue(const int32 InLoop, const AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FInterfaceProperty>(InObject->GetClass()->FindPropertyByName("InterfaceValue"));
 
@@ -2782,7 +2782,7 @@ void ACppActor::GetBPInterfaceValue(const int32 InLoop, const AActor* InObject)
 			static_cast<IInterface*>(const_cast<AActor*>(InObject)->GetInterfaceAddress(Property->InterfaceClass)));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2791,7 +2791,7 @@ void ACppActor::GetBPInterfaceValue(const int32 InLoop, const AActor* InObject)
 
 void ACppActor::SetBPArrayValue(const int32 InLoop, AActor* InObject, const TArray<int32>& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FArrayProperty>(InObject->GetClass()->FindPropertyByName("ArrayValue"));
 
@@ -2800,7 +2800,7 @@ void ACppActor::SetBPArrayValue(const int32 InLoop, AActor* InObject, const TArr
 		Property->CopyCompleteValue(Property->ContainerPtrToValuePtr<void>(InObject), &InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2809,7 +2809,7 @@ void ACppActor::SetBPArrayValue(const int32 InLoop, AActor* InObject, const TArr
 
 void ACppActor::GetBPArrayValue(const int32 InLoop, const AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FArrayProperty>(InObject->GetClass()->FindPropertyByName("ArrayValue"));
 
@@ -2820,7 +2820,7 @@ void ACppActor::GetBPArrayValue(const int32 InLoop, const AActor* InObject)
 		Property->CopyCompleteValue(&Value, Property->ContainerPtrToValuePtr<void>(InObject));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2829,7 +2829,7 @@ void ACppActor::GetBPArrayValue(const int32 InLoop, const AActor* InObject)
 
 void ACppActor::SetBPArrayElement(const int32 InLoop, AActor* InObject, const int32 InIndex, const int32 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FArrayProperty>(InObject->GetClass()->FindPropertyByName("ArrayValue"));
 
@@ -2841,7 +2841,7 @@ void ACppActor::SetBPArrayElement(const int32 InLoop, AActor* InObject, const in
 		Property->Inner->CopyCompleteValue(Helper.GetRawPtr(InIndex), &InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2850,7 +2850,7 @@ void ACppActor::SetBPArrayElement(const int32 InLoop, AActor* InObject, const in
 
 void ACppActor::GetBPArrayElement(const int32 InLoop, const AActor* InObject, const int32 InIndex)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FArrayProperty>(InObject->GetClass()->FindPropertyByName("ArrayValue"));
 
@@ -2862,7 +2862,7 @@ void ACppActor::GetBPArrayElement(const int32 InLoop, const AActor* InObject, co
 		auto Value = *(int32*)Helper.GetRawPtr(InIndex);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2871,7 +2871,7 @@ void ACppActor::GetBPArrayElement(const int32 InLoop, const AActor* InObject, co
 
 void ACppActor::SetBPSetValue(const int32 InLoop, AActor* InObject, const TSet<int32>& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FSetProperty>(InObject->GetClass()->FindPropertyByName("SetValue"));
 
@@ -2880,7 +2880,7 @@ void ACppActor::SetBPSetValue(const int32 InLoop, AActor* InObject, const TSet<i
 		Property->CopyCompleteValue(Property->ContainerPtrToValuePtr<void>(InObject), &InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2889,7 +2889,7 @@ void ACppActor::SetBPSetValue(const int32 InLoop, AActor* InObject, const TSet<i
 
 void ACppActor::GetBPSetValue(const int32 InLoop, const AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FSetProperty>(InObject->GetClass()->FindPropertyByName("SetValue"));
 
@@ -2900,7 +2900,7 @@ void ACppActor::GetBPSetValue(const int32 InLoop, const AActor* InObject)
 		Property->CopyCompleteValue(&Value, Property->ContainerPtrToValuePtr<void>(InObject));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2909,7 +2909,7 @@ void ACppActor::GetBPSetValue(const int32 InLoop, const AActor* InObject)
 
 void ACppActor::SetBPMapValue(const int32 InLoop, AActor* InObject, const TMap<int32, int32>& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FMapProperty>(InObject->GetClass()->FindPropertyByName("MapValue"));
 
@@ -2918,7 +2918,7 @@ void ACppActor::SetBPMapValue(const int32 InLoop, AActor* InObject, const TMap<i
 		Property->CopyCompleteValue(Property->ContainerPtrToValuePtr<void>(InObject), &InValue);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2927,7 +2927,7 @@ void ACppActor::SetBPMapValue(const int32 InLoop, AActor* InObject, const TMap<i
 
 void ACppActor::GetBPMapValue(const int32 InLoop, const AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FMapProperty>(InObject->GetClass()->FindPropertyByName("MapValue"));
 
@@ -2938,7 +2938,7 @@ void ACppActor::GetBPMapValue(const int32 InLoop, const AActor* InObject)
 		Property->CopyCompleteValue(&Value, Property->ContainerPtrToValuePtr<void>(InObject));
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2947,7 +2947,7 @@ void ACppActor::GetBPMapValue(const int32 InLoop, const AActor* InObject)
 
 void ACppActor::SetBPMapElement(const int32 InLoop, AActor* InObject, const int32 InIndex, const int32 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FMapProperty>(InObject->GetClass()->FindPropertyByName("MapValue"));
 
@@ -2969,7 +2969,7 @@ void ACppActor::SetBPMapElement(const int32 InLoop, AActor* InObject, const int3
 		}
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -2978,7 +2978,7 @@ void ACppActor::SetBPMapElement(const int32 InLoop, AActor* InObject, const int3
 
 void ACppActor::GetBPMapElement(const int32 InLoop, const AActor* InObject, const int32 InIndex)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Property = CastField<FMapProperty>(InObject->GetClass()->FindPropertyByName("MapValue"));
 
@@ -3000,7 +3000,7 @@ void ACppActor::GetBPMapElement(const int32 InLoop, const AActor* InObject, cons
 		}
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3009,7 +3009,7 @@ void ACppActor::GetBPMapElement(const int32 InLoop, const AActor* InObject, cons
 
 void ACppActor::MemberBPFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("MemberFunction");
 
@@ -3018,7 +3018,7 @@ void ACppActor::MemberBPFunction(const int32 InLoop, AActor* InObject)
 		InObject->ProcessEvent(Function, nullptr);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3027,7 +3027,7 @@ void ACppActor::MemberBPFunction(const int32 InLoop, AActor* InObject)
 
 void ACppActor::SetBPBoolValueFunction(const int32 InLoop, AActor* InObject, const bool InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("SetBoolValueFunction");
 
@@ -3038,7 +3038,7 @@ void ACppActor::SetBPBoolValueFunction(const int32 InLoop, AActor* InObject, con
 		InObject->ProcessEvent(Function, &Param);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3047,7 +3047,7 @@ void ACppActor::SetBPBoolValueFunction(const int32 InLoop, AActor* InObject, con
 
 void ACppActor::GetBPBoolValueFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("GetBoolValueFunction");
 
@@ -3060,7 +3060,7 @@ void ACppActor::GetBPBoolValueFunction(const int32 InLoop, AActor* InObject)
 		auto Value = Param.Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3069,7 +3069,7 @@ void ACppActor::GetBPBoolValueFunction(const int32 InLoop, AActor* InObject)
 
 void ACppActor::SetBPInt32ValueFunction(const int32 InLoop, AActor* InObject, const int32 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("SetInt32ValueFunction");
 
@@ -3080,7 +3080,7 @@ void ACppActor::SetBPInt32ValueFunction(const int32 InLoop, AActor* InObject, co
 		InObject->ProcessEvent(Function, &Param);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3089,7 +3089,7 @@ void ACppActor::SetBPInt32ValueFunction(const int32 InLoop, AActor* InObject, co
 
 void ACppActor::GetBPInt32ValueFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("GetInt32ValueFunction");
 
@@ -3102,7 +3102,7 @@ void ACppActor::GetBPInt32ValueFunction(const int32 InLoop, AActor* InObject)
 		auto Value = Param.Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3111,7 +3111,7 @@ void ACppActor::GetBPInt32ValueFunction(const int32 InLoop, AActor* InObject)
 
 void ACppActor::SetBPInt64ValueFunction(const int32 InLoop, AActor* InObject, const int64 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("SetInt64ValueFunction");
 
@@ -3122,7 +3122,7 @@ void ACppActor::SetBPInt64ValueFunction(const int32 InLoop, AActor* InObject, co
 		InObject->ProcessEvent(Function, &Param);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3131,7 +3131,7 @@ void ACppActor::SetBPInt64ValueFunction(const int32 InLoop, AActor* InObject, co
 
 void ACppActor::GetBPInt64ValueFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("GetInt64ValueFunction");
 
@@ -3144,7 +3144,7 @@ void ACppActor::GetBPInt64ValueFunction(const int32 InLoop, AActor* InObject)
 		auto Value = Param.Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3153,7 +3153,7 @@ void ACppActor::GetBPInt64ValueFunction(const int32 InLoop, AActor* InObject)
 
 void ACppActor::SetBPUInt8ValueFunction(const int32 InLoop, AActor* InObject, const uint8 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("SetUInt8ValueFunction");
 
@@ -3164,7 +3164,7 @@ void ACppActor::SetBPUInt8ValueFunction(const int32 InLoop, AActor* InObject, co
 		InObject->ProcessEvent(Function, &Param);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3173,7 +3173,7 @@ void ACppActor::SetBPUInt8ValueFunction(const int32 InLoop, AActor* InObject, co
 
 void ACppActor::GetBPUInt8ValueFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("GetUInt8ValueFunction");
 
@@ -3186,7 +3186,7 @@ void ACppActor::GetBPUInt8ValueFunction(const int32 InLoop, AActor* InObject)
 		auto Value = Param.Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3195,7 +3195,7 @@ void ACppActor::GetBPUInt8ValueFunction(const int32 InLoop, AActor* InObject)
 
 void ACppActor::SetBPDoubleValueFunction(const int32 InLoop, AActor* InObject, const double InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("SetDoubleValueFunction");
 
@@ -3206,7 +3206,7 @@ void ACppActor::SetBPDoubleValueFunction(const int32 InLoop, AActor* InObject, c
 		InObject->ProcessEvent(Function, &Param);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3215,7 +3215,7 @@ void ACppActor::SetBPDoubleValueFunction(const int32 InLoop, AActor* InObject, c
 
 void ACppActor::GetBPDoubleValueFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("GetDoubleValueFunction");
 
@@ -3228,7 +3228,7 @@ void ACppActor::GetBPDoubleValueFunction(const int32 InLoop, AActor* InObject)
 		auto Value = Param.Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3237,7 +3237,7 @@ void ACppActor::GetBPDoubleValueFunction(const int32 InLoop, AActor* InObject)
 
 void ACppActor::SetBPNameValueFunction(const int32 InLoop, AActor* InObject, const FName& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("SetNameValueFunction");
 
@@ -3248,7 +3248,7 @@ void ACppActor::SetBPNameValueFunction(const int32 InLoop, AActor* InObject, con
 		InObject->ProcessEvent(Function, &Param);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3257,7 +3257,7 @@ void ACppActor::SetBPNameValueFunction(const int32 InLoop, AActor* InObject, con
 
 void ACppActor::GetBPNameValueFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("GetNameValueFunction");
 
@@ -3270,7 +3270,7 @@ void ACppActor::GetBPNameValueFunction(const int32 InLoop, AActor* InObject)
 		auto Value = Param.Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3279,7 +3279,7 @@ void ACppActor::GetBPNameValueFunction(const int32 InLoop, AActor* InObject)
 
 void ACppActor::SetBPTextValueFunction(const int32 InLoop, AActor* InObject, const FText& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("SetTextValueFunction");
 
@@ -3290,7 +3290,7 @@ void ACppActor::SetBPTextValueFunction(const int32 InLoop, AActor* InObject, con
 		InObject->ProcessEvent(Function, &Param);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3299,7 +3299,7 @@ void ACppActor::SetBPTextValueFunction(const int32 InLoop, AActor* InObject, con
 
 void ACppActor::GetBPTextValueFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("GetTextValueFunction");
 
@@ -3312,7 +3312,7 @@ void ACppActor::GetBPTextValueFunction(const int32 InLoop, AActor* InObject)
 		auto Value = Param.Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3321,7 +3321,7 @@ void ACppActor::GetBPTextValueFunction(const int32 InLoop, AActor* InObject)
 
 void ACppActor::SetBPStringValueFunction(const int32 InLoop, AActor* InObject, const FString& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("SetStringValueFunction");
 
@@ -3332,7 +3332,7 @@ void ACppActor::SetBPStringValueFunction(const int32 InLoop, AActor* InObject, c
 		InObject->ProcessEvent(Function, &Param);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3341,7 +3341,7 @@ void ACppActor::SetBPStringValueFunction(const int32 InLoop, AActor* InObject, c
 
 void ACppActor::GetBPStringValueFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("GetStringValueFunction");
 
@@ -3354,7 +3354,7 @@ void ACppActor::GetBPStringValueFunction(const int32 InLoop, AActor* InObject)
 		auto Value = Param.Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3363,7 +3363,7 @@ void ACppActor::GetBPStringValueFunction(const int32 InLoop, AActor* InObject)
 
 void ACppActor::SetBPEnumValueFunction(const int32 InLoop, AActor* InObject, const uint8 InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("SetEnumValueFunction");
 
@@ -3374,7 +3374,7 @@ void ACppActor::SetBPEnumValueFunction(const int32 InLoop, AActor* InObject, con
 		InObject->ProcessEvent(Function, &Param);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3383,7 +3383,7 @@ void ACppActor::SetBPEnumValueFunction(const int32 InLoop, AActor* InObject, con
 
 void ACppActor::GetBPEnumValueFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("GetEnumValueFunction");
 
@@ -3396,7 +3396,7 @@ void ACppActor::GetBPEnumValueFunction(const int32 InLoop, AActor* InObject)
 		auto Value = Param.Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3405,7 +3405,7 @@ void ACppActor::GetBPEnumValueFunction(const int32 InLoop, AActor* InObject)
 
 void ACppActor::SetBPStructValueFunction(const int32 InLoop, AActor* InObject, const void* InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("SetStructValueFunction");
 
@@ -3417,7 +3417,7 @@ void ACppActor::SetBPStructValueFunction(const int32 InLoop, AActor* InObject, c
 		InObject->ProcessEvent(Function, &Param);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3426,7 +3426,7 @@ void ACppActor::SetBPStructValueFunction(const int32 InLoop, AActor* InObject, c
 
 void ACppActor::GetBPStructValueFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("GetStructValueFunction");
 
@@ -3440,7 +3440,7 @@ void ACppActor::GetBPStructValueFunction(const int32 InLoop, AActor* InObject)
 		auto Value = Param.Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3449,7 +3449,7 @@ void ACppActor::GetBPStructValueFunction(const int32 InLoop, AActor* InObject)
 
 void ACppActor::SetBPObjectValueFunction(const int32 InLoop, AActor* InObject, const AActor* InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("SetObjectValueFunction");
 
@@ -3460,7 +3460,7 @@ void ACppActor::SetBPObjectValueFunction(const int32 InLoop, AActor* InObject, c
 		InObject->ProcessEvent(Function, &Param);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3469,7 +3469,7 @@ void ACppActor::SetBPObjectValueFunction(const int32 InLoop, AActor* InObject, c
 
 void ACppActor::GetBPObjectValueFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("GetObjectValueFunction");
 
@@ -3482,7 +3482,7 @@ void ACppActor::GetBPObjectValueFunction(const int32 InLoop, AActor* InObject)
 		auto Value = Param.Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3491,7 +3491,7 @@ void ACppActor::GetBPObjectValueFunction(const int32 InLoop, AActor* InObject)
 
 void ACppActor::SetBPClassValueFunction(const int32 InLoop, AActor* InObject, const UClass* InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("SetClassValueFunction");
 
@@ -3502,7 +3502,7 @@ void ACppActor::SetBPClassValueFunction(const int32 InLoop, AActor* InObject, co
 		InObject->ProcessEvent(Function, &Param);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3511,7 +3511,7 @@ void ACppActor::SetBPClassValueFunction(const int32 InLoop, AActor* InObject, co
 
 void ACppActor::GetBPClassValueFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("GetClassValueFunction");
 
@@ -3524,7 +3524,7 @@ void ACppActor::GetBPClassValueFunction(const int32 InLoop, AActor* InObject)
 		auto Value = Param.Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3534,7 +3534,7 @@ void ACppActor::GetBPClassValueFunction(const int32 InLoop, AActor* InObject)
 void ACppActor::SetBPInterfaceValueFunction(const int32 InLoop, AActor* InObject,
                                             const TScriptInterface<IInterface>& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("SetInterfaceValueFunction");
 
@@ -3545,7 +3545,7 @@ void ACppActor::SetBPInterfaceValueFunction(const int32 InLoop, AActor* InObject
 		InObject->ProcessEvent(Function, &Param);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3554,7 +3554,7 @@ void ACppActor::SetBPInterfaceValueFunction(const int32 InLoop, AActor* InObject
 
 void ACppActor::GetBPInterfaceValueFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("GetInterfaceValueFunction");
 
@@ -3567,7 +3567,7 @@ void ACppActor::GetBPInterfaceValueFunction(const int32 InLoop, AActor* InObject
 		auto Value = Param.Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3576,7 +3576,7 @@ void ACppActor::GetBPInterfaceValueFunction(const int32 InLoop, AActor* InObject
 
 void ACppActor::SetBPArrayValueFunction(const int32 InLoop, AActor* InObject, const TArray<int32>& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("SetArrayValueFunction");
 
@@ -3587,7 +3587,7 @@ void ACppActor::SetBPArrayValueFunction(const int32 InLoop, AActor* InObject, co
 		InObject->ProcessEvent(Function, &Param);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3596,7 +3596,7 @@ void ACppActor::SetBPArrayValueFunction(const int32 InLoop, AActor* InObject, co
 
 void ACppActor::GetBPArrayValueFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("GetArrayValueFunction");
 
@@ -3609,7 +3609,7 @@ void ACppActor::GetBPArrayValueFunction(const int32 InLoop, AActor* InObject)
 		auto Value = Param.Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3618,7 +3618,7 @@ void ACppActor::GetBPArrayValueFunction(const int32 InLoop, AActor* InObject)
 
 void ACppActor::SetBPSetValueFunction(const int32 InLoop, AActor* InObject, const TSet<int32>& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("SetSetValueFunction");
 
@@ -3629,7 +3629,7 @@ void ACppActor::SetBPSetValueFunction(const int32 InLoop, AActor* InObject, cons
 		InObject->ProcessEvent(Function, &Param);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3638,7 +3638,7 @@ void ACppActor::SetBPSetValueFunction(const int32 InLoop, AActor* InObject, cons
 
 void ACppActor::GetBPSetValueFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("GetSetValueFunction");
 
@@ -3651,7 +3651,7 @@ void ACppActor::GetBPSetValueFunction(const int32 InLoop, AActor* InObject)
 		auto Value = Param.Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3660,7 +3660,7 @@ void ACppActor::GetBPSetValueFunction(const int32 InLoop, AActor* InObject)
 
 void ACppActor::SetBPMapValueFunction(const int32 InLoop, AActor* InObject, const TMap<int32, int32>& InValue)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("SetMapValueFunction");
 
@@ -3671,7 +3671,7 @@ void ACppActor::SetBPMapValueFunction(const int32 InLoop, AActor* InObject, cons
 		InObject->ProcessEvent(Function, &Param);
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 
@@ -3680,7 +3680,7 @@ void ACppActor::SetBPMapValueFunction(const int32 InLoop, AActor* InObject, cons
 
 void ACppActor::GetBPMapValueFunction(const int32 InLoop, AActor* InObject)
 {
-	const auto Start = UKismetMathLibrary::Now();
+	const auto Start = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	const auto Function = InObject->GetClass()->FindFunctionByName("GetMapValueFunction");
 
@@ -3693,7 +3693,7 @@ void ACppActor::GetBPMapValueFunction(const int32 InLoop, AActor* InObject)
 		auto Value = Param.Value;
 	}
 
-	const auto End = UKismetMathLibrary::Now();
+	const auto End = UTestCaseBlueprintFunctionLibrary::GetTimestamp();
 
 	auto TotalSeconds = UTestCaseBlueprintFunctionLibrary::GetTotalSeconds(End, Start);
 

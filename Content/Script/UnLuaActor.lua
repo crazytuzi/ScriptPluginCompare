@@ -5,13 +5,13 @@ end
 
 -- Empty
 function M:EmptyFunction(InLoop)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         self:Empty()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -27,13 +27,13 @@ end
 
 -- Add
 function M:AddFunction(InLoop)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         self:Add(1, 1)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -50,13 +50,13 @@ end
 
 -- Subtract
 function M:SubtractFunction(InLoop)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         self:Subtract(1, 1)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -72,13 +72,13 @@ end
 
 -- Multiply
 function M:MultiplyFunction(InLoop)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         self:Multiply(1, 1)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -94,13 +94,13 @@ end
 
 -- Divide
 function M:DivideFunction(InLoop)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         self:Divide(1, 1)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -112,13 +112,13 @@ end
 
 -- Bool
 function M:SetCppBoolValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.BoolValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -129,13 +129,13 @@ function M:SetCppBoolValue(InLoop, InObject, InValue)
 end
 
 function M:GetCppBoolValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.BoolValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -147,13 +147,13 @@ end
 
 -- Int8
 function M:SetCppInt8Value(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.Int8Value = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -164,13 +164,13 @@ function M:SetCppInt8Value(InLoop, InObject, InValue)
 end
 
 function M:GetCppInt8Value(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.Int8Value
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -182,13 +182,13 @@ end
 
 -- Int16
 function M:SetCppInt16Value(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.Int16Value = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -199,13 +199,13 @@ function M:SetCppInt16Value(InLoop, InObject, InValue)
 end
 
 function M:GetCppInt16Value(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.Int16Value
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -217,13 +217,13 @@ end
 
 -- Int32
 function M:SetCppInt32Value(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.Int32Value = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -234,13 +234,13 @@ function M:SetCppInt32Value(InLoop, InObject, InValue)
 end
 
 function M:GetCppInt32Value(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.Int32Value
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -252,13 +252,13 @@ end
 
 -- Int64
 function M:SetCppInt64Value(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.Int64Value = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -269,13 +269,13 @@ function M:SetCppInt64Value(InLoop, InObject, InValue)
 end
 
 function M:GetCppInt64Value(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.Int64Value
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -287,13 +287,13 @@ end
 
 -- UInt8
 function M:SetCppUInt8Value(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.UInt8Value = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -304,13 +304,13 @@ function M:SetCppUInt8Value(InLoop, InObject, InValue)
 end
 
 function M:GetCppUInt8Value(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.UInt8Value
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -322,13 +322,13 @@ end
 
 -- UInt16
 function M:SetCppUInt16Value(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.UInt16Value = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -339,13 +339,13 @@ function M:SetCppUInt16Value(InLoop, InObject, InValue)
 end
 
 function M:GetCppUInt16Value(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.UInt16Value
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -357,13 +357,13 @@ end
 
 -- UInt32
 function M:SetCppUInt32Value(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.UInt32Value = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -374,13 +374,13 @@ function M:SetCppUInt32Value(InLoop, InObject, InValue)
 end
 
 function M:GetCppUInt32Value(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.UInt32Value
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -392,13 +392,13 @@ end
 
 -- UInt64
 function M:SetCppUInt64Value(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.UInt64Value = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -409,13 +409,13 @@ function M:SetCppUInt64Value(InLoop, InObject, InValue)
 end
 
 function M:GetCppUInt64Value(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.UInt64Value
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -427,13 +427,13 @@ end
 
 -- Float
 function M:SetCppFloatValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.FloatValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -444,13 +444,13 @@ function M:SetCppFloatValue(InLoop, InObject, InValue)
 end
 
 function M:GetCppFloatValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.FloatValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -462,13 +462,13 @@ end
 
 -- Double
 function M:SetCppDoubleValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.DoubleValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -479,13 +479,13 @@ function M:SetCppDoubleValue(InLoop, InObject, InValue)
 end
 
 function M:GetCppDoubleValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.DoubleValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -497,13 +497,13 @@ end
 
 -- FName
 function M:SetCppNameValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.NameValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -514,13 +514,13 @@ function M:SetCppNameValue(InLoop, InObject, InValue)
 end
 
 function M:GetCppNameValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.NameValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -532,13 +532,13 @@ end
 
 -- FText
 function M:SetCppTextValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.TextValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -549,13 +549,13 @@ function M:SetCppTextValue(InLoop, InObject, InValue)
 end
 
 function M:GetCppTextValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.TextValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -567,13 +567,13 @@ end
 
 -- FString
 function M:SetCppStringValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.StringValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -584,13 +584,13 @@ function M:SetCppStringValue(InLoop, InObject, InValue)
 end
 
 function M:GetCppStringValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.StringValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -602,13 +602,13 @@ end
 
 -- UEnum
 function M:SetCppEnumValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.EnumValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -619,13 +619,13 @@ function M:SetCppEnumValue(InLoop, InObject, InValue)
 end
 
 function M:GetCppEnumValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.EnumValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -637,13 +637,13 @@ end
 
 -- UEnum Class
 function M:SetCppEnumClassValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.EnumClassValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -654,13 +654,13 @@ function M:SetCppEnumClassValue(InLoop, InObject, InValue)
 end
 
 function M:GetCppEnumClassValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.EnumClassValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -672,13 +672,13 @@ end
 
 -- UStruct
 function M:SetCppStructValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.StructValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -689,13 +689,13 @@ function M:SetCppStructValue(InLoop, InObject, InValue)
 end
 
 function M:GetCppStructValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.StructValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -707,13 +707,13 @@ end
 
 -- UObject
 function M:SetCppObjectValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.ObjectValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -724,13 +724,13 @@ function M:SetCppObjectValue(InLoop, InObject, InValue)
 end
 
 function M:GetCppObjectValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.ObjectValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -742,13 +742,13 @@ end
 
 -- UClass
 function M:SetCppClassValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.ClassValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -759,13 +759,13 @@ function M:SetCppClassValue(InLoop, InObject, InValue)
 end
 
 function M:GetCppClassValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.ClassValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -777,13 +777,13 @@ end
 
 -- UInterface 
 function M:SetCppInterfaceValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.InterfaceValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -794,13 +794,13 @@ function M:SetCppInterfaceValue(InLoop, InObject, InValue)
 end
 
 function M:GetCppInterfaceValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.InterfaceValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -812,13 +812,13 @@ end
 
 -- TArray
 function M:SetCppArrayValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.ArrayValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -829,13 +829,13 @@ function M:SetCppArrayValue(InLoop, InObject, InValue)
 end
 
 function M:GetCppArrayValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.ArrayValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -847,13 +847,13 @@ end
 
 -- TArray Element
 function M:SetCppArrayElement(InLoop, InObject, InIndex, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.ArrayValue[InIndex] = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -864,13 +864,13 @@ function M:SetCppArrayElement(InLoop, InObject, InIndex, InValue)
 end
 
 function M:GetCppArrayElement(InLoop, InObject, InIndex)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.ArrayValue[InIndex]
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -882,13 +882,13 @@ end
 
 -- TSet
 function M:SetCppSetValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.SetValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -899,13 +899,13 @@ function M:SetCppSetValue(InLoop, InObject, InValue)
 end
 
 function M:GetCppSetValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.SetValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -917,13 +917,13 @@ end
 
 -- TMap
 function M:SetCppMapValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.MapValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -934,13 +934,13 @@ function M:SetCppMapValue(InLoop, InObject, InValue)
 end
 
 function M:GetCppMapValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.MapValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -952,13 +952,13 @@ end
 
 -- TMap Element
 function M:SetCppMapElement(InLoop, InObject, InIndex, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.MapValue:Add(InIndex, InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -969,13 +969,13 @@ function M:SetCppMapElement(InLoop, InObject, InIndex, InValue)
 end
 
 function M:GetCppMapElement(InLoop, InObject, InIndex)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.MapValue:Find(InIndex)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -987,13 +987,13 @@ end
 
 -- Static
 function M:StaticCppFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.StaticFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1005,13 +1005,13 @@ end
 
 -- Member
 function M:MemberCppFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:MemberFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1023,13 +1023,13 @@ end
 
 -- Bool
 function M:SetCppBoolValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetBoolValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1040,13 +1040,13 @@ function M:SetCppBoolValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppBoolValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetBoolValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1058,13 +1058,13 @@ end
 
 -- Int8
 function M:SetCppInt8ValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetInt8ValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1075,13 +1075,13 @@ function M:SetCppInt8ValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppInt8ValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetInt8ValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1093,13 +1093,13 @@ end
 
 -- Int16
 function M:SetCppInt16ValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetInt16ValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1110,13 +1110,13 @@ function M:SetCppInt16ValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppInt16ValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetInt16ValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1128,13 +1128,13 @@ end
 
 -- Int32
 function M:SetCppInt32ValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetInt32ValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1145,13 +1145,13 @@ function M:SetCppInt32ValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppInt32ValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetInt32ValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1163,13 +1163,13 @@ end
 
 -- Int64
 function M:SetCppInt64ValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetInt64ValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1180,13 +1180,13 @@ function M:SetCppInt64ValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppInt64ValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetInt64ValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1198,13 +1198,13 @@ end
 
 -- UInt8
 function M:SetCppUInt8ValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetUInt8ValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1215,13 +1215,13 @@ function M:SetCppUInt8ValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppUInt8ValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetUInt8ValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1233,13 +1233,13 @@ end
 
 -- UInt16
 function M:SetCppUInt16ValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetUInt16ValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1250,13 +1250,13 @@ function M:SetCppUInt16ValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppUInt16ValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetUInt16ValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1268,13 +1268,13 @@ end
 
 -- UInt32
 function M:SetCppUInt32ValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetUInt32ValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1285,13 +1285,13 @@ function M:SetCppUInt32ValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppUInt32ValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetUInt32ValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1303,13 +1303,13 @@ end
 
 -- UInt64
 function M:SetCppUInt64ValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetUInt64ValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1320,13 +1320,13 @@ function M:SetCppUInt64ValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppUInt64ValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetUInt64ValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1338,13 +1338,13 @@ end
 
 -- Float
 function M:SetCppFloatValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetFloatValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1355,13 +1355,13 @@ function M:SetCppFloatValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppFloatValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetFloatValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1373,13 +1373,13 @@ end
 
 -- Double
 function M:SetCppDoubleValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetDoubleValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1390,13 +1390,13 @@ function M:SetCppDoubleValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppDoubleValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetDoubleValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1408,13 +1408,13 @@ end
 
 -- FName
 function M:SetCppNameValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetNameValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1425,13 +1425,13 @@ function M:SetCppNameValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppNameValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetNameValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1443,13 +1443,13 @@ end
 
 -- FText
 function M:SetCppTextValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetTextValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1460,13 +1460,13 @@ function M:SetCppTextValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppTextValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetTextValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1478,13 +1478,13 @@ end
 
 -- FString
 function M:SetCppStringValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetStringValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1495,13 +1495,13 @@ function M:SetCppStringValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppStringValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetStringValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1513,13 +1513,13 @@ end
 
 -- UEnum
 function M:SetCppEnumValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetEnumValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1530,13 +1530,13 @@ function M:SetCppEnumValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppEnumValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetEnumValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1548,13 +1548,13 @@ end
 
 -- UEnum Class
 function M:SetCppEnumClassValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetEnumClassValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1565,13 +1565,13 @@ function M:SetCppEnumClassValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppEnumClassValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetEnumClassValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1583,13 +1583,13 @@ end
 
 -- UStruct
 function M:SetCppStructValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetStructValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1600,13 +1600,13 @@ function M:SetCppStructValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppStructValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetStructValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1618,13 +1618,13 @@ end
 
 -- UObject
 function M:SetCppObjectValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetObjectValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1635,13 +1635,13 @@ function M:SetCppObjectValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppObjectValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetObjectValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1653,13 +1653,13 @@ end
 
 -- UClass
 function M:SetCppClassValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetClassValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1670,13 +1670,13 @@ function M:SetCppClassValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppClassValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetClassValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1688,13 +1688,13 @@ end
 
 -- UInterface 
 function M:SetCppInterfaceValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetInterfaceValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1705,13 +1705,13 @@ function M:SetCppInterfaceValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppInterfaceValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetInterfaceValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1723,13 +1723,13 @@ end
 
 -- TArray
 function M:SetCppArrayValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetArrayValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1740,13 +1740,13 @@ function M:SetCppArrayValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppArrayValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetArrayValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1758,13 +1758,13 @@ end
 
 -- TSet
 function M:SetCppSetValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetSetValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1775,13 +1775,13 @@ function M:SetCppSetValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppSetValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetSetValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1793,13 +1793,13 @@ end
 
 -- TMap
 function M:SetCppMapValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetMapValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1810,13 +1810,13 @@ function M:SetCppMapValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetCppMapValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetMapValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1828,13 +1828,13 @@ end
 
 -- Bool
 function M:SetBPBoolValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.BoolValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1845,13 +1845,13 @@ function M:SetBPBoolValue(InLoop, InObject, InValue)
 end
 
 function M:GetBPBoolValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.BoolValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1863,13 +1863,13 @@ end
 
 -- Int32
 function M:SetBPInt32Value(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.Int32Value = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1880,13 +1880,13 @@ function M:SetBPInt32Value(InLoop, InObject, InValue)
 end
 
 function M:GetBPInt32Value(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.Int32Value
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1898,13 +1898,13 @@ end
 
 -- Int64
 function M:SetBPInt64Value(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.Int64Value = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1915,13 +1915,13 @@ function M:SetBPInt64Value(InLoop, InObject, InValue)
 end
 
 function M:GetBPInt64Value(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.Int64Value
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1933,13 +1933,13 @@ end
 
 -- UInt8
 function M:SetBPUInt8Value(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.UInt8Value = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1950,13 +1950,13 @@ function M:SetBPUInt8Value(InLoop, InObject, InValue)
 end
 
 function M:GetBPUInt8Value(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.UInt8Value
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1968,13 +1968,13 @@ end
 
 -- Double
 function M:SetBPDoubleValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.DoubleValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -1985,13 +1985,13 @@ function M:SetBPDoubleValue(InLoop, InObject, InValue)
 end
 
 function M:GetBPDoubleValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.DoubleValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2003,13 +2003,13 @@ end
 
 -- FName
 function M:SetBPNameValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.NameValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2020,13 +2020,13 @@ function M:SetBPNameValue(InLoop, InObject, InValue)
 end
 
 function M:GetBPNameValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.NameValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2038,13 +2038,13 @@ end
 
 -- FText
 function M:SetBPTextValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.TextValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2055,13 +2055,13 @@ function M:SetBPTextValue(InLoop, InObject, InValue)
 end
 
 function M:GetBPTextValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.TextValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2073,13 +2073,13 @@ end
 
 -- FString
 function M:SetBPStringValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.StringValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2090,13 +2090,13 @@ function M:SetBPStringValue(InLoop, InObject, InValue)
 end
 
 function M:GetBPStringValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.StringValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2108,13 +2108,13 @@ end
 
 -- UEnum
 function M:SetBPEnumValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.EnumValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2125,13 +2125,13 @@ function M:SetBPEnumValue(InLoop, InObject, InValue)
 end
 
 function M:GetBPEnumValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.EnumValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2143,13 +2143,13 @@ end
 
 -- UStruct
 function M:SetBPStructValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.StructValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2160,13 +2160,13 @@ function M:SetBPStructValue(InLoop, InObject, InValue)
 end
 
 function M:GetBPStructValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.StructValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2178,13 +2178,13 @@ end
 
 -- UObject
 function M:SetBPObjectValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.ObjectValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2195,13 +2195,13 @@ function M:SetBPObjectValue(InLoop, InObject, InValue)
 end
 
 function M:GetBPObjectValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.ObjectValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2213,13 +2213,13 @@ end
 
 -- UClass
 function M:SetBPClassValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.ClassValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2230,13 +2230,13 @@ function M:SetBPClassValue(InLoop, InObject, InValue)
 end
 
 function M:GetBPClassValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.ClassValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2248,13 +2248,13 @@ end
 
 -- UInterface 
 function M:SetBPInterfaceValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.InterfaceValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2265,13 +2265,13 @@ function M:SetBPInterfaceValue(InLoop, InObject, InValue)
 end
 
 function M:GetBPInterfaceValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.InterfaceValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2283,13 +2283,13 @@ end
 
 -- TArray
 function M:SetBPArrayValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.ArrayValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2300,13 +2300,13 @@ function M:SetBPArrayValue(InLoop, InObject, InValue)
 end
 
 function M:GetBPArrayValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.ArrayValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2318,13 +2318,13 @@ end
 
 -- TArray Element
 function M:SetBPArrayElement(InLoop, InObject, InIndex, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.ArrayValue[InIndex] = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2335,13 +2335,13 @@ function M:SetBPArrayElement(InLoop, InObject, InIndex, InValue)
 end
 
 function M:GetBPArrayElement(InLoop, InObject, InIndex)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.ArrayValue[InIndex]
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2353,13 +2353,13 @@ end
 
 -- TSet
 function M:SetBPSetValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.SetValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2370,13 +2370,13 @@ function M:SetBPSetValue(InLoop, InObject, InValue)
 end
 
 function M:GetBPSetValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.SetValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2388,13 +2388,13 @@ end
 
 -- TMap
 function M:SetBPMapValue(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.MapValue = InValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2405,13 +2405,13 @@ function M:SetBPMapValue(InLoop, InObject, InValue)
 end
 
 function M:GetBPMapValue(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.MapValue
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2423,13 +2423,13 @@ end
 
 -- TMap Element
 function M:SetBPMapElement(InLoop, InObject, InIndex, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject.MapValue:Add(InIndex, InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2440,13 +2440,13 @@ function M:SetBPMapElement(InLoop, InObject, InIndex, InValue)
 end
 
 function M:GetBPMapElement(InLoop, InObject, InIndex)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject.MapValue:Find(InIndex)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2458,13 +2458,13 @@ end
 
 -- Member
 function M:MemberBPFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:MemberFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2476,13 +2476,13 @@ end
 
 -- Bool
 function M:SetBPBoolValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetBoolValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2493,13 +2493,13 @@ function M:SetBPBoolValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetBPBoolValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetBoolValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2511,13 +2511,13 @@ end
 
 -- Int32
 function M:SetBPInt32ValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetInt32ValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2528,13 +2528,13 @@ function M:SetBPInt32ValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetBPInt32ValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetInt32ValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2546,13 +2546,13 @@ end
 
 -- Int64
 function M:SetBPInt64ValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetInt64ValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2563,13 +2563,13 @@ function M:SetBPInt64ValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetBPInt64ValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetInt64ValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2581,13 +2581,13 @@ end
 
 -- UInt8
 function M:SetBPUInt8ValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetUInt8ValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2598,13 +2598,13 @@ function M:SetBPUInt8ValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetBPUInt8ValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetUInt8ValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2616,13 +2616,13 @@ end
 
 -- Double
 function M:SetBPDoubleValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetDoubleValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2633,13 +2633,13 @@ function M:SetBPDoubleValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetBPDoubleValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetDoubleValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2651,13 +2651,13 @@ end
 
 -- FName
 function M:SetBPNameValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetNameValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2668,13 +2668,13 @@ function M:SetBPNameValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetBPNameValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetNameValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2686,13 +2686,13 @@ end
 
 -- FText
 function M:SetBPTextValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetTextValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2703,13 +2703,13 @@ function M:SetBPTextValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetBPTextValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetTextValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2721,13 +2721,13 @@ end
 
 -- FString
 function M:SetBPStringValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetStringValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2738,13 +2738,13 @@ function M:SetBPStringValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetBPStringValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetStringValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2756,13 +2756,13 @@ end
 
 -- UEnum
 function M:SetBPEnumValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetEnumValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2773,13 +2773,13 @@ function M:SetBPEnumValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetBPEnumValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetEnumValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2791,13 +2791,13 @@ end
 
 -- UStruct
 function M:SetBPStructValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetStructValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2808,13 +2808,13 @@ function M:SetBPStructValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetBPStructValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetStructValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2826,13 +2826,13 @@ end
 
 -- UObject
 function M:SetBPObjectValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetObjectValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2843,13 +2843,13 @@ function M:SetBPObjectValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetBPObjectValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetObjectValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2861,13 +2861,13 @@ end
 
 -- UClass
 function M:SetBPClassValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetClassValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2878,13 +2878,13 @@ function M:SetBPClassValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetBPClassValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetClassValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2896,13 +2896,13 @@ end
 
 -- UInterface 
 function M:SetBPInterfaceValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetInterfaceValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2913,13 +2913,13 @@ function M:SetBPInterfaceValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetBPInterfaceValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetInterfaceValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2931,13 +2931,13 @@ end
 
 -- TArray
 function M:SetBPArrayValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetArrayValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2948,13 +2948,13 @@ function M:SetBPArrayValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetBPArrayValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetArrayValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2966,13 +2966,13 @@ end
 
 -- TSet
 function M:SetBPSetValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetSetValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -2983,13 +2983,13 @@ function M:SetBPSetValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetBPSetValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetSetValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3001,13 +3001,13 @@ end
 
 -- TMap
 function M:SetBPMapValueFunction(InLoop, InObject, InValue)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         InObject:SetMapValueFunction(InValue)
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 
@@ -3018,13 +3018,13 @@ function M:SetBPMapValueFunction(InLoop, InObject, InValue)
 end
 
 function M:GetBPMapValueFunction(InLoop, InObject)
-    local Start = UE.UKismetMathLibrary.Now()
+    local Start = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     for i = 0, InLoop do
         local Value = InObject:GetMapValueFunction()
     end
 
-    local End = UE.UKismetMathLibrary.Now()
+    local End = UE.UTestCaseBlueprintFunctionLibrary.GetTimestamp()
 
     local TotalSeconds = UE.UTestCaseBlueprintFunctionLibrary.GetTotalSeconds(End, Start);
 

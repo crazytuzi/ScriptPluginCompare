@@ -15,8 +15,11 @@ class SCRIPTPLUGINCOMPARE_API UTestCaseBlueprintFunctionLibrary : public UBluepr
 	GENERATED_BODY()
 
 public:
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	static int64 GetTimestamp();
+
 	UFUNCTION(BlueprintCallable)
-	static double GetTotalSeconds(const FDateTime& A, const FDateTime& B);
+	static double GetTotalSeconds(const int64& A, const int64& B);
 
 	UFUNCTION(BlueprintCallable)
 	static FString GetPlatform();
