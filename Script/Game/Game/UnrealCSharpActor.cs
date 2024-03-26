@@ -1,17 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Script.Common;
 using Script.CoreUObject;
 using Script.Engine;
 using Script.Game.FirstPerson.Blueprints;
 
 namespace Script.ScriptPluginCompare
 {
-    [IsOverride]
+    [Override]
     public partial class AUnrealCSharpActor
     {
-        [IsOverride]
+        [Override]
         public override void ReceiveBeginPlay()
         {
             var UnrealCSharpSubsystem =
