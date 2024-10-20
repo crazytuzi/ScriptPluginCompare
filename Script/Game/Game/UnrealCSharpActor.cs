@@ -1156,7 +1156,7 @@ namespace Script.ScriptPluginCompare
         }
 
         // UClass
-        private void SetCppClassValue(Int32 InLoop, ATestActor InObject, TSubclassOf<UObject> InValue)
+        private void SetCppClassValue(Int32 InLoop, ATestActor InObject, UClass InValue)
         {
             var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
@@ -2124,7 +2124,7 @@ namespace Script.ScriptPluginCompare
         }
 
         // UClass
-        private void SetCppClassValueFunction(Int32 InLoop, ATestActor InObject, TSubclassOf<UObject> InValue)
+        private void SetCppClassValueFunction(Int32 InLoop, ATestActor InObject, UClass InValue)
         {
             var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
@@ -2653,7 +2653,7 @@ namespace Script.ScriptPluginCompare
         }
 
         // UClass
-        private void SetBPClassValue(Int32 InLoop, BP_TestActor_C InObject, TSubclassOf<UObject> InValue)
+        private void SetBPClassValue(Int32 InLoop, BP_TestActor_C InObject, UClass InValue)
         {
             var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
@@ -3265,7 +3265,7 @@ namespace Script.ScriptPluginCompare
         }
 
         // UClass
-        private void SetBPClassValueFunction(Int32 InLoop, BP_TestActor_C InObject, TSubclassOf<UObject> InValue)
+        private void SetBPClassValueFunction(Int32 InLoop, BP_TestActor_C InObject, UClass InValue)
         {
             var Start = UTestCaseBlueprintFunctionLibrary.GetTimestamp();
 
